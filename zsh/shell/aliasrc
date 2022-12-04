@@ -1,0 +1,118 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# Use $XINITRC variable if file exists.
+[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
+
+# sudo not required for some system commands
+for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
+	alias $command="sudo $command"
+done; unset command
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+  zshconfig="nvim ~/.zshrc" \
+  build="npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch" \
+  ab="sudo chown agung:agung /sys/class/backlight/amdgpu_bl0/*" \
+  v="nvim" \
+  vv="nvim" \
+  vim="nvim" \
+  vi="nvim" \
+  t="tmux" \
+  ta="tmux a" \
+  tK="tmux kill-server && echo tmux session killed" \
+  tl="tmux ls" \
+  mux="tmuxinator" \
+  c="clear" \
+  trashput="trash-put" \
+  trashempty="trash-empty" \
+  trashlist="trash-list" \
+  trashrestore="trash-restore" \
+  trashrm="trash-rm" \
+  lfp="leafpad" \
+  lu="apt list --upgradable" \
+  ll="ls -l" \
+  l="ls -l" \
+  la="ls -la" \
+  ltr="ls -ltrh" \
+  ltra="ls -ltrah" \
+  lf="lfub" \
+  scim="sc-im" \
+  f="ranger" \
+  F="nemo ." \
+  FF="dolphin ." \
+  music="mpd && ncmpcpp" \
+  mm="ncmpcpp" \
+  enablesmb="sudo systemctl enable --now smb.service" \
+  restartsmb="sudo systemctl restart smb.service" \
+  smbstatus="sudo systemctl status smb.service" \
+  enablenmb="sudo systemctl enable --now nmb.service" \
+  restartnmb="sudo systemctl restart nmb.service" \
+  nmbstatus="sudo systemctl status nmb.service" \
+  rmswap="rm ~/.local/share/nvim/swap/*" \
+  x="xsessions" \
+  poweroff="systemctl poweroff" \
+  reboot="systemctl reboot" \
+  xfast="xset r rate 300 50" \
+  xdefault="xset r rate 460 25" \
+  mk="make && sudo make install" \
+  sx="startx" \
+  update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg" \
+  dl="spotdl" \
+  fg="figlet" \
+  fgg="figlet Arch Linux" \
+  winbox="wine ~/Downloads/winbox.exe"
+
+	# cp="cp -iv" \
+	# mv="mv -iv" \
+	# rm="rm -vI" \
+
+alias \
+	cp="cp" \
+	mv="mv" \
+	rm="rm" \
+	bc="bc -ql" \
+	mkd="mkdir -pv" \
+	ffmpeg="ffmpeg -hide_banner"
+
+# LAMP
+alias \
+  startapache="sudo systemctl start apache2.service && lampstatus" \
+  startmysql="sudo systemctl start mysql.service && lampstatus" \
+  stopapache="sudo systemctl stop apache2.service && lampstatus" \
+  stopmysql="sudo systemctl stop mysql.service && lampstatus" \
+  restartapache="sudo systemctl restart apache2.service && lampstatus" \
+  restartmysql="sudo systemctl restart mysql.service && lampstatus" \
+  startlamp="sudo systemctl start apache2.service && sudo systemctl start mysql.service && lampstatus" \
+  stoplamp="sudo systemctl stop apache2.service && sudo systemctl stop mysql.service && lampstatus" \
+
+## FZF
+#alias \
+#	se="du -a ~/.local/bin/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;" \
+#	vf="fzf | xargs -r -I % $EDITOR % ;"
+
+# Colorize commands when possible.
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+
+# These common commands are just too long! Abbreviate them.
+alias \
+	ka="killall" \
+	g="git" \
+	sdn="shutdown -h now" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	pp="pacman" \
+	xi="sudo xbps-install" \
+	xr="sudo xbps-remove -R" \
+	xq="xbps-query" \
+	z="zathura"
+
+alias \
+	lf="lfub" \
+	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
+	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \

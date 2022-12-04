@@ -1,0 +1,3 @@
+#!/bin/sh
+
+paplay ~/.local/share/sounds/sound_mint_logout.wav

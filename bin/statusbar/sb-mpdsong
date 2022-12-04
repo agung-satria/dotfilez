@@ -1,0 +1,28 @@
+#!/bin/bash
+
+ PREFIX_PLAY='  '
+#PREFIX_PLAY='🎵 '
+ PREFIX_PAUSE='  '
+#PREFIX_PAUSE='⏸️ '
+TIME="$(mpc -p 6601 status | awk 'NR==2 { print $3 }')"
+
+get_mpd()
+{
+	current_song="$(mpc -p 6601 current | awk '{print substr($0,1,35)}')"
+
+	if [[ "$current_song" = "" ]]; then
+		echo " "
+		exit 0
+	else
+		playpause=$(mpc -p 6601 | awk '/\[.*]/{split($0, a, " "); print a[1]}')
+		if [[ "$playpause" = "[playing]" ]]; then
+			current_song="$PREFIX_PLAY$current_song $TIME"
+		elif [[ "$playpause" = "[paused]" ]]; then
+			current_song="$PREFIX_PAUSE$current_song $TIME"
+		fi
+	fi
+
+	echo " $current_song "
+}
+
+get_mpd

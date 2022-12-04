@@ -1,0 +1,17 @@
+#!/bin/bash
+# icons depend on nerdfonts being installed
+while true; do
+bat() {
+  batstat="$(cat /sys/class/power_supply/BAT0/status)"
+	battery="$(cat /sys/class/power_supply/BAT0/capacity)"
+	if [[ $battery -ge 9 ]] && [[ $battery -le 15 ]] && [[ $batstat = "Discharging" ]];        then
+        notify-send "Low battery  $battery %" -u normal && snd_lowbat_notify
+	elif [[ $battery -ge 6 ]] && [[ $battery -le 8 ]] && [[ $batstat = "Discharging" ]];        then
+        notify-send "Low battery  $battery %" -u critical && snd_lowbat_notify
+	elif [[ $battery -ge 3 ]] && [[ $battery -le 5 ]] && [[ $batstat = "Discharging" ]];        then
+        systemctl suspend
+    fi
+ }
+    $(bat)
+sleep 2m
+done

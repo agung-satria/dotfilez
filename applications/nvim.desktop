@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.7.2
+Type=Application
+Terminal=false
+Exec=st -e nvim
+Name=Neovim
+Icon=/home/agung/.local/share/icons/nvim.png
