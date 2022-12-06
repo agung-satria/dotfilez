@@ -3,7 +3,8 @@
 ## Dependencies!
 
 ```sh
-sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk hsetroot xclip wget curl bc tree nemo nemo-fileroller galculator ttf-font-awesome fzf tmux ntfs-3g dunst libnotify maim rofi arandr pulsemixer vlc calcurse imagemagick zip unzip
+sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk hsetroot xclip wget curl rsync bc tree nemo nemo-fileroller galculator ttf-font-awesome fzf tmux ntfs-3g dunst libnotify maim rofi arandr pamixer pulsemixer vlc calcurse imagemagick zip unzip
+sudo pacman -S mtpfs gvfs-mtp gvfs-gphoto2
 ```
 
 ## Change console font (make it bigger)
@@ -45,9 +46,11 @@ makepkg -si
 ## AUR packages
 
 ```sh
+yay -S noto-color-emoji-fontconfig (color emoji!)
 yay -S brave-bin
 yay -S gotop
-yay -S picom-pijulius-git
+yay -S grabc
+yay -S picom-pijulius-git (optional, just use picom)
 yay -S ttf-ms-fonts
 ```
 
@@ -163,6 +166,21 @@ Reboot
 ```sh
 `https://github.com/Raymo111/i3lock-color` (yay -S i3lock-color)
 `https://github.com/betterlockscreen/betterlockscreen` (build manual like on ubuntu)
+```
+
+## Pacman command
+
+```sh
+sudo pacman -Rsn $(pacman -Qdtq)
+sudo pacman -Scc
+sudo pacman -Rscnd <program>
+
+```
+
+## Command
+
+```sh
+`sudo timedatectl set-ntp true` set time automatically
 ```
 
 ## Mounting

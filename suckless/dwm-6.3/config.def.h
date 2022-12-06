@@ -27,9 +27,10 @@ static const int showtab			= showtab_auto;        /* Default tab bar show mode *
 static const int toptab				= False;               /* False means bottom tab bar */
 
 static const char *fonts[]        = {"Ubuntu:weight=regular:size=13:antialias=true:autohint=true",
-	"JetBrainsMono Nerd Font:style:medium:size=13:autohint=true",
-    "JoyPixels:size=13:antialias=true:autohint=true", 
-    "Material Design Icons-Regular:size=13:autohint=true"};
+  "JetBrainsMono Nerd Font:style:medium:size=13:autohint=true",
+  "JoyPixels:size=13:antialias=true:autohint=true", 
+  "NotoColorEmoji:pixelsize=24:antialias=true:autohint=true",
+  "Material Design Icons-Regular:size=13:autohint=true"};
 static const char dmenufont[]     = "Ubuntu:weight=regular:size=13:antialias=true:autohint=true";
 
 // // agstr color^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -72,6 +73,7 @@ const char *spcmd3[] = {"st", "-n", "spncmpcpp", "-g", "100x25", "-e", "ncmpcpp"
 const char *spcmd4[] = {"st", "-n", "spcalcurse", "-g", "100x25", "-e", "calcurse", NULL };
 const char *spcmd5[] = {"st", "-n", "spnmtui", "-g", "100x25", "-e", "nmtui", NULL };
 const char *spcmd6[] = {"st", "-n", "spranger", "-g", "100x25", "-e", "ranger", NULL };
+const char *spcmd7[] = {"st", "-n", "splf", "-g", "100x25", "-e", "lfub", NULL };
 static Sp scratchpads[] = {
 
     /* name          cmd  */
@@ -81,6 +83,7 @@ static Sp scratchpads[] = {
     {"spcalcurse",  spcmd4},
     {"spnmtui",     spcmd5},
     {"spranger",    spcmd6},
+    {"splf",        spcmd7},
 
 };
 
@@ -134,6 +137,7 @@ static const Rule rules[] = {
     { NULL,		          "spcalcurse",   NULL,	     SPTAG(3),	  1,           -1 },
     { NULL,		          "spnmtui",      NULL,		   SPTAG(4),	  1,           -1 },
     { NULL,		          "spranger",     NULL,		   SPTAG(5),	  1,           -1 },
+    { NULL,		          "splf",         NULL,		   SPTAG(6),	  1,           -1 },
     /* floatthings */
     { "float-st",             NULL,     NULL,      0,           1,           -1 },
     { "float-st-lfub",        NULL,     NULL,      0,           1,           -1 },
@@ -242,7 +246,7 @@ static Key keys[] = {
     { MODKEY,            		XK_w,             spawn,		SHCMD("brave") },
     { MODKEY|ShiftMask,  		XK_w,             spawn,		SHCMD("brave --incognito") },
     { MODKEY|ShiftMask,  		XK_d,             spawn,		SHCMD("samedir") },
-    { MODKEY|ShiftMask,  		XK_e,             spawn,		SHCMD("nemo") },
+    { MODKEY|ControlMask,  	XK_e,             spawn,		SHCMD("nemo") },
     { MODKEY|ShiftMask,		  XK_apostrophe,    spawn,	    SHCMD("galculator") },
 //    { MODKEY|ShiftMask,		    	XK_c,             spawn,	    SHCMD("gnome-calendar") },
     { MODKEY,		            	XK_p,	  	  spawn,	    	SHCMD("arandr") },
@@ -352,7 +356,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask,    	    XK_m,	   togglescratch,  {.ui = 2 } },
     { MODKEY,    	            XK_c,	   togglescratch,  {.ui = 3 } },
     { MODKEY|ControlMask,           XK_n,	   togglescratch,  {.ui = 4 } },
-    { MODKEY,                       XK_e,	   togglescratch,  {.ui = 5 } },
+    { MODKEY|ShiftMask,             XK_e,	   togglescratch,  {.ui = 5 } },
+    { MODKEY,                       XK_e,	   togglescratch,  {.ui = 6 } },
 
     TAGKEYS(                        XK_1,                      0)
     TAGKEYS(                        XK_2,                      1)

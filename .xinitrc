@@ -14,7 +14,9 @@ nm-applet &
 # compton &
 dunst &
 snd_mint_login &
-picom --experimental-backends &
+asb &
+# picom --experimental-backends &
+picom &
 # st -e sudo chown agung:agung /sys/class/backlight/amdgpu_bl0/*
 
 ## session:

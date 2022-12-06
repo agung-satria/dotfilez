@@ -5,14 +5,28 @@ case "$(readlink -f /sbin/init)" in
 	*) ctl='loginctl' ;;
 esac
 
-case "$(printf "  lock\n  leave dwm\n  shutdown\n  restart\n⏾ sleep\n鈴   hibernate\n勒  renew dwm\nﱢ  display off" | dmenu -i -p 'Action: ')" in
-	'  lock') betterlockscreen -l ;;
-	'  leave dwm') kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
-	'  shutdown') $ctl poweroff -i ;;
-	'  restart') $ctl reboot -i ;;
-	'鈴  hibernate') $ctl hibernate && betterlockscreen -l ;;
-	'⏾ sleep') $ctl suspend && betterlockscreen -l ;;
-	'勒  renew dwm') kill -HUP "$(pgrep -u "$USER" "\bdwm$")" ;;
-	'ﱢ  display off') xset dpms force off ;;
+# color emoji (noto)🖥️
+case "$(printf "🔒lock\n🚪leave dwm\n📴 shutdown\n🔃 restart\n💤 sleep\n🐻 hibernate\n♻️ renew dwm\n📺 display off" | dmenu -i -p 'Action: ')" in
+	'🔒lock') betterlockscreen -l ;;
+	'🚪leave dwm') kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
+	'📴 shutdown') $ctl poweroff -i ;;
+	'🔃 restart') $ctl reboot -i ;;
+	'🐻 hibernate') $ctl hibernate && betterlockscreen -l ;;
+	'💤 sleep') $ctl suspend && betterlockscreen -l ;;
+	'♻️ renew dwm') kill -HUP "$(pgrep -u "$USER" "\bdwm$")" ;;
+	'📺 display off') xset dpms force off ;;
 	*) exit 1 ;;
 esac
+
+# nerd
+# case "$(printf "  lock\n  leave dwm\n  shutdown\n  restart\n⏾ sleep\n鈴   hibernate\n勒  renew dwm\nﱢ  display off" | dmenu -i -p 'Action: ')" in
+# 	'  lock') betterlockscreen -l ;;
+# 	'  leave dwm') kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
+# 	'  shutdown') $ctl poweroff -i ;;
+# 	'  restart') $ctl reboot -i ;;
+# 	'鈴  hibernate') $ctl hibernate && betterlockscreen -l ;;
+# 	'⏾ sleep') $ctl suspend && betterlockscreen -l ;;
+# 	'勒  renew dwm') kill -HUP "$(pgrep -u "$USER" "\bdwm$")" ;;
+# 	'ﱢ  display off') xset dpms force off ;;
+# 	*) exit 1 ;;
+# esac
