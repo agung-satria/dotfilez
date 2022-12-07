@@ -1,0 +1,21 @@
+#!/bin/bash
+dfiles="${XDG_DATA_HOME:-$HOME/.mygithub/dotfilez}"
+
+cp $HOME/.xinitrc "$dfiles/"
+cp $HOME/.local/bin/cptodotfiles "$dfiles/.local/bin"
+cp $HOME/.local/bin/{asb,brightness-setter,cacctoken,ce,changevolume,cptodotfiles,dmenurecord,dmenuunicode,lampstatus,lowbatnotif,maimpick,mkbash,natural-mouse-scroll-false,rewall,samedir,se,snd_lowbat_notify,snd_lowbat_vista_notify,snd_mint_volume,snd_mint_login,snd_mint_logout,ss-cp,ss-full,sysact} "$dfiles/.local/bin"
+cp $HOME/.config/picom/picom.conf "$dfiles/.config/picom/picom.conf"
+cp $HOME/.zshrc "$dfiles/zsh"
+cp $HOME/.zshenv "$dfiles/zsh"
+cp $HOME/.zprofile "$dfiles/zsh"
+cp -R $HOME/.config/shell "$dfiles/zsh"
+cp $HOME/.tmux.conf "$dfiles/tmux"
+cp $HOME/.config/ranger/{rc.conf,rifle.conf,commands.py,scope.sh,README.md} "$dfiles/.config/ranger"
+cp $HOME/.local/bin/{sampah-cli,dragon} "$dfiles/.config/ranger/bin"
+cp -R $HOME/.config/lf "$dfiles/.config"
+cp -R $HOME/.config/mpv/{mpv.conf,input.conf} "$dfiles/.config/mpv"
+cp -R $HOME/.config/mpd/mpd.conf "$dfiles/.config/mpd"
+cp -R $HOME/.config/ncmpcpp/{config,bindings} "$dfiles/.config/ncmpcpp"
+cp $HOME/.local/bin/statusbar/* "$dfiles/.local/bin/statusbar"
+
+echo "✅ All dotfiles ready to push "

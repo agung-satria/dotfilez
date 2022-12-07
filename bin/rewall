@@ -1,6 +1,0 @@
-#!/bin/bash
-#Descriptions: 
-notify-send "Setting up wallpaper and lockscreen"
-hsetroot -fill ~/.mygithub/dotfilez/wallpapers/landscape.jpg
-betterlockscreen -u ~/.mygithub/dotfilez/wallpapers/mirror_by_Uday_Nakade.jpg
-notify-send "Done"

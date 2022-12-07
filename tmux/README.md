@@ -8,8 +8,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ```sh
 cp .tmux.conf ~/
-cp -r ./.config/tmuxinator/ ~/.config/
-cp -r ./.config/tmux/ ~/.config/
 ```
 
 # Type this in terminal if tmux is already running

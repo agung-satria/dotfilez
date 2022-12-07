@@ -1,8 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Version=0.10
-Type=Application
-Terminal=false
-Exec=st -g 100x25 ncmpcpp
-Name=ncmpcpp
-Icon=/home/agung/.local/share/icons/ncmpcpp.png

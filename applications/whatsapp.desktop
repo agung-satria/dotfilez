@@ -1,9 +1,0 @@
-[Desktop Entry]
-/* build first from: https://github.com/eneshecan/whatsapp-for-linux */
-Type=Application
-Name=WhatsApp for Linux
-GenericName=WhatsApp
-Exec=/home/agung/Downloads/whatsapp-for-linux/build/debug/whatsapp-for-linux
-Terminal=false
-Categories=Internet
-Icon=/home/agung/.local/share/icons/wa.png

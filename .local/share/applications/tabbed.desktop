@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Tabbed ST
+Comment=Add ability to suckless software to have tabs
+Exec=tabbed -r 2 st -w ''
+Icon=utilities-terminal
+Terminal=false
+Categories=ConsoleOnly;System;FileTools;FileManager
+StartupNotify=true
+MimeType=inode/directory;
+Keywords=File;Manager;Browser;Explorer;Launcher;Vi;Vim;Python

@@ -1,0 +1,2 @@
+#!/bin/bash
+st -c float-st -g 80x20 -e sudo chown agung:agung /sys/class/backlight/amdgpu_bl0/*

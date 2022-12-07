@@ -3,8 +3,9 @@
 ## Dependencies!
 
 ```sh
-sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk hsetroot xclip wget curl rsync bc tree nemo nemo-fileroller galculator ttf-font-awesome fzf tmux ntfs-3g dunst libnotify maim rofi arandr pulsemixer vlc calcurse imagemagick zip unzip
+sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk hsetroot xclip wget curl rsync bc tree nemo nemo-fileroller galculator fzf tmux ntfs-3g dunst libnotify maim rofi arandr pulsemixer vlc calcurse imagemagick zip unzip
 sudo pacman -S pamixer light
+sudo pacman -S ttf-joypixels ttf-font-awesome
 sudo pacman -S mtpfs gvfs-mtp gvfs-gphoto2
 ```
 

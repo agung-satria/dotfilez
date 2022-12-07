@@ -1,0 +1,551 @@
+sw_volume: 84
+audio_device_state:1:PipeWire Sound Server
+audio_device_state:1:Visualizer
+audio_device_state:1:lossless
+state: play
+current: 60
+time: 34.361000
+random: 0
+repeat: 1
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:breaking bjm/Breaking Benjamin - So Cold [HQ].mp3
+1:breaking bjm/The Diary Of Jane.mp3
+2:breaking bjm/Breath.mp3
+3:core/Angels Don't Kill.mp3
+4:core/Bullet For My Valentine - Riot (Audio).mp3
+5:core/Dream Theater The Glass Prison.mp3
+6:core/Pantera - Cowboys from Hell.mp3
+7:core/Pantera - Domination.mp3
+8:core/The Abyss.mp3
+9:core/System Of A Down - Lonely Day.mp3
+10:core/Wage War - High Horse.mp3
+11:core/All That Remains - Six.mp3
+12:core/AS I LAY DYING - My Own Grave [Audio].mp3
+13:core/Bring Me The Horizon - Kingslayer (Lyric Video) ft. BABYMETAL.mp3
+14:core/Bring Me The Horizon - True Friends (Official Lyric Video).mp3
+15:core/Children Of Bodom.mp3
+16:core/Demolisher.mp3
+17:core/Dio - Holy Diver.mp3
+18:core/Downfall.mp3
+19:core/Killswitch Engage - Holy Diver.mp3
+20:core/Kissing The Shadows.mp3
+21:core/Living Dead Beat.mp3
+22:core/Polaris - Lucid (OFFICIAL AUDIO).mp3
+23:core/Slaughter To Prevail - Baba Yaga (Lyrics) (HQ).mp3
+24:core/SUICIDE SILENCE - Fuck Everything (Lyric Video).mp3
+25:core/Suicide Silence - Wake Up (HQ).mp3
+26:core/Suicide Silence - You Only Live Once [HQ].mp3
+27:core/You Can't Stop Me.mp3
+28:core/Scene Nine Finally Free.mp3
+29:core/System Of A Down - B.Y.O.B..mp3
+30:core/System Of A Down - RadioVideo.mp3
+31:core/ERRA - Alpha Seed (Official Stream).mp3
+32:core/ERRA - Breach.mp3
+33:core/Slayer - Read Between The Lies.mp3
+34:core/System Of A Down - Chop Suey!.mp3
+35:core/System Of A Down - Toxicity.mp3
+36:core/System Of A Down - Aerials.mp3
+37:core/Pantera - Walk.mp3
+38:core/Fit For A King - When Everything Means Nothing.mp3
+39:disturbed/Disturbed - A Reason To Fight (Audio).mp3
+40:disturbed/Disturbed - Hold On To Memories [Official Lyrics Video].mp3
+41:disturbed/Disturbed - The Sound Of Silence (Audio).mp3
+42:dl/Goliath - Cinta Monyet (Official Music Video).mp3
+43:dl/Goliath - Masih Disini Masih Denganmu (Official Music Video).mp3
+44:dl/kaka-main-salah.mp3
+45:dl/Samsons - Kenangan Terindah (HD Audio).mp3
+46:dl/The Rock - Kamu Kamulah Surgaku (Official Audio Lyric)(1).mp3
+47:faun/Faun - Sigurdlied.mp3
+48:faun/Faun - Iduna.mp3
+49:faun/Faun - The Butterfly.mp3
+50:faun/Faun - Hymn to Pan.mp3
+51:faun/Faun - Feuer.mp3
+52:faun/Faun - Walpurgisnacht.mp3
+53:faun/Faun - Hymne der Nacht.mp3
+54:faun/Faun - Rosenrot.mp3
+55:faun/Faun - Federkleid.mp3
+56:faun/Faun - Sonnenreigen (Lughnasad).mp3
+57:faun/Faun - Odin.mp3
+58:faun/Faun - Tinta.mp3
+59:faun/Faun - Diese kalte Nacht.mp3
+60:faun/Faun, Santiano - Tanz mit mir.mp3
+61:faun/Faun, Michael Rhein - Buntes Volk.mp3
+62:faun/Faun - Von den Elben.mp3
+63:ind/Aneuk Yatim.mp3
+64:ind/Astrid - Tentang Rasa.mp3
+65:ind/Bondan Prakoso, Fade2Black - Ya Sudahlah (Lirik).mp3
+66:ind/Bunga Mawar-Novia Kolopaking.mp4.mp3
+67:ind/Dewa 19 - Takkan Ada Cinta Yg Lain..mp3
+68:ind/Diskoria feat. Dian Sastrowardoyo - Serenata Jiwa Lara.mp3
+69:ind/Hijau Daun - Cobalah (Video Clip).mp3
+70:ind/KAKA MAIN SALAH [ Official lyric video ].mp3
+71:ind/KAKA MAIN SALAH X BELIS MAHAL - PUTRY PASANEA FT KAPTHENPUREK.mp3
+72:ind/Letto - Permintaan Hati.mp3
+73:ind/Letto - Ruang Rindu.mp3
+74:ind/Letto - Sandaran Hati.mp3
+75:ind/Letto - Sebelum Cahaya.mp3
+76:ind/PADI REBORN FT ANDIKA KANGEN BAND - MENCARI ALASAN.mp3
+77:ind/SEBUJUR BANGKAI (Rhoma Irama) - Tiya (Dangdut Cover).mp3
+78:ind/Seventeen sumpah ku mencintaimu.mp3
+79:ind/Ungu ft. Andien - Saat Bahagia (lirik).mp3
+80:ind/Kalia Siska, Ska 86 - CIDRO 2.mp3
+81:ind/Hendra Kumbara - Dalan Liyane.mp3
+82:ind/Tipe-X - Kamu Nggak Sendirian.mp3
+83:ind/Ada Band - Pemain Cinta.mp3
+84:ind/Near, Dian Sorowea - Karna Su Sayang.mp3
+85:ind/Dewa 19 - sedang ingin bercinta.mp3
+86:ind/Dewa 19 - selimut hati.mp3
+87:ind/Denny Caknan - Los Dol.mp3
+88:ind/Ndarboy Genk - Mendung Tanpo Udan.mp3
+89:ind/Tipe-X - Salam Rindu.mp3
+90:ind/Tipe-X - Selamat Jalan.mp3
+91:ind/Nicky Tirta, Vanessa Angel - Indah Cintaku.mp3
+92:ind/Ada Band - Karena Wanita (Ingin Dimengerti).mp3
+93:ind/Ada Band, Ubiet - Jalan Cahaya (feat. Ubiet).mp3
+94:ind/Tipe-X - Boyband.mp3
+95:ind/Shae - Sayang.mp3
+96:maroon5/Won t Go Home Without You.mp3 filename=UTF-8  Won t Go Home Without You.mp3
+97:maroon5/Memories.mp3
+98:maroon5/One More Night.mp3
+99:maroon5/Lucky Strike.mp3
+100:maroon5/Sad.mp3
+101:maroon5/Moves Like Jagger.mp3
+102:metallica/04 - The Day That Never Comes - (Musicfire.in).mp3
+103:metallica/1-04 - Turn the Page - (Musicfire.in).mp3
+104:metallica/Metallica - Mama Said.mp3
+105:metallica/02 - Sad But True - (Musicfire.in).mp3
+106:metallica/01 - Enter Sandman - (Musicfire.in).mp3
+107:metallica/The Unforgiven - (Musicfire.in).mp3
+108:metallica/08 - Nothing Else Matters - (Musicfire.in).mp3
+109:metallica/The Unforgiven II - (Musicfire.in).mp3
+110:metallica/1-08 - No Leaf Clover - (Musicfire.in).mp3
+111:metallica/2-03 - Master of Puppets - (Musicfire.in).mp3
+112:mlsy/Exist - Mencari Alasan (HD Audio ).mp3
+113:mlsy/Amuk - Seakan Menguji.mp3
+114:mlsy/Amy Search - Isabella.mp3
+115:mlsy/Exists - Rindu Serindu Rindunya HQ Audio.mp3
+116:mlsy/U.K's - Di Sana Menanti Di Sini Menunggu.mp3
+117:opeth/Opeth - In My Time of Need (Audio).mp3
+118:opeth/Opeth - Windowpane (Audio).mp3
+119:opeth/Opeth - Harvest.mp3
+120:opeth/Opeth - Blackwater Park.mp3
+121:opeth/Opeth - A Fair Judgement.mp3
+122:opeth/Opeth - Ghost of Perdition.mp3
+123:opeth/Opeth - Nectar.mp3
+124:opeth/Opeth - Black Rose Immortal.mp3
+125:opeth/Opeth - To Bid You Farewell.mp3
+126:opeth/Opeth - Cusp of Eternity.mp3
+127:opeth/Opeth - Moon Above, Sun Below.mp3
+128:opeth/Opeth - Goblin.mp3
+129:opeth/Opeth - Reverie _ Harlequin Forest (Audio).mp3
+130:opeth/Opeth - Benightedd.mp3
+131:opeth/Opeth - The Baying of the Hounds (Audio).mp3
+132:opeth/Opeth - The Grand Conjuration (Audio).mp3
+133:opeth/Opeth - Coil.mp3
+134:opeth/Opeth - Heir Apparent.mp3
+135:opeth/Opeth - The Lotus Eater.mp3
+136:opeth/Opeth - Burden.mp3
+137:opeth/Opeth - Porcelain Heart.mp3
+138:opeth/Opeth - Hessian Peel.mp3
+139:opeth/Opeth - Hex Omega.mp3
+140:opeth/Opeth - Derelict Herds.mp3
+141:opeth/Opeth - Bridge of Sighs.mp3
+142:opeth/Opeth - Den Standiga Resan.mp3
+143:sabaton/Night Witches.mp3
+144:sabaton/No Bullets Fly.mp3
+145:sabaton/Smoking Snakes.mp3
+146:sabaton/Inmate 4859.mp3
+147:sabaton/To Hell and Back.mp3
+148:sabaton/Resist and Bite.mp3
+149:sabaton/Soldier of 3 Armies.mp3
+150:sabaton/Far from the Fame.mp3
+151:sabaton/Hearts of Iron.mp3
+152:sabaton/7734.mp3
+153:sabaton/Man of War.mp3
+154:sabaton/The Future of Warfare.mp3
+155:sabaton/Seven Pillars of Wisdom.mp3
+156:sabaton/82nd All the Way.mp3
+157:sabaton/The Attack of the Dead Men.mp3
+158:sabaton/Devil Dogs.mp3
+159:sabaton/The Red Baron.mp3
+160:sabaton/Great War.mp3
+161:sabaton/A Ghost in the Trenches.mp3
+162:sabaton/Fields of Verdun.mp3
+163:sabaton/The End of the War to End All Wars.mp3
+164:sabaton/In Flanders Fields.mp3
+165:sevenfold/Avenged Sevenfold - Gunslinger.mp3
+166:sevenfold/Avenged Sevenfold - Unbound (The Wild Ride).mp3
+167:sevenfold/Avenged Sevenfold - Brompton Cocktail.mp3
+168:sevenfold/Avenged Sevenfold - Dear God.mp3
+169:sevenfold/Avenged Sevenfold - Sidewinder.mp3
+170:sevenfold/Avenged Sevenfold - Betrayed.mp3
+171:sevenfold/Avenged Sevenfold - M.I.A..mp3
+172:sevenfold/Avenged Sevenfold - Dancing Dead.mp3
+173:sevenfold/Avenged Sevenfold - Hail to the King.mp3
+174:sevenfold/Avenged Sevenfold - Nightmare.mp3
+175:sevenfold/Avenged Sevenfold - Welcome to the Family.mp3
+176:sevenfold/Avenged Sevenfold - Danger Line.mp3
+177:sevenfold/Avenged Sevenfold - Buried Alive.mp3
+178:sevenfold/Avenged Sevenfold - Natural Born Killer.mp3
+179:sevenfold/Avenged Sevenfold - So Far Away.mp3
+180:sevenfold/Avenged Sevenfold - Victim.mp3
+181:sevenfold/Avenged Sevenfold - Tonight the World Dies.mp3
+182:sevenfold/Avenged Sevenfold - Fiction.mp3
+183:sevenfold/Avenged Sevenfold - Save Me.mp3
+184:sevenfold/Avenged Sevenfold - Remenissions.mp3
+185:sevenfold/Avenged Sevenfold - 4-00 aam.mp3
+186:spotdl/MAWAR BODAS - DETTY KURNIA YUSI RINDIAWATI COVER.mp3
+187:spotdl/Skillet - Monster.mp3
+188:spotdl/Skillet - Awake and Alive.mp3
+189:spotdl/Scorpions - Wind Of Change.mp3
+190:spotdl/Frans, Fauzana - Janji Manjalang Rantau.mp3
+191:spotdl/Fauzana - Mananti Jawek Cinto.mp3
+192:spotdl/Frans, Fauzana - Panek Di Awak Kayo Di Urang.mp3
+193:spotdl/Fauzana - Pulanglah Uda Pulanglah Sayang.mp3
+194:spotdl/Frans, Fauzana - Sahati Dalam Cinto.mp3
+195:spotdl/Fauzana - Takabek Gadih Rantau.mp3
+196:spotdl/Frans, Fauzana - Talambek Datang 2.mp3
+197:spotdl/Fauzana - Tasisiah Dek Harato.mp3
+198:spotdl/Frans, Fauzana - Sarindu Bungo Jo Kumbang.mp3
+199:spotdl/Lamb of God - Memento Mori.mp3
+200:spotdl/Lamb of God - Checkmate.mp3
+201:spotdl/Lamb of God - Gears.mp3
+202:spotdl/Lamb of God - Reality Bath.mp3
+203:spotdl/Lamb of God - New Colossal Hate.mp3
+204:spotdl/Lamb of God - Resurrection Man.mp3
+205:spotdl/Lamb of God, Jamey Jasta - Poison Dream.mp3
+206:spotdl/Lamb of God, Chuck Billy - Routes.mp3
+207:spotdl/Lamb of God - Bloodshot Eyes.mp3
+208:spotdl/Lamb of God - On the Hook.mp3
+209:spotdl/Howard Shore, Isabel Bayrakdarian - One of the Dúnedain  'Evenstar' (feat. Isabel Bayrakdarian).mp3
+210:spotdl/TOTO - Africa.mp3
+211:spotdl/The Pied Pipers - Dream.mp3
+212:spotdl/killswitch engage/Killswitch Engage - Numbered Days.mp3
+213:spotdl/killswitch engage/Killswitch Engage - Self Revolution.mp3
+214:spotdl/killswitch engage/Killswitch Engage - Fixation on the Darkness.mp3
+215:spotdl/killswitch engage/Killswitch Engage - My Last Serenade.mp3
+216:spotdl/killswitch engage/Killswitch Engage - Life to Lifeless.mp3
+217:spotdl/killswitch engage/Killswitch Engage - Just Barely Breathing.mp3
+218:spotdl/killswitch engage/Killswitch Engage - To the Sons of Man.mp3
+219:spotdl/killswitch engage/Killswitch Engage - Temple from the Within.mp3
+220:spotdl/killswitch engage/Killswitch Engage - The Element of One.mp3
+221:spotdl/killswitch engage/Killswitch Engage - Vide Infra.mp3
+222:spotdl/killswitch engage/Killswitch Engage - Without a Name.mp3
+223:spotdl/killswitch engage/Killswitch Engage - Rise Inside.mp3
+224:spotdl/killswitch engage/Killswitch Engage - In the Unblind.mp3
+225:spotdl/killswitch engage/Killswitch Engage - When the Balance Is Broken.mp3
+226:spotdl/killswitch engage/Killswitch Engage - Untitled and Unloved.mp3
+227:spotdl/killswitch engage/Killswitch Engage - Numbered Days - Demo.mp3
+228:spotdl/killswitch engage/Killswitch Engage - Transfiguration (a.k.a. Fixation on the Darkness) - Demo.mp3
+229:spotdl/killswitch engage/Killswitch Engage - Just Barely Breathing - Demo.mp3
+230:spotdl/killswitch engage/Killswitch Engage - Daylight Dies.mp3
+231:spotdl/killswitch engage/Killswitch Engage - This Is Absolution.mp3
+232:spotdl/killswitch engage/Killswitch Engage - The Arms of Sorrow.mp3
+233:spotdl/killswitch engage/Killswitch Engage - Unbroken.mp3
+234:spotdl/killswitch engage/Killswitch Engage - My Curse.mp3
+235:spotdl/killswitch engage/Killswitch Engage - For You.mp3
+236:spotdl/killswitch engage/Killswitch Engage - Still Beats Your Name.mp3
+237:spotdl/killswitch engage/Killswitch Engage - Eye of the Storm.mp3
+238:spotdl/killswitch engage/Killswitch Engage - Break the Silence.mp3
+239:spotdl/killswitch engage/Killswitch Engage - Desperate Times.mp3
+240:spotdl/killswitch engage/Killswitch Engage - Reject Yourself.mp3
+241:spotdl/killswitch engage/Killswitch Engage - Be One.mp3
+242:spotdl/killswitch engage/Killswitch Engage - Let the Bridges Burn.mp3
+243:spotdl/killswitch engage/Killswitch Engage - This Fire.mp3
+244:spotdl/killswitch engage/Killswitch Engage - Holy Diver.mp3
+245:spotdl/killswitch engage/Killswitch Engage - Unleashed.mp3
+246:spotdl/killswitch engage/Killswitch Engage, Howard Jones - The Signal Fire (feat. Howard Jones).mp3
+247:spotdl/killswitch engage/Killswitch Engage - Us Against the World.mp3
+248:spotdl/killswitch engage/Killswitch Engage, Chuck Billy - The Crownless King (feat. Chuck Billy).mp3
+249:spotdl/killswitch engage/Killswitch Engage - I Am Broken Too.mp3
+250:spotdl/killswitch engage/Killswitch Engage - As Sure as the Sun Will Rise.mp3
+251:spotdl/killswitch engage/Killswitch Engage - Know Your Enemy.mp3
+252:spotdl/killswitch engage/Killswitch Engage - Take Control.mp3
+253:spotdl/killswitch engage/Killswitch Engage - Ravenous.mp3
+254:spotdl/killswitch engage/Killswitch Engage - I Can't Be the Only One.mp3
+255:spotdl/killswitch engage/Killswitch Engage - Bite the Hand That Feeds.mp3
+256:spotdl/killswitch engage/Killswitch Engage - To the Great Beyond.mp3
+257:spotdl/killswitch engage/Killswitch Engage - Hollow Convictions.mp3
+258:spotdl/killswitch engage/Killswitch Engage - Killing of Leviathan.mp3
+259:spotdl/killswitch engage/Killswitch Engage - No Devotion.mp3
+260:spotdl/killswitch engage/Killswitch Engage - I Feel Alive Again.mp3
+261:spotdl/killswitch engage/Killswitch Engage - Prophets of Treason.mp3
+262:spotdl/killswitch engage/Killswitch Engage - The Hell in Me.mp3
+263:spotdl/killswitch engage/Killswitch Engage - Beyond the Flames.mp3
+264:spotdl/killswitch engage/Killswitch Engage - The New Awakening.mp3
+265:spotdl/killswitch engage/Killswitch Engage - In Due Time.mp3
+266:spotdl/killswitch engage/Killswitch Engage - A Tribute to the Fallen.mp3
+267:spotdl/killswitch engage/Killswitch Engage - Turning Point.mp3
+268:spotdl/killswitch engage/Killswitch Engage - All We Have.mp3
+269:spotdl/killswitch engage/Killswitch Engage - You Don't Bleed for Me.mp3
+270:spotdl/killswitch engage/Killswitch Engage - The Call.mp3
+271:spotdl/killswitch engage/Killswitch Engage - No End in Sight.mp3
+272:spotdl/killswitch engage/Killswitch Engage - Always.mp3
+273:spotdl/killswitch engage/Killswitch Engage - Time Will Not Remain.mp3
+274:spotdl/killswitch engage/Killswitch Engage - Blood Stains.mp3
+275:spotdl/killswitch engage/Killswitch Engage - Slave to the Machine.mp3
+276:spotdl/killswitch engage/Killswitch Engage - Numbered Days - Live, 2012.mp3
+277:spotdl/killswitch engage/Killswitch Engage - My Curse - Live, 2012.mp3
+278:spotdl/killswitch engage/Killswitch Engage - I Can't Be the Only One - Alternate Edit.mp3
+279:spotdl/killswitch engage/Killswitch Engage - Alone I Stand.mp3
+280:spotdl/killswitch engage/Killswitch Engage - Hate by Design.mp3
+281:spotdl/killswitch engage/Killswitch Engage - Cut Me Loose.mp3
+282:spotdl/killswitch engage/Killswitch Engage - Strength of the Mind.mp3
+283:spotdl/killswitch engage/Killswitch Engage - Just Let Go.mp3
+284:spotdl/killswitch engage/Killswitch Engage - Embrace the Journey... Upraised.mp3
+285:spotdl/killswitch engage/Killswitch Engage - Quiet Distress.mp3
+286:spotdl/killswitch engage/Killswitch Engage - Until the Day.mp3
+287:spotdl/killswitch engage/Killswitch Engage - It Falls on Me.mp3
+288:spotdl/killswitch engage/Killswitch Engage - The Great Deceit.mp3
+289:spotdl/killswitch engage/Killswitch Engage - We Carry On.mp3
+290:spotdl/killswitch engage/Killswitch Engage - Ascension.mp3
+291:spotdl/killswitch engage/Killswitch Engage - Reignite.mp3
+292:spotdl/killswitch engage/Killswitch Engage - Triumph Through Tragedy.mp3
+293:spotdl/killswitch engage/Killswitch Engage - Loyalty.mp3
+294:spotdl/killswitch engage/Killswitch Engage - Never Again.mp3
+295:spotdl/killswitch engage/Killswitch Engage - Starting Over.mp3
+296:spotdl/killswitch engage/Killswitch Engage - The Forgotten.mp3
+297:spotdl/killswitch engage/Killswitch Engage - Reckoning.mp3
+298:spotdl/killswitch engage/Killswitch Engage - The Return.mp3
+299:spotdl/killswitch engage/Killswitch Engage - A Light in a Darkened World.mp3
+300:spotdl/killswitch engage/Killswitch Engage - Take Me Away.mp3
+301:spotdl/killswitch engage/Killswitch Engage - I Would Do Anything.mp3
+302:spotdl/killswitch engage/Killswitch Engage - Save Me.mp3
+303:spotdl/killswitch engage/Killswitch Engage - Lost.mp3
+304:spotdl/killswitch engage/Killswitch Engage - This Is Goodbye.mp3
+305:spotdl/killswitch engage/Killswitch Engage - Temple From The Within - 2004 Remaster.mp3
+306:spotdl/killswitch engage/Killswitch Engage - Vide Infra - 2004 Remaster.mp3
+307:spotdl/killswitch engage/Killswitch Engage - Irreversal - 2004 Remaster.mp3
+308:spotdl/killswitch engage/Killswitch Engage - Rusted Embrace - 2004 Remaster.mp3
+309:spotdl/killswitch engage/Killswitch Engage - Prelude - 2004 Remaster.mp3
+310:spotdl/killswitch engage/Killswitch Engage - Soilborn - 2004 Remaster.mp3
+311:spotdl/killswitch engage/Killswitch Engage - Numb Sick Eyes - 2004 Remaster.mp3
+312:spotdl/killswitch engage/Killswitch Engage - In the Unblind - 2004 Remaster.mp3
+313:spotdl/killswitch engage/Killswitch Engage - One Last Sunset - 2004 Remaster.mp3
+314:spotdl/killswitch engage/Killswitch Engage - Prelude (Demo) - Bonus Track.mp3
+315:spotdl/killswitch engage/Killswitch Engage - Soilborn (Demo) - Bonus Track.mp3
+316:spotdl/killswitch engage/Killswitch Engage - Vide Infra (Demo) - Bonus Track.mp3
+317:spotdl/killswitch engage/Killswitch Engage - In The Unblind (Demo) - Bonus Track.mp3
+318:spotdl/killswitch engage/Killswitch Engage - In a Dead World.mp3
+319:spotdl/killswitch engage/Killswitch Engage - Rose of Sharyn - Live.mp3
+320:spotdl/killswitch engage/Killswitch Engage - My Curse - Live.mp3
+321:spotdl/killswitch engage/Killswitch Engage - Holy Diver - Live.mp3
+322:spotdl/killswitch engage/Killswitch Engage - A Light in a Darkened World - Live.mp3
+323:spotdl/killswitch engage/Killswitch Engage - Know Your Enemy (Live).mp3
+324:spotdl/killswitch engage/Killswitch Engage - A Bid Farewell.mp3
+325:spotdl/killswitch engage/Killswitch Engage - Take This Oath.mp3
+326:spotdl/killswitch engage/Killswitch Engage - When Darkness Falls.mp3
+327:spotdl/killswitch engage/Killswitch Engage - Rose of Sharyn.mp3
+328:spotdl/killswitch engage/Killswitch Engage - Inhale.mp3
+329:spotdl/killswitch engage/Killswitch Engage - Breathe Life.mp3
+330:spotdl/killswitch engage/Killswitch Engage - The End of Heartache.mp3
+331:spotdl/killswitch engage/Killswitch Engage - Declaration.mp3
+332:spotdl/killswitch engage/Killswitch Engage - World Ablaze.mp3
+333:spotdl/killswitch engage/Killswitch Engage - And Embers Rise.mp3
+334:spotdl/killswitch engage/Killswitch Engage - Wasted Sacrifice.mp3
+335:spotdl/killswitch engage/Killswitch Engage - Hope Is....mp3
+336:spotdl/killswitch engage/Killswitch Engage - Irreversal.mp3
+337:spotdl/killswitch engage/Killswitch Engage - My Life for Yours.mp3
+338:spotdl/killswitch engage/Killswitch Engage - The End of Heartache - Alternate Version.mp3
+339:spotdl/killswitch engage/Killswitch Engage - Life to Lifeless - Live.mp3
+340:spotdl/killswitch engage/Killswitch Engage - Fixation on the Darkness - Live.mp3
+341:spotdl/killswitch engage/Killswitch Engage - My Last Serenade - Live.mp3
+342:spotdl/killswitch engage/Killswitch Engage - Vide Infra (Live).mp3
+343:spotdl/one more rep/DON BROCO - Uber.mp3
+344:spotdl/one more rep/Architects - Animals.mp3
+345:spotdl/one more rep/Sevendust - Praise.mp3
+346:spotdl/one more rep/Deftones - Rickets.mp3
+347:spotdl/one more rep/Lamb of God - Laid to Rest.mp3
+348:spotdl/one more rep/Shinedown - DEVIL.mp3
+349:spotdl/one more rep/Godsmack - Awake.mp3
+350:spotdl/one more rep/Atreyu, Jacoby Shaddix - Untouchable.mp3
+351:spotdl/one more rep/Rob Zombie - Dragula.mp3
+352:spotdl/one more rep/Volbeat - A Warrior's Call.mp3
+353:spotdl/one more rep/We Came As Romans, Caleb Shomo - Black Hole.mp3
+354:spotdl/one more rep/Papa Roach - Born For Greatness.mp3
+355:spotdl/one more rep/Four Year Strong - Get out of My Head.mp3
+356:spotdl/one more rep/Pop Evil - Breathe Again.mp3
+357:spotdl/one more rep/Hyro The Hero - Bullet - Single Version.mp3
+358:spotdl/one more rep/FEVER 333 - BURN IT.mp3
+359:spotdl/one more rep/Coal Chamber - Tyler's Song.mp3
+360:spotdl/one more rep/Black Map - Chasms.mp3
+361:spotdl/one more rep/P.O.D. - Soundboy Killa.mp3
+362:spotdl/one more rep/Dagoba - City Lights.mp3
+363:spotdl/one more rep/Avenged Sevenfold - Bat Country.mp3
+364:spotdl/one more rep/Lifeboats - Cut From The Same Cloth.mp3
+365:spotdl/one more rep/Breaking Benjamin - Never Again.mp3
+366:spotdl/one more rep/Rammstein - Deutschland.mp3
+367:spotdl/one more rep/Fear Factory - Linchpin.mp3
+368:spotdl/one more rep/Beartooth - In Between.mp3
+369:spotdl/one more rep/Novelists FR - Do you really wanna know.mp3
+370:spotdl/one more rep/Staind - Mudshovel.mp3
+371:spotdl/one more rep/Dinosaur Pile-Up - 11 - 11.mp3
+372:spotdl/one more rep/COUNTERFEIT. - Enough.mp3
+373:spotdl/one more rep/Stone Sour - Fabuless.mp3
+374:spotdl/one more rep/Skillet - Feel Invincible.mp3
+375:spotdl/one more rep/Korn - Got the Life.mp3
+376:spotdl/one more rep/Gojira - New Found.mp3
+377:spotdl/one more rep/Alter Bridge - Addicted to Pain.mp3
+378:spotdl/one more rep/Chunk! No, Captain Chunk! - True Colors.mp3
+379:spotdl/one more rep/Solence - Good FKing Music.mp3
+380:spotdl/one more rep/Five Finger Death Punch - Jekyll and Hyde.mp3
+381:spotdl/one more rep/Metallica - Hardwired.mp3
+382:spotdl/one more rep/Sylar - Soul Addiction.mp3
+383:spotdl/one more rep/HELLYEAH - Human.mp3
+384:spotdl/one more rep/Linkin Park - Papercut.mp3
+385:spotdl/one more rep/Tigercub - I.W.G.F.U..mp3
+386:spotdl/one more rep/Carpenter Brut, Greg Puciato - Imaginary Fire - feat. Greg Puciato.mp3
+387:spotdl/one more rep/Halestorm - Mayhem.mp3
+388:spotdl/one more rep/Slipknot - The Heretic Anthem.mp3
+389:spotdl/one more rep/Machine Head - Is There Anybody out There.mp3
+390:spotdl/one more rep/Silverstein - It's Over.mp3
+391:spotdl/one more rep/Seether - Remedy.mp3
+392:spotdl/one more rep/Bad Wolves - Killing Me Slowly.mp3
+393:spotdl/one more rep/Chevelle - Take Out the Gunman.mp3
+394:spotdl/one more rep/Bullet For My Valentine - Letting You Go.mp3
+395:spotdl/one more rep/The Used - Pretty Handsome Awkward.mp3
+396:spotdl/one more rep/Motionless In White - LOUD (Fuck It).mp3
+397:spotdl/one more rep/All That Remains - Madness.mp3
+398:spotdl/one more rep/Manafest, Sonny Sandoval - Nemesis.mp3
+399:spotdl/one more rep/Of Allies - 17.mp3
+400:spotdl/one more rep/Nonpoint - That Day.mp3
+401:spotdl/one more rep/Adelitas Way - Notorious.mp3
+402:spotdl/one more rep/Bring Me The Horizon, YUNGBLUD - Obey (with YUNGBLUD).mp3
+403:spotdl/one more rep/SHVPES - Skin & Bones.mp3
+404:spotdl/one more rep/A Day To Remember - Paranoia.mp3
+405:spotdl/one more rep/Falling In Reverse - Popular Monster.mp3
+406:spotdl/one more rep/Soulfly - Pain.mp3
+407:spotdl/one more rep/Electric Callboy - Pump It.mp3
+408:spotdl/one more rep/Alice In Chains - The One You Know.mp3
+409:spotdl/one more rep/Underoath - Rapture.mp3
+410:spotdl/one more rep/Adema - READY TO DIE.mp3
+411:spotdl/one more rep/Rammstein - Amerika.mp3
+412:spotdl/one more rep/Korn - Let The Dark Do The Rest.mp3
+413:spotdl/one more rep/36 Crazyfists - I'll Go Until My Heart Stops.mp3
+414:spotdl/one more rep/Ill Niño - God Save Us.mp3
+415:spotdl/one more rep/Ill Niño - What Comes Around.mp3
+416:spotdl/one more rep/Fire From The Gods - Right Now.mp3
+417:spotdl/one more rep/Sixx - A.M. - Rise.mp3
+418:spotdl/one more rep/Royal Blood - Little Monster.mp3
+419:spotdl/one more rep/Devour the Day - The Bottom.mp3
+420:spotdl/one more rep/From Ashes to New, In Flames - Scars That I'm Hiding (feat. Anders Fridén of In Flames).mp3
+421:spotdl/one more rep/Spineshank - Violent Mood Swings.mp3
+422:spotdl/one more rep/Bring Me The Horizon - Empire (Let Them Sing).mp3
+423:spotdl/one more rep/Drowning Pool - Bodies.mp3
+424:spotdl/one more rep/While She Sleeps - SYSTEMATIC.mp3
+425:spotdl/one more rep/Three Days Grace - So Called Life.mp3
+426:spotdl/one more rep/Otherwise - Soldiers.mp3
+427:spotdl/one more rep/My Ticket Home - Spit Not Chewed.mp3
+428:spotdl/one more rep/Hollywood Undead - Undead.mp3
+429:spotdl/one more rep/Story Of The Year - The Antidote.mp3
+430:spotdl/one more rep/10 Years - The Shift.mp3
+431:spotdl/one more rep/NOTHING MORE - Do You Really Want It.mp3
+432:spotdl/one more rep/In Flames - The Truth.mp3
+433:spotdl/one more rep/Asking Alexandria - The Violence.mp3
+434:spotdl/one more rep/Shinedown - Asking for It.mp3
+435:spotdl/one more rep/I Prevail - Breaking Down.mp3
+436:spotdl/one more rep/Saul - Trial By Fire.mp3
+437:spotdl/one more rep/Prophets Of Rage - Unfuck The World.mp3
+438:spotdl/one more rep/Black Veil Brides - Wake Up.mp3
+439:spotdl/one more rep/coldrain - Gone.mp3
+440:spotdl/one more rep/Pantera - Walk.mp3
+441:spotdl/one more rep/Static-X - Bled for Days.mp3
+442:spotdl/one more rep/Cold - Stupid Girl.mp3
+443:trivium/Trivium - Beyond Oblivion.mp3
+444:trivium/Trivium - A Gunshot to the Head of Trepidation.mp3
+445:trivium/Trivium - Beauty In The Sorrow.mp3
+446:trivium/Trivium - Betrayer.mp3
+447:trivium/Trivium - Insurrection.mp3
+448:trivium/Trivium - Into The Mouth of Hell We March.mp3
+449:trivium/Trivium - Like Callisto To A Star In Heaven.mp3
+450:trivium/Trivium - Other Worlds.mp3
+451:trivium/Trivium - Pillars of Serpents.mp3
+452:trivium/Trivium - Throes Of Perdition.mp3
+453:Cole Swindell & Lainey Wilson - Never Say Never (Lyrics).mp3
+454:Delain - Hit Me With Your Best Shot HD.mp3
+455:Endless War.mp3
+456:Feel.mp3
+457:Gin Blossoms - As Long As It Matters (Official Video).mp3
+458:Gin Blossoms - Don't Want To Lose You Now.mp3
+459:Gin Blossoms - Til I Hear It From You (Official Video).mp3
+460:𝘎𝘰𝘰𝘥𝘣𝘺𝘦 𝘛𝘰 𝘈 𝘞𝘰𝘳𝘭𝘥 - 𝘗𝘰𝘳𝘵𝘦𝘳 𝘙𝘰𝘣𝘪𝘯𝘴𝘰𝘯 (𝘵𝘪𝘬𝘵𝘰𝘬 𝘷𝘦𝘳𝘴𝘪𝘰𝘯).mp3
+461:Guitar Hero 2 - Thunderhorse 100% FC (Expert).mp3
+462:Guitar Hero 2 Free Bird Expert 100% FC (636342).mp3
+463:Hollywood Undead - Hear Me Now.mp3
+464:Led Zeppelin - Stairway To Heaven (Official Audio).mp3
+465:Lord of the Rings Sound of The Shire.mp3
+466:MAWAR BODAS - DETTY KURNIA _ YUSI RINDIAWATI COVER LAGU SUNDA [ BENING MUSIK ].mp3
+467:Mozart K.488 Piano Concerto #23 in A 2nd mov. Adagio.mp3
+468:One of the Dúnedain Evenstar (feat. Isabel Bayrakdarian).mp3
+469:Rainbow - Catch The Rainbow (1975).mp3
+470:Red Hot Chili Peppers Snow (Hey oh) (HQ, HD Audio).mp3
+471:Scorpions - Temple Of The King.mp3
+472:Siti Nurhaliza - Nirmala (Official Music Video).mp3
+473:Sympathy - Larval Stage Planning.mp3
+474:t.A.T.u. - All About Us.mp3
+475:Venom (Music From The Motion Picture).mp3
+476:Ylvis - Janym (Жаным).mp3
+477:George Benson - Nothing's Gonna Change My Love for You.mp3
+478:Firehouse - Here for You.mp3
+479:Killer Queen.mp3
+480:Bohemian Rhapsody.mp3
+481:Blue - All Rise.mp3
+482:Passenger - Let Her Go.mp3
+483:Fit For A King - Annihilation.mp3
+484:Delain - April Rain.mp3
+485:Amy Winehouse - You Know I'm No Good.mp3
+486:Shania Twain - You're Still The One.mp3
+487:Radiohead - Creep.mp3
+488:Delain - Electricity.mp3
+489:Delain - Virtue And Vice [mp3clan].mp3
+490:Hollywood Undead - Bullet.mp3
+491:Sia - Snowman.mp3
+492:Lenka - Trouble Is a Friend.mp3
+493:Akon - Right Now (Na Na Na).mp3
+494:Firehouse - Love Of A Lifetime.mp3
+495:Firehouse - I Live My Life for You.mp3
+496:Uncle Kracker - Smile.mp3
+497:Madball - Born Strong - feat. Candace (Walls of Jericho).mp3
+498:DragonForce - Trail Of Broken Hearts.mp3
+499:Julie London - Cry Me A River.mp3
+500:DragonForce - Cry Thunder.mp3
+501:See Me in Shadow.mp3
+502:Fireflies.mp3
+503:Daylight.mp3
+504:AURORA - Runaway.mp3
+505:M2M - The Day You Went Away.mp3
+506:Rainbow - The Temple Of The King.mp3
+507:T.R.I.A.D - Selir Hati.mp3
+508:Maher Zain, Irfan Makki - Allahi Allah Kiya Karo.mp3
+509:My Chemical Romance - Disenchanted.mp3
+510:Stardust.mp3
+511:Farewell.mp3
+512:Sade - Smooth Operator - Remastered.mp3
+513:Hotel California.mp3
+514:Lyin  Eyes.mp3 filename=UTF-8  Lyin  Eyes.mp3
+515:My Chemical Romance - Helena.mp3
+516:Jason Becker, Codany Holiday - Hold On To Love (feat. Codany Holiday).mp3
+517:George Strait - Troubadour.mp3
+518:K'NAAN - Wavin' Flag.mp3
+519:Dana Winner - Sealed With A Kiss.mp3
+520:Stratovarius - Coming Home.mp3
+521:Shakira, Freshlyground - Waka Waka (This Time for Africa) [The Official 2010 FIFA World Cup (TM) Song] (feat. Freshlyground).mp3
+522:We Are The Others.mp3
+523:Fit For A King - When Everything Means Nothing.mp3
+524:Josh Turner - Your Man.mp3
+525:spotdl/killswitch engage/Killswitch Engage - My Life for Yours.mp3
+526:spotdl/killswitch engage/Killswitch Engage - The End of Heartache - Alternate Version.mp3
+527:spotdl/killswitch engage/Killswitch Engage - My Life for Yours.mp3
+528:spotdl/killswitch engage/Killswitch Engage - The End of Heartache - Alternate Version.mp3
+529:spotdl/killswitch engage/Killswitch Engage - My Life for Yours.mp3
+530:spotdl/killswitch engage/Killswitch Engage - The End of Heartache - Alternate Version.mp3
+531:spotdl/killswitch engage/Killswitch Engage - My Life for Yours.mp3
+532:spotdl/killswitch engage/Killswitch Engage - The End of Heartache - Alternate Version.mp3
+533:spotdl/killswitch engage/Killswitch Engage - My Life for Yours.mp3
+534:spotdl/killswitch engage/Killswitch Engage - The End of Heartache - Alternate Version.mp3
+playlist_end

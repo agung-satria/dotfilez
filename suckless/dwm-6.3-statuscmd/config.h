@@ -28,7 +28,7 @@ static const int toptab				= False;               /* False means bottom tab bar 
 
 static const char *fonts[]        = {"Ubuntu:weight=regular:size=13:antialias=true:autohint=true",
   "JetBrainsMono Nerd Font:style:medium:size=13:autohint=true",
-  "JoyPixels:size=13:antialias=true:autohint=true", 
+  "JoyPixels:size=12:antialias=true:autohint=true", 
   "NotoColorEmoji:pixelsize=24:antialias=true:autohint=true",
   "Material Design Icons-Regular:size=13:autohint=true"};
 static const char dmenufont[]     = "Ubuntu:weight=regular:size=13:antialias=true:autohint=true";
@@ -162,21 +162,37 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 static const Layout layouts[] = {
     /* symbol     arrange function */
 
-    /*0*/ { "[]=",      tile },    /* first entry is default */
-    /*1*/ { "TTT",      bstack },
-    /*2*/ { "[M]",      monocle },
-    /*3*/ { "[@]",      spiral },
-    /*4*/ { "[\\]",     dwindle },
-    /*5*/ { "H[]",      deck },
-    /*6*/ { "===",      bstackhoriz },
-    /*7*/ { "HHH",      grid },
-    /*8*/ { "###",      nrowgrid },
-    /*9*/ { "---",      horizgrid },
-    /*10*/{ ":::",      gaplessgrid },
-    /*11*/{ "|M|",      centeredmaster },
-    /*12*/{ ">M>",      centeredfloatingmaster },
-    /*13*/{ "><>",      NULL },    /* no layout function means floating behavior */
-    { NULL,       NULL },
+    //  /*0*/ { "[]=",      tile },    /* first entry is default */
+    //  /*1*/ { "TTT",      bstack },
+    //  /*2*/ { "[M]",      monocle },
+    //  /*3*/ { "[@]",      spiral },
+    //  /*4*/ { "[\\]",     dwindle },
+    //  /*5*/ { "H[]",      deck },
+    //  /*6*/ { "===",      bstackhoriz },
+    //  /*7*/ { "HHH",      grid },
+    //  /*8*/ { "###",      nrowgrid },
+    //  /*9*/ { "---",      horizgrid },
+    //  /*10*/{ ":::",      gaplessgrid },
+    //  /*11*/{ "|M|",      centeredmaster },
+    //  /*12*/{ ">M>",      centeredfloatingmaster },
+    //  /*13*/{ "><>",      NULL },    /* no layout function means floating behavior */
+
+    /*0*/ { "",      tile },    /* first entry is default */
+    /*1*/ { "",      bstack },
+    /*2*/ { "",      monocle },
+    /*3*/ { "",      spiral },
+    /*4*/ { "",      dwindle },
+    /*5*/ { "",      deck },
+    /*6*/ { "",      bstackhoriz },
+    /*7*/ { "",      grid },
+    /*8*/ { "",      nrowgrid },
+    /*9*/ { "",      horizgrid },
+    /*10*/{ "",      gaplessgrid },
+    /*11*/{ "",      centeredmaster },
+    /*12*/{ "",      centeredfloatingmaster },
+    /*13*/{ "者",     NULL },    /* no layout function means floating behavior */
+
+    { NULL,           NULL },
 };
 
 /* key definitions */
@@ -216,13 +232,13 @@ static Key keys[] = {
 
   /* volume and brightness */
     { 0,  XF86XK_AudioMute,           spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+1 dwmblocks; snd_mint_volume") },
-    { 0,  XF86XK_AudioRaiseVolume,    spawn, SHCMD("pamixer -i 5; pkill -RTMIN+1 dwmblocks; snd_mint_volume") },
-    { 0,  XF86XK_AudioLowerVolume,    spawn, SHCMD("pamixer -d 5; pkill -RTMIN+1 dwmblocks; snd_mint_volume") },
+    { 0,  XF86XK_AudioRaiseVolume,    spawn, SHCMD("pamixer -i 5; pkill -RTMIN+1 dwmblocks") },
+    { 0,  XF86XK_AudioLowerVolume,    spawn, SHCMD("pamixer -d 5; pkill -RTMIN+1 dwmblocks") },
     { 0,  XF86MonBrightnessUp,        spawn, SHCMD("light -A 5; pkill -RTMIN+2 dwmblocks") },
     { 0,  XF86MonBrightnessDown,      spawn, SHCMD("light -U 5; pkill -RTMIN+2 dwmblocks") },
     { MODKEY,			        XK_0,		    spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+1 dwmblocks; snd_mint_volume") },
-    { MODKEY,			        XK_equal,		spawn, SHCMD("pamixer -i 5; pkill -RTMIN+1 dwmblocks; snd_mint_volume") },
-    { MODKEY,			        XK_minus,		spawn, SHCMD("pamixer -d 5; pkill -RTMIN+1 dwmblocks; snd_mint_volume") },
+    { MODKEY,			        XK_equal,		spawn, SHCMD("pamixer -i 5; pkill -RTMIN+1 dwmblocks") },
+    { MODKEY,			        XK_minus,		spawn, SHCMD("pamixer -d 5; pkill -RTMIN+1 dwmblocks") },
     { MODKEY|ShiftMask,		XK_equal,		spawn, SHCMD("light -A 5; pkill -RTMIN+2 dwmblocks") },
     { MODKEY|ShiftMask,		XK_minus,		spawn, SHCMD("light -U 5; pkill -RTMIN+2 dwmblocks") },
 

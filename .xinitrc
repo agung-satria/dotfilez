@@ -1,10 +1,10 @@
 ## auto start
 lowbatnotif &
-hsetroot -fill ~/.mygithub/uwuntu/wallpaper/landscape.jpg
+hsetroot -cover ~/.mygithub/dotfilez/.local/share/wallpapers/landscape-darken.jpg
 xset r rate 300 50
 xset s blank
 xset s 240
-natural-mouse-scroll-false.sh &
+natural-mouse-scroll-false &
 mpd &
 dwmblocks &
 nm-applet &

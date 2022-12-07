@@ -5,9 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font :pixelsize=22:antialias=true:autohint=true";
+static char *font = "JetBrainsMono Nerd Font :pixelsize=20:antialias=true:autohint=true";
 // static char *font2[] = { "JetBrainsMono Nerd Font :pixelsize=22:antialias=true:autohint=true" };
-static char *font2[] = { "NotoColorEmoji:pixelsize=24:antialias=true:autohint=true" };
+static char *font2[] = { "NotoColorEmoji:pixelsize=20:antialias=true:autohint=true",
+  "JoyPixels:size=12:antialias=true:autohint=true", 
+  "Material Design Icons-Regular:size=13:autohint=true"};
 static int borderpx = 2;
 
 /*
@@ -199,7 +201,8 @@ static const char *colorname[] = {
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#add8e6", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
-	"#14191e", /* 258 -> bg */
+ 	"#14191e", /* 258 -> bg for onedark*/
+	// "#0C0D13", /* 258 -> bg */
 	// "#0e0d0d", /* 258 -> bg */
 	"#ebdbb2", /* 259 -> fg */
 	// "#1E2127", /* 258 -> bg */

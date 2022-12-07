@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=st
-Comment=simple-terminal emulator for X
-Icon=/home/agung/.local/share/icons/st.png
-Terminal=true
-Exec=st
-Categories=System;TerminalEmulator
-Keywords=terminal;st;console

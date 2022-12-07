@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Winbox 3.35
-GenericName=Wine
-Exec=wine ~/.local/bin/winbox64.exe
-Terminal=false
-Categories=Wine
-Icon=/home/agung/.local/share/icons/winbox.png

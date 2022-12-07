@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# PREFIX_PLAY='⏮️⏯️⏭️' 
+# PREFIX_PAUSE='⏮️⏸️⏭️'
+# PREFIX_PLAY=''
+# PREFIX_PAUSE=''
+PREFIX_PLAY=''
+PREFIX_PAUSE=''
+
+get_mpd()
+{
+	current_song="$(mpc -p 6601 current | awk '{print substr($0,1,35)}')"
+
+	if [[ "$current_song" = "" ]]; then
+		echo ""
+		exit 0
+	else
+		playpause=$(mpc -p 6601 | awk '/\[.*]/{split($0, a, " "); print a[1]}')
+		if [[ "$playpause" = "[playing]" ]]; then
+			current_song="$PREFIX_PLAY"
+		elif [[ "$playpause" = "[paused]" ]]; then
+			current_song="$PREFIX_PAUSE"
+		fi
+	fi
+   now_playing="$(mpc -p 6601 current)"
+ case $BLOCK_BUTTON in
+	1) notify-send "🎵 $now_playing" "\-Middle click to toggle 
+    -Right click to open ncmpcpp" ;;
+	2) mpc -p 6601 toggle ;;
+	3) st -c float-st-ncmpcpp -g 100x25+350+200 ncmpcpp ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac;
+
+	echo " $current_song"
+}
+get_mpd

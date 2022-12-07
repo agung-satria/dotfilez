@@ -1,4 +1,0 @@
-#!/bin/bash
-xclip -select clipboard ~/.local/share/.at.txt
-# or
-# xclip -sel c ~/Downloads/access-token-dotfiles.txt

@@ -1,0 +1,38 @@
+#!/bin/bash
+network() {
+	wire="$(ip a | grep 'enx00e04c361596' | grep inet | wc -l)"
+	wire2="$(ip a | grep 'usb0' | grep inet | wc -l)"
+	wire3="$(ip a | grep 'enx00e04c361596' | grep inet | wc -l)"
+	wifi="$(ip a | grep wlp1s0 | grep inet | wc -l)"
+
+	if [ $wire = 1 ]; then
+	        # echo "✅"
+	        echo ""
+       elif [ $wire2 = 1 ]; then
+               # echo "✅"
+               echo ""
+       elif [ $wire3 = 1 ]; then
+               # echo "✅"
+               echo ""
+       elif [ $wifi = 1 ]; then
+   	        # echo "✅"
+   	        echo ""
+   	   else
+	   # echo "❌睊"
+	   echo "睊"
+	fi
+}
+#  ﴹ  睊  ﯥ ❎✅  🖥️ 💻 🌐  
+case $BLOCK_BUTTON in
+	1) notify-send "🔗 Connection Status" "Right click to open NMTUI" ;;
+	2) notify-send "🔗 Connection Status" "Right click to open NMTUI" ;;
+	# 3) st -c float-st-nmtui -g 95x25+775+35 nmtui ;;
+	3) st -c float-st-nmtui -g 100x25+350+200 nmtui ;;
+
+# - Middle click opens calcurse if installed" ;;
+	# 3) setsid -f "$TERMINAL" -e calcurse ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+echo "$(network)"
+

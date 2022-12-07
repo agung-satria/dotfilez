@@ -1,0 +1,3 @@
+#!/bin/sh
+
+paplay ~/.local/share/sounds/low_battery_sound.wav
