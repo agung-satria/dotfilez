@@ -6,18 +6,13 @@ xset s blank
 xset s 240
 natural-mouse-scroll-false.sh &
 mpd &
-# auto-xautolock &
-# flameshot &
-# gromit-mpx &
-slstatus &
+dwmblocks &
 nm-applet &
-# compton &
 dunst &
 snd_mint_login &
-asb &
 # picom --experimental-backends &
 picom &
-# st -e sudo chown agung:agung /sys/class/backlight/amdgpu_bl0/*
+asb &
 
 ## session:
 exec dwm

@@ -131,7 +131,7 @@ bat() {
  }
 	battery="$(cat /sys/class/power_supply/BAT0/capacity)"
  case $BLOCK_BUTTON in
-	1) notify-send "🔋 $battery%" ;;
+	1) notify-send "🔋 Battery percentage $battery%" ;;
   # 4) light -A 5;;
   # 5) light -U 5;;
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;

@@ -1,4 +1,5 @@
 # Dependencies:
+
 ```sh
 sudo pacman -S ranger ueberzug
 sudo pacman -S perl-image-exiftool perl-file-mimeinfo zathura ffmpegthumbnailer lynx trash-cli xwallpaper mpv
@@ -7,6 +8,7 @@ yay -S dragon-drop (already in bin)
 ```
 
 ## Install
+
 ```sh
 chmod +x scope
 chmod +x cleaner
@@ -23,4 +25,5 @@ no need to copy (just the reminder path use)
 ```
 
 ## Mapping ranger (sync it)
+
 See `lfrc`

@@ -3,7 +3,8 @@
 ## Dependencies!
 
 ```sh
-sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk hsetroot xclip wget curl rsync bc tree nemo nemo-fileroller galculator ttf-font-awesome fzf tmux ntfs-3g dunst libnotify maim rofi arandr pamixer pulsemixer vlc calcurse imagemagick zip unzip
+sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk hsetroot xclip wget curl rsync bc tree nemo nemo-fileroller galculator ttf-font-awesome fzf tmux ntfs-3g dunst libnotify maim rofi arandr pulsemixer vlc calcurse imagemagick zip unzip
+sudo pacman -S pamixer light
 sudo pacman -S mtpfs gvfs-mtp gvfs-gphoto2
 ```
 
@@ -66,10 +67,11 @@ See README in tmux directory
 See README in zsh directory
 ```
 
-## Install ranger file manager
+## Install ranger or lf file manager
 
 ```sh
 See README in config/ranger directory
+See README in config/lf directory
 ```
 
 ## Music player
