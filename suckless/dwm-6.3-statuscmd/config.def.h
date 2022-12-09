@@ -12,10 +12,10 @@ static const unsigned int systrayonleft = 0;   	/* 0: systray in the right corne
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static int showsystray        = 0;     /* 0 means no systray */
-static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 8;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 8;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 8;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 8;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 1;     /* 0 means bottom bar */
@@ -97,20 +97,21 @@ static const Rule rules[] = {
      *	WM_CLASS(STRING) = instance, class
      *	WM_NAME(STRING) = title
     */
-    /* class                  instance    title       tags mask     isfloating   monitor */
-    { "Brave-browser",        NULL,		  NULL,		   1 << 1,	    0,		     -1 },  
-    { "Google-chrome",        NULL,		  NULL,		   1 << 1,	    0,		     -1 },  
-    { "TelegramDesktop",      NULL,		  NULL,		   1 << 3,	    0,		     -1 },
-    { "Shotcut",	            NULL,		  NULL,		   1 << 4,	    0,		     -1 },
-    { "Gimp",	                NULL,		  NULL,		   1 << 5,	    0,		     -1 },
-    { "Inkscape",	            NULL,		  NULL,		   1 << 6,	    0,		     -1 },
+    /* class                  instance  title      tags mask    isfloating   monitor */
+    { "Brave-browser",        NULL,		  NULL,		   1 << 1,	    0,		       -1 },  
+    { "Google-chrome",        NULL,		  NULL,		   1 << 1,	    0,		       -1 },  
+    { "TelegramDesktop",      NULL,		  NULL,		   1 << 3,	    0,		       -1 },
+    { "Shotcut",	            NULL,		  NULL,		   1 << 4,	    0,		       -1 },
+    { "Gimp",	                NULL,		  NULL,		   1 << 5,	    0,		       -1 },
+    { "Inkscape",	            NULL,		  NULL,		   1 << 6,	    0,		       -1 },
     { "libreoffice",	        NULL,		  NULL,		   1 << 2,	    0,     	     -1 },
-    { "zoom",                 NULL,     NULL,      1 << 7,      0,           -1 },  
-    { "vokoscreen",           NULL,     NULL,      1 << 8,      1,           -1 },  
-    { "vokoscreenNG",         NULL,     NULL,      1 << 8,      1,           -1 },  
-    { "SimpleScreenRecorder", NULL,     NULL,      1 << 8,      1,           -1 },  
+    { "vokoscreen",           NULL,     NULL,      0,           1,           -1 },  
+    { "vokoscreenNG",         NULL,     NULL,      0,           1,           -1 },  
+    { "SimpleScreenRecorder", NULL,     NULL,      0,           1,           -1 },  
     { "Yad",			            NULL,     NULL,      0,           1,           -1 },  
     { "yad",			            NULL,     NULL,      0,           1,           -1 },  
+    { "Lxappearance",		      NULL,     NULL,      0,           1,           -1 },  
+    { "lxappearance",		      NULL,     NULL,      0,           1,           -1 },  
     { "vCoolor",			        NULL,     NULL,      0,           1,           -1 },  
     { "winbox64.exe",	        NULL,     NULL,      0,           1,           -1 },  
     { "Wine",                 NULL,     NULL,      0,           1,           -1 },  
@@ -140,14 +141,6 @@ static const Rule rules[] = {
     { NULL,		          "splf",         NULL,		   SPTAG(6),	  1,           -1 },
     /* floatthings */
     { "float-st",             NULL,     NULL,      0,           1,           -1 },
-    { "float-st-lfub",        NULL,     NULL,      0,           1,           -1 },
-    { "float-st-calcurse",    NULL,     NULL,      0,           1,           -1 },
-    { "float-st-calc",        NULL,     NULL,      0,           1,           -1 },
-    { "float-st-ncmpcpp",     NULL,     NULL,      0,           1,           -1 },
-    { "float-st-nmtui",       NULL,     NULL,      0,           0,           -1 },
-    { "float-st-gotop",       NULL,     NULL,      0,           1,           -1 },
-    { "float-st-obs",         NULL,     NULL,      0,           1,           -1 },
-    { "float-st-pulsemixer",  NULL,     NULL,      0,           1,           -1 },
 };
 
 /* layout(s) */
@@ -179,18 +172,18 @@ static const Layout layouts[] = {
 
     /*0*/ { "",      tile },    /* first entry is default */
     /*1*/ { "",      bstack },
-    /*2*/ { "",      monocle },
+    /*2*/ { "ﱢ",      monocle },
     /*3*/ { "",      spiral },
     /*4*/ { "",      dwindle },
     /*5*/ { "",      deck },
     /*6*/ { "",      bstackhoriz },
     /*7*/ { "",      grid },
-    /*8*/ { "",      nrowgrid },
+    /*8*/ { "",      nrowgrid },
     /*9*/ { "",      horizgrid },
-    /*10*/{ "",      gaplessgrid },
+    /*10*/{ "",      gaplessgrid },
     /*11*/{ "",      centeredmaster },
     /*12*/{ "",      centeredfloatingmaster },
-    /*13*/{ "者",     NULL },    /* no layout function means floating behavior */
+    /*13*/{ "穀",     NULL },    /* no layout function means floating behavior */
 
     { NULL,           NULL },
 };
@@ -231,12 +224,12 @@ static Key keys[] = {
     /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^agstr^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
   /* volume and brightness */
-    { 0,  XF86XK_AudioMute,           spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+1 dwmblocks; snd_mint_volume") },
+    { 0,  XF86XK_AudioMute,           spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+1 dwmblocks") },
     { 0,  XF86XK_AudioRaiseVolume,    spawn, SHCMD("pamixer -i 5; pkill -RTMIN+1 dwmblocks") },
     { 0,  XF86XK_AudioLowerVolume,    spawn, SHCMD("pamixer -d 5; pkill -RTMIN+1 dwmblocks") },
     { 0,  XF86MonBrightnessUp,        spawn, SHCMD("light -A 5; pkill -RTMIN+2 dwmblocks") },
     { 0,  XF86MonBrightnessDown,      spawn, SHCMD("light -U 5; pkill -RTMIN+2 dwmblocks") },
-    { MODKEY,			        XK_0,		    spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+1 dwmblocks; snd_mint_volume") },
+    { MODKEY,			        XK_0,		    spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+1 dwmblocks") },
     { MODKEY,			        XK_equal,		spawn, SHCMD("pamixer -i 5; pkill -RTMIN+1 dwmblocks") },
     { MODKEY,			        XK_minus,		spawn, SHCMD("pamixer -d 5; pkill -RTMIN+1 dwmblocks") },
     { MODKEY|ShiftMask,		XK_equal,		spawn, SHCMD("light -A 5; pkill -RTMIN+2 dwmblocks") },
@@ -267,11 +260,11 @@ static Key keys[] = {
     { MODKEY,		            	XK_a,   	  spawn,	    	SHCMD("dunstctl history-pop") },
     { MODKEY|ShiftMask,		    	XK_a,   	  spawn,	    	SHCMD("dunstctl close-all") },
     { MODKEY|ControlMask,		XK_a,   	  spawn,	    	SHCMD("dunstctl close") },
-    { MODKEY|ControlMask,		XK_l,   	  spawn,	    	SHCMD("snd_mint_logout && betterlockscreen -l && snd_mint_logout") },
+    { MODKEY|ControlMask,		XK_l,   	  spawn,	    	SHCMD("lockwithsound") },
 
     // floatthings
-    { MODKEY|ShiftMask,         	XK_r,             spawn,        SHCMD("st -c float-st-gotop -g 100x25 gotop") },
-    { MODKEY,			        XK_F4,		      spawn,		SHCMD(TERMINAL " -c float-st-pulsemixer -g 100x25 pulsemixer") },
+    { MODKEY|ShiftMask,         	XK_r,             spawn,        SHCMD("st -c float-st -g 100x25 gotop") },
+    { MODKEY,			        XK_F4,		      spawn,		SHCMD(TERMINAL " -c float-st -g 100x25 pulsemixer") },
     { MODKEY,			       XK_F11,		spawn,		SHCMD("mpv --untimed --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)") },
 
     /* screenshots */
@@ -279,6 +272,7 @@ static Key keys[] = {
     { ShiftMask,	       	       XK_Print,	spawn,		SHCMD("maimpick") },
     { ControlMask,         	       XK_Print,	spawn,		SHCMD("ss-cp") },
     { MODKEY,	           	       XK_v,        spawn,	    SHCMD("dmenurecord") },
+    { MODKEY|ShiftMask,	         XK_v,        spawn,	    SHCMD("simplescreenrecorder") },
     { MODKEY,	           	       XK_grave,    spawn,	    SHCMD("dmenuunicode") },
     { MODKEY|ShiftMask,	 	       XK_s,        spawn,	    SHCMD("maim -s | xclip -selection clipboard -t image/png") },
 

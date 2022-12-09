@@ -1,0 +1,4 @@
+#!/bin/bash
+#Descriptions: copy color selected to clipboard make sure 'colorpicker' is installed
+#yay -S colorpicker
+colorpicker --short --one-shot --preview | xclip -selection clipboard

@@ -1,0 +1,12 @@
+#! /bin/bash 
+
+# echo -e "🚀"
+echo -e "   "
+
+case $BLOCK_BUTTON in
+  1) rofi modi drun -show drun show-icons true -columns 2 width 45 ;;
+  2) notify-send "❓ Help file not yet available" ;;
+  3) sysact ;;
+  6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+
+esac

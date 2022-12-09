@@ -23,9 +23,12 @@ case $BLOCK_BUTTON in
 	2) notify-send "📅 Time/date module" "\- Left click to show upcoming appointments for the next three days via \`calcurse -d3\` and show the month via \`cal\`
 - Right click opens calcurse if installed" ;;
 	# 3) setsid -f "$TERMINAL" -e calcurse ;;
-	3) st -c float-st-calcurse -g 100x25+350+200 calcurse ;;
+	3) st -c float-st -g 100x25+350+200 calcurse ;;
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
-echo "📅$(date "+%b-%d-%Y $icon%H:%M ")" #24hr
-# echo "📅$(date "+%b-%d-%Y $icon%I:%M%p ")" #12hr
+# echo "📅$(date "+%b-%d-%Y $icon%H:%M ")" #24hr no day
+# echo "📅$(date "+%b-%d-%Y $icon%I:%M%p ")" #12hr noday
+
+# echo "📅$(date "+%b-%d-%Y(%a) $icon%H:%M ")" #24hr
+echo "📅$(date "+%b-%d-%Y(%a) $icon%I:%M%p ")" #12hr

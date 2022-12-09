@@ -1,0 +1,4 @@
+#!/bin/bash
+#Descriptions: 
+snd-lock &
+betterlockscreen -l && snd-unlock

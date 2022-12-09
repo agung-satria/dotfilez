@@ -1,6 +1,8 @@
 #!/bin/bash
 #Descriptions: 
-notify-send "Setting up wallpaper and lockscreen"
-hsetroot -fill ~/.mygithub/dotfilez/.local/share/wallpapers/landscape.jpg
-betterlockscreen -u ~/.mygithub/dotfilez/.local/share/wallpapers/landscape.jpg
-notify-send "Done"
+snd-notify &
+notify-send -t 2000 "🖼️ Setting up wallpaper and lockscreen"
+hsetroot -fill ~/.mygithub/dotfilez/.local/share/wallpapers/win11-dark-1080p.jpg
+betterlockscreen -u ~/.mygithub/dotfilez/.local/share/wallpapers/win11-white-1080p.jpg
+snd-notifysystemgeneric &
+notify-send -t 1500 "✅ Done"

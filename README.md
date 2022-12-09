@@ -1,9 +1,9 @@
-# Arch linux stuff (suckless, script, config, apps, notes, etc)
+# Arch Linux Stuff (suckless, [nvim](https://github.com/agung-satria/nvimnew), script, config, apps, notes, etc)
 
 ## Dependencies!
 
 ```sh
-sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk hsetroot xclip wget curl rsync bc tree nemo nemo-fileroller galculator fzf tmux ntfs-3g dunst libnotify maim rofi arandr pulsemixer vlc calcurse imagemagick zip unzip
+sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk hsetroot xclip wget curl rsync bc tree nemo nemo-fileroller galculator fzf tmux ntfs-3g dunst libnotify maim rofi arandr pulsemixer simplescreenrecorder vlc calcurse imagemagick zip unzip unrar gzip
 sudo pacman -S pamixer light
 sudo pacman -S ttf-joypixels ttf-font-awesome
 sudo pacman -S mtpfs gvfs-mtp gvfs-gphoto2
@@ -14,8 +14,7 @@ sudo pacman -S mtpfs gvfs-mtp gvfs-gphoto2
 ```sh
 ls /usr/share/kbd/consolefonts
 sudo pacman -S terminus-font
-sudo nvim /etc/vconsole.conf
-`FONT=ter-u32n.psf.gz`
+sudo echo "FONT=ter-u32n.psf.gz" >> /etc/vconsole.conf
 reboot
 ```
 
@@ -47,41 +46,59 @@ makepkg -si
 
 ## AUR packages
 
-```sh
-yay -S noto-color-emoji-fontconfig (color emoji!)
-yay -S brave-bin
-yay -S gotop
-yay -S grabc
-yay -S picom-pijulius-git (optional, just use picom)
-yay -S ttf-ms-fonts
-```
+- yay -S noto-color-emoji-fontconfig (color emoji!)
+- yay -S brave-bin
+- yay -S gotop
+- yay -S grabc (sometimes not working)
+- yay -S picom-pijulius-git (optional, just use picom)
+- yay -S ttf-ms-fonts
+- yay -S colorpicker
+- yay -S 7-zip
 
 ## Install tmux
 
-```sh
-See README in tmux directory
-```
+See README in `tmux/README.md`
 
 ## Install zsh
 
-```sh
-See README in zsh directory
-```
+See README in `zsh/README.md`
 
 ## Install ranger or lf file manager
 
-```sh
-See README in config/ranger directory
-See README in config/lf directory
-```
+See README in `.config/{ranger/README.md,../.config/lf/README.md}`
 
-## Music player
+## Media player
 
 ```sh
-sudo pacman -S mpc mpd ncmpcpp
-cd ~/.mygithub/dotfilez/config
-cp -R {mpd,ncmpcpp} ~/.config
+sudo pacman -S mpc mpd ncmpcpp mpv
+cp -R .config/{mpd,ncmpcpp,mpv} ~/.config
 ```
+
+## Theming
+
+```sh
+sudo pacman -S papirus-icon-theme lxappearance
+```
+
+Install from file
+
+- Extract the files in the _.themes_ and _.icons_ folder to home directory
+- And change icon and theme using _lxappearance_
+
+## Install rofi
+
+Copy config file
+
+```sh
+cp -R .config/rofi ~/.config
+```
+
+Change rofi themes:
+
+- Use `vr` (aliased to nvim ~/.config/rofi/config.rasi)
+- Uncomment line 15 in _config.rasi_ to use [siduck](https://github.com/siduck/chadwm/tree/main/rofi) theme
+- Change/uncomment last line/section to use other themes (windows11, launchpad, etc)
+- Use `rofi-theme-selector` to select a theme that isn't in the file (make sure to put that in _themes_ directory)
 
 ## Default applications
 
@@ -92,13 +109,7 @@ Nemo 'xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-se
 ## Nemo preview
 
 - Edit - Preferences - Preview
-- `Only for files smaller than` set to 1GB
-
-## Theming
-
-```sh
-sudo pacman -S papirus-icon-theme lxappearance
-```
+- _Only for files smaller than_ set to 1GB
 
 ## Pacman character (ILoveCandy)
 
@@ -123,25 +134,19 @@ ILoveCandy
 #ParallelDownloads = 5
 ```
 
-## Install rofi
-
-```sh
-cd ~/.mygithub/dotfilez/config/rofi
-mkdir ~/.config/rofi
-cp -r * ~/.config/rofi
-rofi-theme-selector
-choose "config"
-alt-a (to choose theme)
-```
-
 ## Enable tap to Click
 
 ```sh
 sudo cp /usr/share/X11/xorg.conf.d/40-libinput.conf /etc/X11/xorg.conf.d
 sudo nvim /etc/X11/xorg.conf.d/40-libinput.conf
-```
 
-Add this section:
+sudo echo "Section "InputClass"
+	Identifier "devname"
+	Driver "libinput"
+	Option "Tapping" "on"
+	Option "NaturalScrolling" "true"
+EndSection" >> /etc/X11/xorg.conf.d/40-libinput.conf
+```
 
 ```sh
 Section "InputClass"
@@ -199,8 +204,7 @@ nvme0n1p5 (data D windows)
 
 ## Speed up booting time
 
-```sh
-sudo nvim /etc/default/grub
-set `GRUB_TIMEOUT=1` or `GRUB_TIMEOUT=0`
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-```
+- ```sudo nvim /etc/default/grub```
+- set _`GRUB_TIMEOUT=1`_ or _`GRUB_TIMEOUT=0`_
+- ```sudo grub-mkconfig -o /boot/grub/grub.cfg```
+- reboot

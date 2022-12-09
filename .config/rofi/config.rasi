@@ -1,7 +1,7 @@
 configuration{
     modi: "run,drun,window";
     lines: 5;
-    font: "Iosevka 12";
+    font: "Ubuntu 12";
     show-icons: true;
     icon-theme: "Paper Mono";
     terminal: "st";
@@ -9,10 +9,10 @@ configuration{
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
-    display-drun: "   Apps ";
+    display-drun: " 🚀 Apps ";
 }
 
-@theme "everblush"
+/* @theme "onedark"  //dracula, everblush, forest, gruv, nord, onedark */
 
 element-text, element-icon , mode-switcher {
     background-color: inherit;
@@ -41,8 +41,8 @@ prompt {
     background-color: @blue;
     padding: 6px;
     text-color: @bg-col;
-    border-radius: 3px;
-    margin: 20px 0px 0px 20px;
+    border-radius: 5px;
+    margin: 20px 0px 0px 26px;
 }
 
 textbox-prompt-colon {
@@ -96,3 +96,9 @@ button selected {
   background-color: @bg-col;
   text-color: @blue;
 }
+
+// theme is in ~/.config/rofi/themes (uncomment to select)
+
+@theme "/home/agung/.config/rofi/themes/windows11-grid-dark.rasi"
+/* @theme "/home/agung/.config/rofi/themes/windows11-grid-dark-transparent.rasi" */
+/* @theme "/home/agung/.config/rofi/themes/launchpad.rasi" */

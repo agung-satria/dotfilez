@@ -136,6 +136,28 @@ export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=80%"
 typeset -a ealiases
 ealiases=()
 
+# Add this to easily extract compressed files, use xtract <filename> to extract compressed file
+xtract() {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xvjf $1     ;;
+            *.tar.gz)    tar xvzf $1     ;;
+            *.bz2)       bunzip2 $1      ;;
+            *.rar)       unrar x $1      ;;
+            *.gz)        gunzip $1       ;;
+            *.tar)       tar xvf $1      ;;
+            *.tbz2)      tar xvjf $1     ;;
+            *.tgz)       tar xvzf $1     ;;
+            *.zip)       unzip $1        ;;
+            *.Z)         uncompress $1   ;;
+            *.7z)        7z x $1         ;;
+            *)           echo "'$1' cannot be extracted via >extract<" ;;
+        esac
+    else
+        echo "'$1' is not a valid file!"
+    fi
+}
+
 # write a function for adding an alias to the list mentioned above
 function abbrev-alias() {
     alias $1

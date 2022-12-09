@@ -4,7 +4,7 @@ export TERMINAL="st"
 export BROWSER="brave"
 
 # path
-export PATH=~/.local/bin:~/.local/bin/statusbar:~/.local/bin/sb:~/bin:$PATH
+export PATH=~/.local/bin:~/.local/bin/statusbar:~/.local/bin/sound:~/bin:$PATH
 export PATH=/usr/local/node-v19.1.0-linux-x64/bin:$PATH
 
 # build this first

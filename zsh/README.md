@@ -102,6 +102,10 @@ export EDITOR=nvim;
 
 ```
 
+# Custom function
+Use xtract <filename> to extract compressed file
+
+
 # Add Abbreviations to zsh
 
 add this lines to zshrc:

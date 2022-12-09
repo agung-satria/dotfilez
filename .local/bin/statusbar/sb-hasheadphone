@@ -1,0 +1,15 @@
+#! /bin/bash 
+
+avail="$(pacmd list-sinks | grep 'Headphones' | awk -F'available' '{ print $2 }'|awk '{ print $2 }')"
+
+if [[ $avail = 'yes)' ]] ; then
+  echo "🎧"
+else
+  echo ""
+fi
+
+case $BLOCK_BUTTON in
+	1) notify-send "🎧 Headphone detected" ;;
+ 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+
+esac

@@ -1,15 +1,16 @@
 ## auto start
 lowbatnotif &
-hsetroot -cover ~/.mygithub/dotfilez/.local/share/wallpapers/landscape-darken.jpg
+# hsetroot -cover ~/.mygithub/dotfilez/.local/share/wallpapers/landscape-darken.jpg
+hsetroot -cover ~/.mygithub/dotfilez/.local/share/wallpapers/win11-dark-1080p.jpg
 xset r rate 300 50
 xset s blank
-xset s 240
+xset s 600
 natural-mouse-scroll-false &
 mpd &
 dwmblocks &
 nm-applet &
 dunst &
-snd_mint_login &
+snd-logon &
 # picom --experimental-backends &
 picom &
 asb &

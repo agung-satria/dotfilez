@@ -1,11 +1,10 @@
 #!/bin/bash
-
 # Prints out the CPU load percentage
 
-PREFIX=''
+# PREFIX=''
 # PREFIX='🗄'
+PREFIX='💻'
 # PREFIX='💽'
-
 
 get_load()
 {
@@ -35,6 +34,7 @@ get_load()
 
 get_load
 case $BLOCK_BUTTON in
-	1) notify-send "CPU Usage" ;;
-esac
+  1) notify-send "💻 CPU Usage" ;;
+  6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 
+esac

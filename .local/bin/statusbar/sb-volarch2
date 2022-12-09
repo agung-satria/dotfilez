@@ -3,12 +3,12 @@
 # Prints the current volume or 🔇 if muted.
 
 case $BLOCK_BUTTON in
-	1) pamixer -t && snd_mint_volume ;;
+	1) pamixer -t ;;
 	2) notify-send "📢 Volume module" "\- Shows volume 🔊, 🔇 if muted.
 - Left click to mute.
 - Right click to open pulsemixer." ;;
 	# 3) setsid -f "$TERMINAL" -e pulsemixer ;;
-	3) st -c float-st-pulsemixer -g 100x25+350+200 pulsemixer ;;
+	3) st -c float-st -g 100x25+350+200 pulsemixer ;;
 	4) pamixer --allow-boost -i 1 ;;
 	5) pamixer --allow-boost -d 1 ;;
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;

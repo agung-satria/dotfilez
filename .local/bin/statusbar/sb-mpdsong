@@ -2,7 +2,7 @@
 
 case $BLOCK_BUTTON in
   1) mpc -p 6601 toggle ;;
-  3) st -c float-st-ncmpcpp -g 100x25+350+200 ncmpcpp ;;
+  3) st -c float-st -g 100x25+350+200 ncmpcpp ;;
   6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 

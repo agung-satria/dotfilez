@@ -7,12 +7,12 @@ esac
 
 # color emoji (noto)🖥️
 case "$(printf "🔒lock\n🚪leave dwm\n📴 shutdown\n🔃 restart\n💤 sleep\n🐻 hibernate\n♻️ renew dwm\n📺 display off" | dmenu -i -p 'Action: ')" in
-	'🔒lock') betterlockscreen -l ;;
-	'🚪leave dwm') kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
+	'🔒lock') lockwithsound ;;
+	'🚪leave dwm') kill -TERM "$(pgrep -u "$USER" "\bdwm$")" && snd-logoff ;;
 	'📴 shutdown') $ctl poweroff -i ;;
 	'🔃 restart') $ctl reboot -i ;;
-	'🐻 hibernate') $ctl hibernate && betterlockscreen -l ;;
-	'💤 sleep') $ctl suspend && betterlockscreen -l ;;
+	'🐻 hibernate') $ctl hibernate && lockwithsound ;;
+	'💤 sleep') $ctl suspend && lockwithsound ;;
 	'♻️ renew dwm') kill -HUP "$(pgrep -u "$USER" "\bdwm$")" ;;
 	'📺 display off') xset dpms force off ;;
 	*) exit 1 ;;
