@@ -1,7 +1,7 @@
 <h1 align="center">My Arch Linux Setup</h1>
 <p align="center">suckless, <a href="https://github.com/agung-satria/nvimnew" target="_blank">nvim</a>, script, config, apps, notes, etc</p>
 
-![](suckless/screenshots/dwm-11.png)
+![](suckless/screenshots/desktop.png)
 
 ## Dependencies!
 
