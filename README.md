@@ -6,7 +6,7 @@
 ## Dependencies!
 
 ```sh
-sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk hsetroot xclip wget curl rsync bc flameshot tree nemo nemo-fileroller galculator fzf tmux ntfs-3g dunst libnotify maim rofi arandr pulsemixer simplescreenrecorder vlc calcurse imagemagick zip unzip unrar gzip
+sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk hsetroot xclip wget curl rsync bc flameshot tree nemo nemo-fileroller galculator fzf tmux ntfs-3g dunst libnotify maim rofi arandr pulsemixer simplescreenrecorder nano vlc calcurse imagemagick zip unzip unrar gzip
 sudo pacman -S pamixer light
 sudo pacman -S ttf-joypixels ttf-font-awesome
 sudo pacman -S mtpfs gvfs-mtp gvfs-gphoto2
@@ -85,7 +85,7 @@ sudo pacman -S papirus-icon-theme lxappearance
 
 Install from file
 
-- Extract the files in the _.themes_ and _.icons_ folder to home directory
+- Extract the files in the _usr/share/icons_ and _usr/share/themes_ folder to each specified directory
 - And change icon and theme using _lxappearance_
 
 ## Install rofi
@@ -150,6 +150,8 @@ sudo echo "Section "InputClass"
 	Option "NaturalScrolling" "true"
 EndSection" >> /etc/X11/xorg.conf.d/40-libinput.conf
 ```
+
+Section
 
 ```sh
 Section "InputClass"

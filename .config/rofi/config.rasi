@@ -99,6 +99,8 @@ button selected {
 
 // theme is in ~/.config/rofi/themes (uncomment to select)
 
-@theme "/home/agung/.config/rofi/themes/windows11-grid-dark.rasi"
+/* @theme "/home/agung/.config/rofi/themes/windows11-grid-dark.rasi" */
 /* @theme "/home/agung/.config/rofi/themes/windows11-grid-dark-transparent.rasi" */
+@theme "/home/agung/.config/rofi/themes/windows11-list-dark.rasi"
+/* @theme "/home/agung/.config/rofi/themes/windows11-list-dark-transparent.rasi" */
 /* @theme "/home/agung/.config/rofi/themes/launchpad.rasi" */

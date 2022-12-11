@@ -1,11 +1,5 @@
 #!/bin/bash
 
-case $BLOCK_BUTTON in
-  1) mpc -p 6601 toggle ;;
-  3) st -c float-st -g 100x25+350+200 ncmpcpp ;;
-  6) "$TERMINAL" -e "$EDITOR" "$0" ;;
-esac
-
 PREFIX_PLAY='🎵    '
 PREFIX_PAUSE='🎵    '
 TIME="$(mpc -p 6601 status | awk 'NR==2 { print $3 }')"
@@ -33,3 +27,15 @@ get_mpd()
 }
 
 get_mpd
+
+case $BLOCK_BUTTON in
+  1) mpc -p 6601 toggle ;;
+  # 2) notify-send "$current_song $TIME" "\- Left click to toggle play and pause
+  2) dunstify -r 2322 "$current_song $TIME" "\- Left click to toggle play and pause.
+    - Right click open ncmpcpp.
+    - Scroll up and down to change ncmpcpp volume." ;;
+  3) st -c float-st -g 100x25+350+200 ncmpcpp ;;
+  4) mpc -p 6601 volume +2 ;;
+  5) mpc -p 6601 volume -2 ;;
+  6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac

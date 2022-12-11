@@ -56,6 +56,7 @@ vvrreadme="$EDITOR /home/agung/.config/ranger/readme.txt" \
 vvpicom="$EDITOR /home/agung/.config/picom/picom.conf" \
 vz="$EDITOR ~/.zshrc" \
 vr="$EDITOR ~/.config/rofi/config.rasi" \
+vap="$EDITOR ~/.local/share/applications/" \
 vx="$EDITOR /home/agung/.xinitrc" \
 vvdunstrc="$EDITOR /home/agung/.config/dunst/dunstrc" \
 vvsmb="sudo $EDITOR /etc/samba/smb.conf" \

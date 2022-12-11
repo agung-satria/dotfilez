@@ -1,15 +1,23 @@
 #! /bin/bash 
 
-avail="$(pacmd list-sinks | grep 'Headphones' | awk -F'available' '{ print $2 }'|awk '{ print $2 }')"
+avail="$(pacmd list-sinks | grep 'Headphones' | awk -F 'available' '{ print $2 }' | awk '{ print $2 }')"
 
-if [[ $avail = 'yes)' ]] ; then
+if [[ $avail == 'yes)' ]] ; then
   echo "🎧"
 else
   echo ""
 fi
 
 case $BLOCK_BUTTON in
-	1) notify-send "🎧 Headphone detected" ;;
+	# 1) notify-send "🎧 Headphone detected" ;;
+  1) pamixer -t; pkill -RTMIN+1 dwmblocks ;;
+  2) notify-send "🎧 Headphone detected" "\- Shows volume 🔊, 🔇 if muted.
+    - Left click to mute.
+    - Right click to open pulsemixer.
+    - Scroll up and down to change volume." ;;
+	3) st -c float-st -g 100x25+350+200 pulsemixer ;;
+  4) pamixer --allow-boost -i 1; pkill -RTMIN+1 dwmblocks ;;
+  5) pamixer --allow-boost -d 1; pkill -RTMIN+1 dwmblocks ;;
  	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 
 esac

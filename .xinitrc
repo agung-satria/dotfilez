@@ -13,7 +13,7 @@ nm-applet &
 dunst &
 # picom --experimental-backends &
 picom &
-asb &
+# asb & #rc.local alternative
 snd-logon &
 
 ## session:

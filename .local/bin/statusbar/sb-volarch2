@@ -5,8 +5,9 @@
 case $BLOCK_BUTTON in
 	1) pamixer -t ;;
 	2) notify-send "📢 Volume module" "\- Shows volume 🔊, 🔇 if muted.
-- Left click to mute.
-- Right click to open pulsemixer." ;;
+    - Left click to mute.
+    - Right click to open pulsemixer.
+    - Scroll up and down to change volume." ;;
 	# 3) setsid -f "$TERMINAL" -e pulsemixer ;;
 	3) st -c float-st -g 100x25+350+200 pulsemixer ;;
 	4) pamixer --allow-boost -i 1 ;;

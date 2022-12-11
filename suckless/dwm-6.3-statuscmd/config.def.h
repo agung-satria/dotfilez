@@ -230,8 +230,8 @@ static Key keys[] = {
     { 0,  XF86MonBrightnessUp,        spawn, SHCMD("light -A 5; pkill -RTMIN+2 dwmblocks") },
     { 0,  XF86MonBrightnessDown,      spawn, SHCMD("light -U 5; pkill -RTMIN+2 dwmblocks") },
     { MODKEY,			        XK_0,		    spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+1 dwmblocks") },
-    { MODKEY,			        XK_equal,		spawn, SHCMD("pamixer -i 5; pkill -RTMIN+1 dwmblocks") },
-    { MODKEY,			        XK_minus,		spawn, SHCMD("pamixer -d 5; pkill -RTMIN+1 dwmblocks") },
+    { MODKEY,			        XK_equal,		spawn, SHCMD("pamixer -i 5 --allow-boost; pkill -RTMIN+1 dwmblocks") },
+    { MODKEY,			        XK_minus,		spawn, SHCMD("pamixer -d 5 --allow-boost; pkill -RTMIN+1 dwmblocks") },
     { MODKEY|ShiftMask,		XK_equal,		spawn, SHCMD("light -A 5; pkill -RTMIN+2 dwmblocks") },
     { MODKEY|ShiftMask,		XK_minus,		spawn, SHCMD("light -U 5; pkill -RTMIN+2 dwmblocks") },
 
@@ -280,6 +280,7 @@ static Key keys[] = {
 
     { MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+    { MODKEY|ALTKEY,                XK_Return, spawn,          SHCMD("tabbed -r 2 st -w ''") }, //open tabbed in st
     { MODKEY|ControlMask,           XK_Return, spawn,          SHCMD("st -e tmux a") }, //reattach last tmux session
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY|ShiftMask,             XK_b,      togglesystray,  {0} },

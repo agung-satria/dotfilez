@@ -1,11 +1,9 @@
 [Desktop Entry]
 Type=Application
-Name=Tabbed ST
+Name=st tabbed
 Comment=Add ability to suckless software to have tabs
 Exec=tabbed -r 2 st -w ''
-Icon=/home/agung/.local/share/icons/tabbed.png
+Icon=/home/agung/.local/share/icons/terminal.png
 Terminal=false
-Categories=ConsoleOnly;System;FileTools;FileManager
-StartupNotify=true
-MimeType=inode/directory;
-Keywords=File;Manager;Browser;Explorer;Launcher;Vi;Vim;Python
+Categories=System;TerminalEmulator
+Keywords=terminal;st;console
