@@ -6,6 +6,6 @@ echo " " $temp_cpu0"°C "
 # echo " 🌡️" $temp_cpu0"°C "
 # echo $temp_cpu0"°C"
 case $BLOCK_BUTTON in
-	1) notify-send "🌡️ CPU temperature" ;;
+	1) notify-send "🌡️ CPU temperature $temp_cpu0°C" ;;
  	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac

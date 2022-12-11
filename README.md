@@ -1,9 +1,12 @@
-# Arch Linux Stuff (suckless, [nvim](https://github.com/agung-satria/nvimnew), script, config, apps, notes, etc)
+<h1 align="center">My Arch Linux Setup</h1>
+<p align="center">suckless, <a href="https://github.com/agung-satria/nvimnew" target="_blank">nvim</a>, script, config, apps, notes, etc</p>
+
+![](suckless/screenshots/dwm-11.png)
 
 ## Dependencies!
 
 ```sh
-sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk hsetroot xclip wget curl rsync bc tree nemo nemo-fileroller galculator fzf tmux ntfs-3g dunst libnotify maim rofi arandr pulsemixer simplescreenrecorder vlc calcurse imagemagick zip unzip unrar gzip
+sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk hsetroot xclip wget curl rsync bc flameshot tree nemo nemo-fileroller galculator fzf tmux ntfs-3g dunst libnotify maim rofi arandr pulsemixer simplescreenrecorder vlc calcurse imagemagick zip unzip unrar gzip
 sudo pacman -S pamixer light
 sudo pacman -S ttf-joypixels ttf-font-awesome
 sudo pacman -S mtpfs gvfs-mtp gvfs-gphoto2
@@ -204,7 +207,7 @@ nvme0n1p5 (data D windows)
 
 ## Speed up booting time
 
-- ```sudo nvim /etc/default/grub```
+- `sudo nvim /etc/default/grub`
 - set _`GRUB_TIMEOUT=1`_ or _`GRUB_TIMEOUT=0`_
-- ```sudo grub-mkconfig -o /boot/grub/grub.cfg```
+- `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 - reboot

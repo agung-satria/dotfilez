@@ -4,7 +4,7 @@ mem="$(free -h | awk '/^Mem:/ {print $3}')"
 echo -e "🧠$mem"
 
 case $BLOCK_BUTTON in
-	1) notify-send "🧠 Memory used" ;;
+	1) notify-send "🧠 Memory used $mem" ;;
  	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 
 esac

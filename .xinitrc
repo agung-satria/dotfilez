@@ -1,4 +1,5 @@
 ## auto start
+dwmblocks &
 lowbatnotif &
 # hsetroot -cover ~/.mygithub/dotfilez/.local/share/wallpapers/landscape-darken.jpg
 hsetroot -cover ~/.mygithub/dotfilez/.local/share/wallpapers/win11-dark-1080p.jpg
@@ -7,13 +8,13 @@ xset s blank
 xset s 600
 natural-mouse-scroll-false &
 mpd &
-dwmblocks &
+flameshot &
 nm-applet &
 dunst &
-snd-logon &
 # picom --experimental-backends &
 picom &
 asb &
+snd-logon &
 
 ## session:
 exec dwm

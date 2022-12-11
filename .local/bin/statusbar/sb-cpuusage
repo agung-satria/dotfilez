@@ -34,7 +34,7 @@ get_load()
 
 get_load
 case $BLOCK_BUTTON in
-  1) notify-send "💻 CPU Usage" ;;
+  1) notify-send "💻 CPU Usage $cpu_usage%" ;;
   6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 
 esac

@@ -249,7 +249,7 @@ static Key keys[] = {
 
     /* launch (apps, dmenu script, etc) */
     { MODKEY,				XK_Escape,        	spawn,		SHCMD("sysact") },
-    { MODKEY|ShiftMask,		    	XK_BackSpace,     	spawn,		SHCMD("systemctl suspend && betterlockscreen -l") },
+    { MODKEY|ShiftMask,		    	XK_BackSpace,     	spawn,		SHCMD("systemctl suspend && lockwithsound") },
     { MODKEY,				    XK_r,             spawn,		SHCMD("rofi modi drun -show drun show-icons true -columns 2 width 45") },
     { MODKEY,            		XK_w,             spawn,		SHCMD("brave") },
     { MODKEY|ShiftMask,  		XK_w,             spawn,		SHCMD("brave --incognito") },
