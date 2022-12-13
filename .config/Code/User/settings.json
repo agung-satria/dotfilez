@@ -1,0 +1,189 @@
+{
+  // vimrc start
+  "files.autoSave": "onFocusChange",
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  // "vim.sneak": true,
+  "vim.easymotionMarkerooundColor": "#020202",
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    }
+    {
+      "before": ["<S-h>"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+      {
+        "before": ["<S-l>"],
+        "commands": ["workbench.action.nextEditor"]
+      },
+      {
+        "before": ["<tab>"],
+        "commands": ["workbench.action.nextEditor"]
+      },
+      {
+        "before": ["<S-tab>"],
+        "commands": ["workbench.action.previousEditor"]
+      }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>", "l"]
+    },
+    {
+      "before": ["k", "j"],
+      "after": ["<Esc>", "l"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "w"],
+      "commands": [":w"]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": [":q"]
+    },
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["S-j"],
+      "after": ["C-f"]
+    },
+    {
+      "before": ["S-k"],
+      "after": ["C-b"]
+    },
+    {
+      "before": ["C-a"],
+      "after": ["ggVG"]
+      // "commands": [":q"]
+    },
+    {
+      "before": ["C-h"],
+      "after": ["C-W", "h"]
+    },
+    {
+      "before": ["C-j"],
+      "after": ["C-W", "j"]
+    },
+    {
+      "before": ["C-k"],
+      "after": ["C-W", "k"]
+    },
+    {
+      "before": ["C-l"],
+      "after": ["C-W", "l"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<leader>", "x"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<leader>", "v", "v"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+    {
+      "before": ["<leader>", "s", "v"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["<leader>", "n"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "r", "v"],
+      "commands": ["revealInExplorer"]
+    },
+    {
+      "before": ["<leader>", "o"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.showEditorsInActiveGroup"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "after": ["_"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "after": ["$"]
+    },
+    {
+      "before": ["<leader>", "r", "e"],
+      "commands": [
+      "editor.action.rename"
+       ]
+    },
+  ],
+  "vim.leader": "<space>",
+
+  "vim.handleKeys": {
+    "<C-A>": false,
+    "<C-F>": false,
+    "<C-D>": false,
+    "<C-C>": true,
+    "<C-X>": false,
+    "<C-V>": false,
+    "<C-Z>": false,
+    "<C-Y>": false
+  },
+  // vimrc end
+
+  // vscode settings start
+
+  "workbench.editor.showTabs": true,
+  "workbench.editor.enablePreview": false, // show all tabs
+  "breadcrumbs.enabled": false, // top directory path
+  "editor.guides.indentation": false,
+  "editor.renderLineHighlight": "none", // removes line highlight
+  "editor.overviewRulerBorder": false, // removes border from overview ruler (located on the right, same position as the scrollbar)
+  "editor.hideCursorInOverviewRuler": true, // hides cursor mark in the overview ruler
+  "editor.folding": false, // removes the folding feature
+  "editor.occurrencesHighlight": false, // removes box highlights when selecting word
+  "editor.matchBrackets": true, // removes the highlight of matching brackets (I use Subtle Match Brackets extension for this)
+  "editor.glyphMargin": false, // removes the space used mainly for debugging indicators
+  "explorer.openEditors.visible": 0, // removes the open editors section at the top of the sidebar, you can see the opened files with ⌘ + ⌥ + Tab
+  "workbench.activityBar.visible": true, // removes the activity bar (the 4 icons at the left of the screen), so now you will have to open the explorer, git, debugger and extension with shortcuts or through the Command Palette
+  "workbench.editor.showIcons": true, // icon from opened files in tabs
+  "workbench.editor.tabCloseButton": "off", // removes cross icon from tabs
+  "workbench.statusBar.visible": false, // status bar at the bottom
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none", // removes whitespace chars
+  "editor.fontLigatures": false,
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.cursorBlinking": "solid",
+  "window.zoomLevel": 2,
+  "window.menuBarVisibility": "toggle",
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "One Dark Pro Darker", "workbench.colorCustomizations": { // object that allows you to customize your color theme: https://code.visualstudio.com/docs/getstarted/theme-color-reference 
+    "tab.activeBorder": "#0000" // removes border to highlight active tabs (the colors formats are: #RGB, #RGBA, #RRGGBB or #RRGGBBAA)
+  }
+}
+// vscode settings end

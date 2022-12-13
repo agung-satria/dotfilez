@@ -1,15 +1,22 @@
 <h1 align="center">My Arch Linux Setup</h1>
 <p align="center">suckless, <a href="https://github.com/agung-satria/nvimnew" target="_blank">nvim</a>, script, config, apps, notes, etc</p>
 
-![](suckless/screenshots/desktop.png)
+![](suckless/screenshots/desktop-rofi.png)
+![](suckless/screenshots/desktop-dirty.png)
 
 ## Dependencies!
 
 ```sh
-sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk hsetroot xclip wget curl rsync bc flameshot tree nemo nemo-fileroller galculator fzf tmux ntfs-3g dunst libnotify maim rofi arandr pulsemixer simplescreenrecorder nano vlc calcurse imagemagick zip unzip unrar gzip
-sudo pacman -S pamixer light
+sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk
+sudo pacman -S wget curl rsync tree fzf tmux nano imagemagick
+sudo pacman -S nemo nemo-fileroller font-manager
+sudo pacman -S simplescreenrecorder flameshot maim
+sudo pacman -S dunst libnotify calcurse bc hsetroot xclip pulsemixer
+sudo pacman -S pamixer light expac
 sudo pacman -S ttf-joypixels ttf-font-awesome
-sudo pacman -S mtpfs gvfs-mtp gvfs-gphoto2
+sudo pacman -S ntfs-3g mtpfs gvfs-mtp gvfs-gphoto2
+sudo pacman -S galculator rofi arandr vlc
+sudo pacman -S zip unzip unrar gzip
 ```
 
 ## Change console font (make it bigger)
@@ -51,9 +58,11 @@ makepkg -si
 
 - yay -S noto-color-emoji-fontconfig (color emoji!)
 - yay -S brave-bin
+- yay -S mirage (image viewer)
 - yay -S gotop
 - yay -S grabc (sometimes not working)
-- yay -S picom-pijulius-git (optional, just use picom)
+- yay -S picom-jonaburg-git (for nice rounded corners/used) or
+- yay -S picom-pijulius-git (for nice animation)
 - yay -S ttf-ms-fonts
 - yay -S colorpicker
 - yay -S 7-zip

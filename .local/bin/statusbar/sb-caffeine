@@ -1,0 +1,30 @@
+#!/bin/sh
+
+icon="change    "
+
+blank() {
+icon="    "
+  if $(xset s 600 && xset s blank) = true ; then
+   icon="    "
+ else
+   exit
+ fi 
+   icon="    "
+}
+
+noblank() {
+icon="    "
+ if $(xset s off && xset -dpms) = true ; then
+   icon="    "
+ else
+   exit
+ fi 
+   icon="    "
+}
+
+    case $BLOCK_BUTTON in
+      1) noblank; pkill -RTMIN+13 dwmblocks;;
+      3) blank; pkill -RTMIN+13 dwmblocks;;
+      6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+    esac; echo "$icon"
+    

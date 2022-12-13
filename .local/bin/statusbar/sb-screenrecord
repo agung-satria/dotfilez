@@ -1,0 +1,16 @@
+#!/bin/sh
+
+function runssr() {
+  if ! command -v simplescreenrecorder &> /dev/null
+  then
+    notify-send "simplescreenrecorder is not installed"
+    exit
+  else
+    simplescreenrecorder
+  fi
+}
+
+    case $BLOCK_BUTTON in
+      1) runssr ;;
+      6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+    esac; echo "   "

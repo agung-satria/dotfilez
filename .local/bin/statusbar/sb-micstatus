@@ -1,0 +1,20 @@
+#! /bin/bash 
+
+micavail="$(pamixer --list-sources | grep 'input' | awk '{print$3}')"
+
+if [[ $micavail == '"Running"' ]] ; then
+  echo "   "
+else
+  # echo "   "
+  echo ""
+fi
+
+case $BLOCK_BUTTON in
+  1) notify-send "Mic status: $micavail" ;;
+  2) notify-send "🎧 Headphone detected" "\- Shows volume 🔊, 🔇 if muted.
+    - Left click to mute.
+    - Right click to toggle Microphone." ;;
+  3) pamixer --source alsa_input.pci-0000_03_00.6.analog-stereo -t; pkill -RTMIN+1 dwmblocks ;;
+ 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+
+esac

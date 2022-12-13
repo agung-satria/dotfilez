@@ -11,8 +11,8 @@ mpd &
 flameshot &
 nm-applet &
 dunst &
-# picom --experimental-backends &
-picom &
+picom --experimental-backends &
+# picom &
 # asb & #rc.local alternative
 snd-logon &
 

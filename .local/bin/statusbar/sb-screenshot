@@ -1,0 +1,40 @@
+#!/bin/sh
+
+function rungui() {
+  if ! command -v flameshot &> /dev/null
+  then
+    notify-send "flameshot is not installed"
+    exit
+  else
+    flameshot gui
+  fi
+}
+
+function runhelp() {
+  if ! command -v flameshot &> /dev/null
+  then
+    notify-send "flameshot is not installed"
+    exit
+  else
+    notify-send "🖼️ Flameshot " "\- Click to open gui
+-Right click to open launcer"
+  fi
+}
+
+function runlauncher() {
+  if ! command -v flameshot &> /dev/null
+  then
+    notify-send "flameshot is not installed"
+    exit
+  else
+    flameshot launcher
+  fi
+}
+
+    case $BLOCK_BUTTON in
+      1) rungui ;;
+      2) runhelp ;;
+      3) runlauncher ;;
+      6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+    esac; echo "   "
+    

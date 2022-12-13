@@ -12,10 +12,10 @@ static const unsigned int systrayonleft = 0;   	/* 0: systray in the right corne
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static int showsystray        = 0;     /* 0 means no systray */
-static const unsigned int gappih    = 8;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 8;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 8;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 8;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 14;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 20;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 1;     /* 0 means bottom bar */
@@ -26,12 +26,12 @@ enum showtab_modes { showtab_never, showtab_auto, showtab_nmodes, showtab_always
 static const int showtab			= showtab_auto;        /* Default tab bar show mode */
 static const int toptab				= False;               /* False means bottom tab bar */
 
-static const char *fonts[]        = {"Ubuntu:weight=regular:size=13:antialias=true:autohint=true",
+static const char *fonts[]        = {"SF Pro Display:weight=Medium:size=13:antialias=true:autohint=true",
   "JetBrainsMono Nerd Font:style:medium:size=13:autohint=true",
   "JoyPixels:size=12:antialias=true:autohint=true", 
   "NotoColorEmoji:pixelsize=24:antialias=true:autohint=true",
   "Material Design Icons-Regular:size=13:autohint=true"};
-static const char dmenufont[]     = "Ubuntu:weight=regular:size=13:antialias=true:autohint=true";
+static const char dmenufont[]     = "SF Pro Display:weight=Medium:size=13:antialias=true:autohint=true";
 
 // // agstr color^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 // static const char col_gray1[]     = "#141919";
@@ -100,11 +100,14 @@ static const Rule rules[] = {
     /* class                  instance  title      tags mask    isfloating   monitor */
     { "Brave-browser",        NULL,		  NULL,		   1 << 1,	    0,		       -1 },  
     { "Google-chrome",        NULL,		  NULL,		   1 << 1,	    0,		       -1 },  
+    { "Code",                 NULL,		  NULL,		   1 << 2,	    0,		       -1 },
+    { "code",                 NULL,		  NULL,		   1 << 2,	    0,		       -1 },
+    { "libreoffice",	        NULL,		  NULL,		   1 << 2,	    0,     	     -1 },
     { "TelegramDesktop",      NULL,		  NULL,		   1 << 3,	    0,		       -1 },
     { "Shotcut",	            NULL,		  NULL,		   1 << 4,	    0,		       -1 },
     { "Gimp",	                NULL,		  NULL,		   1 << 5,	    0,		       -1 },
     { "Inkscape",	            NULL,		  NULL,		   1 << 6,	    0,		       -1 },
-    { "libreoffice",	        NULL,		  NULL,		   1 << 2,	    0,     	     -1 },
+    { "obs",	                NULL,		  NULL,		   1 << 7,	    0,		       -1 },
     { "vokoscreen",           NULL,     NULL,      0,           1,           -1 },  
     { "vokoscreenNG",         NULL,     NULL,      0,           1,           -1 },  
     { "SimpleScreenRecorder", NULL,     NULL,      0,           1,           -1 },  
@@ -121,6 +124,9 @@ static const Rule rules[] = {
     { "Pavucontrol",          NULL,     NULL,      0,           1,           -1 },  
     { "xdman-Main",           NULL,     NULL,      0,           1,           -1 },  
     { "arandr",               NULL,     NULL,      0,           1,           -1 },  
+    { "Sxiv",                 NULL,     NULL,      0,           1,           -1 },  
+    { "Mirage",               NULL,     NULL,      0,           1,           -1 },  
+    { "Viewnior",             NULL,     NULL,      0,           1,           -1 },  
     { "Nemo",                 NULL,     NULL,      0,           1,           -1 },  
     { "File-roller",          NULL,     NULL,      0,           1,           -1 },  
     { "Org.gnome.Nautilus",   NULL,     NULL,      0,           1,           -1 },  
@@ -144,7 +150,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.535; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -224,14 +230,14 @@ static Key keys[] = {
     /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^agstr^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
   /* volume and brightness */
-    { 0,  XF86XK_AudioMute,           spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+1 dwmblocks") },
-    { 0,  XF86XK_AudioRaiseVolume,    spawn, SHCMD("pamixer -i 5; pkill -RTMIN+1 dwmblocks") },
-    { 0,  XF86XK_AudioLowerVolume,    spawn, SHCMD("pamixer -d 5; pkill -RTMIN+1 dwmblocks") },
+    { 0,  XF86XK_AudioMute,           spawn, SHCMD("changevolume mute; pkill -RTMIN+1 dwmblocks") },
+    { 0,  XF86XK_AudioRaiseVolume,    spawn, SHCMD("changevolume up; pkill -RTMIN+1 dwmblocks") },
+    { 0,  XF86XK_AudioLowerVolume,    spawn, SHCMD("changevolume down; pkill -RTMIN+1 dwmblocks") },
     { 0,  XF86MonBrightnessUp,        spawn, SHCMD("light -A 5; pkill -RTMIN+2 dwmblocks") },
     { 0,  XF86MonBrightnessDown,      spawn, SHCMD("light -U 5; pkill -RTMIN+2 dwmblocks") },
-    { MODKEY,			        XK_0,		    spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+1 dwmblocks") },
-    { MODKEY,			        XK_equal,		spawn, SHCMD("pamixer -i 5 --allow-boost; pkill -RTMIN+1 dwmblocks") },
-    { MODKEY,			        XK_minus,		spawn, SHCMD("pamixer -d 5 --allow-boost; pkill -RTMIN+1 dwmblocks") },
+    { MODKEY,			        XK_0,		    spawn, SHCMD("changevolume mute; pkill -RTMIN+1 dwmblocks") },
+    { MODKEY,			        XK_equal,		spawn, SHCMD("changevolume up; pkill -RTMIN+1 dwmblocks") },
+    { MODKEY,			        XK_minus,		spawn, SHCMD("changevolume down; pkill -RTMIN+1 dwmblocks") },
     { MODKEY|ShiftMask,		XK_equal,		spawn, SHCMD("light -A 5; pkill -RTMIN+2 dwmblocks") },
     { MODKEY|ShiftMask,		XK_minus,		spawn, SHCMD("light -U 5; pkill -RTMIN+2 dwmblocks") },
 
@@ -292,8 +298,8 @@ static Key keys[] = {
     { ALTKEY,                       XK_Tab,    swapfocus,      {0} }, 
     { MODKEY,                       XK_n,      incnmaster,     {.i = +1 } },
     { MODKEY|ShiftMask,             XK_n,      incnmaster,     {.i = -1 } },
-    { MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-    { MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+    { MODKEY,                       XK_h,      setmfact,       {.f = -0.035} },
+    { MODKEY,                       XK_l,      setmfact,       {.f = +0.035} },
     { MODKEY|ShiftMask,             XK_l,      setcfact,       {.f = +0.25} },
     { MODKEY|ShiftMask,             XK_h,      setcfact,       {.f = -0.25} },
     { MODKEY|ShiftMask,             XK_g,      setcfact,       {.f =  0.00} },

@@ -1,0 +1,43 @@
+#!/bin/sh
+
+function send_notification() {
+  volume=$(pamixer --get-volume)
+  dunstify -a "changevolume" -u low -r "9993" -h int:value:"$volume" -i "volume-$1" "Volume: ${volume}%" -t 2000
+}
+
+case $BLOCK_BUTTON in
+  # 1) pamixer -t ;;
+  1) pamixer -t
+    if $(pamixer --get-mute); then
+      dunstify -i volume-mute -a "changevolume" -t 2000 -r 9993 -u low "Muted"
+    else
+      send_notification $(pamixer -u)
+      fi ;;
+    2) notify-send "📢 Volume module" "\- Shows volume 🔊, 🔇 if muted.
+      - Left click to mute.
+      - Right click to open pulsemixer.
+      - Scroll up and down to change volume." ;;
+    3) st -c float-st -g 100x25+350+200 pulsemixer ;;
+    4) changevolume up ;;
+    5) changevolume down ;;
+    6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+  esac
+
+  [ $(pamixer --get-mute) = true ] && echo "   " && exit
+
+  vol="$(pamixer --get-volume)"
+
+  if [ "$vol" -gt "74" ]; then
+    icon="   "
+  elif [ "$vol" -gt "49" ]; then
+    icon="墳  "
+  elif [ "$vol" -gt "24" ]; then
+    icon="  "
+  elif [ "$vol" -gt "0" ]; then
+    icon="  "
+  else
+    echo "   "  && exit
+  fi
+
+# echo "$icon$vol%"
+echo "$icon"

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+    case $BLOCK_BUTTON in
+      1) notify-send "🔔 Notification " "\-Win+A or Right click
+to pop up dunst history
+-Win+Shift+A or Middle click
+to close all pop up" ;;
+      2) dunstctl close-all ;;
+      3) dunstctl history-pop ;;
+      6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+    esac; echo "  "

@@ -7,4 +7,4 @@ Exec=st -g 100x25 ncmpcpp
 Name=ncmpcpp
 Icon=/home/agung/.local/share/icons/ncmpcpp.png
 Categories=Music Player
-Keywords=music player;mp3 player;lagu;music;console;terminal
+Keywords=music player;mp3 player;lagu;music;console
