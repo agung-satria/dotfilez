@@ -1,0 +1,5 @@
+#!/bin/bash
+#Descriptions: 
+snd-lock &
+betterlockscreen -l &
+$HOME/.config/eww/powermenu/launch_powermenu #to toggle close after lock

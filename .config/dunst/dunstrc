@@ -1,5 +1,4 @@
 [global]
-
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
@@ -18,6 +17,12 @@
     # will be ignored.
     follow = mouse
 
+    width = 350
+    height = 350
+    # offset = 10x35
+    offset = 14x38
+
+
     # The geometry of the window:
     #   [{width}]x{height}[+/-{x}+/-{y}]
     # The geometry of the message window.
@@ -30,7 +35,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-25+30"
+    # geometry = "300x5-25+30"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -55,10 +60,10 @@
     separator_height = 2
 
     # Padding between text and separator.
-    padding = 8
+    padding = 12
 
     # Horizontal padding.
-    horizontal_padding = 8
+    horizontal_padding = 2
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
@@ -87,7 +92,7 @@
 
     ### Text ###
 
-    font = JetBrains Mono Medium 10
+    font = Hack Nerd Font 12
 
 
     # The spacing between lines.  If the height is smaller than the
@@ -166,7 +171,8 @@
     ### Icons ###
 
     # Align icons left/right/off
-    icon_position = left
+    # icon_position = left
+    icon_position = off
 
     # Scale small icons up to this size, set to 0 to disable. Helpful
     # for e.g. small files or high-dpi screens. In case of conflict,

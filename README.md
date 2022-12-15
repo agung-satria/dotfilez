@@ -8,14 +8,15 @@
 
 ```sh
 sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk
-sudo pacman -S wget curl rsync tree fzf tmux nano imagemagick
+sudo pacman -S tmux fzf wget curl rsync tree imagemagick nano
 sudo pacman -S nemo nemo-fileroller font-manager
-sudo pacman -S simplescreenrecorder flameshot maim
+sudo pacman -S maim xdotool flameshot simplescreenrecorder
 sudo pacman -S dunst libnotify calcurse bc hsetroot xclip pulsemixer
 sudo pacman -S pamixer light expac
 sudo pacman -S ttf-joypixels ttf-font-awesome
 sudo pacman -S ntfs-3g mtpfs gvfs-mtp gvfs-gphoto2
-sudo pacman -S galculator rofi arandr vlc
+sudo pacman -S rofi arandr vlc galculator 
+sudo pacman -S scrot
 sudo pacman -S zip unzip unrar gzip
 ```
 
@@ -111,6 +112,11 @@ Change rofi themes:
 - Uncomment line 15 in _config.rasi_ to use [siduck](https://github.com/siduck/chadwm/tree/main/rofi) theme
 - Change/uncomment last line/section to use other themes (windows11, launchpad, etc)
 - Use `rofi-theme-selector` to select a theme that isn't in the file (make sure to put that in _themes_ directory)
+
+## Install eww
+
+- Install [rust](https://rustup.rs/)
+- Install [eww](https://elkowar.github.io/eww/eww.html)
 
 ## Default applications
 

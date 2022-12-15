@@ -10,8 +10,8 @@ location=${1:-/}
 
 case $BLOCK_BUTTON in
 	1) notify-send "💽 Drive Usage :"$(df -h "$location" | awk ' /[0-9]/ {print $3 "/" $2}')"" ;;
-	2) notify-send "💽 Disk module" "\- Shows used hard drive space.
-- Right Click to show all disk info." ;;
+	2) notify-send "💽 Disk module" "\ Shows used hard drive space.
+ Right Click to show all disk info." ;;
 	3) notify-send "💽 Disk space" "$(df -h --output=target,used,size)" ;;
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
@@ -20,7 +20,7 @@ case "$location" in
 	"/home"* ) icon="🏠" ;;
 	"/mnt"* ) icon="💾" ;;
 	# *) icon="💽";;
-	*) icon="   ";;
+	*) icon="    ";;
 esac
 
 # printf "%s%s\n" "$icon" "$(df -h "$location" | awk ' /[0-9]/ {print $3 "/" $2}')"

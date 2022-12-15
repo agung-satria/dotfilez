@@ -1,0 +1,17 @@
+(defwidget backlightSlider []
+    (metric
+      :class 'brightness'
+      :value brightness
+      ; :onchange "xbacklight -set {}%"
+      ; :onchange "$HOME/.config/eww/slider/scripts/brightness-setter {}%"
+      :onchange "light -S {}%"
+      :orientation 'h'
+      :flipped false
+             )
+)
+
+(defwidget footer []
+  (box :orientation "v"
+  (backlightSlider)
+  (btns)
+ ))

@@ -16,6 +16,7 @@ alias \
   zshconfig="nvim ~/.zshrc" \
   build="npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch" \
   ab="sudo chown agung:agung /sys/class/backlight/amdgpu_bl0/*" \
+  nvim="nvim" \
   v="nvim" \
   vv="nvim" \
   vim="nvim" \

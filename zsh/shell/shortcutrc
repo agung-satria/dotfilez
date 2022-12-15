@@ -27,6 +27,7 @@ cfnc="cd /home/agung/.config/ncmpcpp && ls -a" \
 cfmpd="cd /home/agung/.config/mpd && ls -a" \
 cfp="cd /home/agung/.config/picom && ls -a" \
 cfr="cd /home/agung/.config/ranger && ls -a" \
+cfe="cd /home/agung/.config/eww && ls -a" \
 cfs="cd /home/agung/.config/shell && ls -a" \
 cdg="cd ~/.mygithub && ls -a" \
 cdd="cd ~/.mygithub/dotfilez && ls -a" \

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# The clickable help menu. Middle click to restart wm.
+
+    case $BLOCK_BUTTON in
+      1) rofi modi drun -show drun show-icons true ;;
+      2) notify-send "❓ Help file not yet available" ;;
+      3) sysact ;;
+      6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+    esac; echo "   "

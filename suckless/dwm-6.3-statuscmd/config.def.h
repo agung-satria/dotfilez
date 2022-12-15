@@ -26,12 +26,15 @@ enum showtab_modes { showtab_never, showtab_auto, showtab_nmodes, showtab_always
 static const int showtab			= showtab_auto;        /* Default tab bar show mode */
 static const int toptab				= False;               /* False means bottom tab bar */
 
-static const char *fonts[]        = {"SF Pro Display:weight=Medium:size=13:antialias=true:autohint=true",
-  "JetBrainsMono Nerd Font:style:medium:size=13:autohint=true",
+static const char *fonts[]        = {"SF Pro Display:weight=Medium:size=14:antialias=true:autohint=true",
+  "JetBrainsMono Nerd Font:style:medium:size=14:autohint=true",
   "JoyPixels:size=12:antialias=true:autohint=true", 
-  "NotoColorEmoji:pixelsize=24:antialias=true:autohint=true",
-  "Material Design Icons-Regular:size=13:autohint=true"};
-static const char dmenufont[]     = "SF Pro Display:weight=Medium:size=13:antialias=true:autohint=true";
+  "Noto Color Emoji:pixelsize=14:antialias=true:autohint=true",
+  "Font Awesome 6 Brands Regular:pixelsize=14:antialias=true:autohint=true",
+  "Font Awesome 6 Free Regular:pixelsize=14:antialias=true:autohint=true",
+  "Font Awesome 6 Free Solid:pixelsize=14:antialias=true:autohint=true",
+  "Material:size=14:autohint=true"};
+static const char dmenufont[]     = "SF Pro Display:weight=Medium:size=14:antialias=true:autohint=true";
 
 // // agstr color^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 // static const char col_gray1[]     = "#141919";
@@ -150,7 +153,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.535; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.57; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -254,18 +257,23 @@ static Key keys[] = {
     { MODKEY|ALTKEY,		    	XK_bracketright,	spawn,		SHCMD("mpc -p 6601 random") },
 
     /* launch (apps, dmenu script, etc) */
-    { MODKEY,				XK_Escape,        	spawn,		SHCMD("sysact") },
     { MODKEY|ShiftMask,		    	XK_BackSpace,     	spawn,		SHCMD("systemctl suspend && lockwithsound") },
     { MODKEY,				    XK_r,             spawn,		SHCMD("rofi modi drun -show drun show-icons true -columns 2 width 45") },
     { MODKEY,            		XK_w,             spawn,		SHCMD("brave") },
+    // { MODKEY,				        XK_Escape,       	spawn,		SHCMD("sysact") },
+    { MODKEY,               XK_a,             spawn,		SHCMD("/home/agung/.config/eww/launch_all") },
+    { MODKEY,               XK_s,             spawn,		SHCMD("/home/agung/.config/eww/slider/launch_slider") },
+    { MODKEY,               XK_m,             spawn,		SHCMD("/home/agung/.config/eww/music/launch_music") },
+    { MODKEY,               XK_Escape,        spawn,		SHCMD("/home/agung/.config/eww/powermenu/launch_powermenu") },
     { MODKEY|ShiftMask,  		XK_w,             spawn,		SHCMD("brave --incognito") },
     { MODKEY|ShiftMask,  		XK_d,             spawn,		SHCMD("samedir") },
+    { MODKEY,  		          XK_y,             spawn,		SHCMD("xcpcolor") },
     { MODKEY|ControlMask,  	XK_e,             spawn,		SHCMD("nemo") },
     { MODKEY|ShiftMask,		  XK_apostrophe,    spawn,	    SHCMD("galculator") },
-    { MODKEY,		            	XK_p,	  	  spawn,	    	SHCMD("arandr") },
-    { MODKEY,		            	XK_a,   	  spawn,	    	SHCMD("dunstctl history-pop") },
-    { MODKEY|ShiftMask,		    	XK_a,   	  spawn,	    	SHCMD("dunstctl close-all") },
-    { MODKEY|ControlMask,		XK_a,   	  spawn,	    	SHCMD("dunstctl close") },
+    { MODKEY,		           	XK_p,	  	  spawn,	    	SHCMD("arandr") },
+    { MODKEY|ShiftMask,		  XK_a,   	  spawn,	    	SHCMD("dunstctl history-pop") },
+    { MODKEY|ControlMask,	  XK_a,   	  spawn,	    	SHCMD("dunstctl close-all") },
+    // { MODKEY|ControlMask,		XK_a,   	  spawn,	    	SHCMD("dunstctl close") },
     { MODKEY|ControlMask,		XK_l,   	  spawn,	    	SHCMD("lockwithsound") },
 
     // floatthings
@@ -330,12 +338,12 @@ static Key keys[] = {
     { MODKEY,                       XK_Tab,    view,           {0} },
     { MODKEY,                       XK_q,      killclient,     {0} },
     { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-    { MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[1]} },
-    { MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-    { MODKEY,                       XK_s,      setlayout,      {.v = &layouts[3]} },
+    { MODKEY|ControlMask,           XK_t,      setlayout,      {.v = &layouts[1]} },
+    { MODKEY|ControlMask,           XK_m,      setlayout,      {.v = &layouts[2]} },
+    { MODKEY|ControlMask,           XK_s,      setlayout,      {.v = &layouts[3]} },
     { MODKEY|ControlMask,           XK_c,      setlayout,      {.v = &layouts[5]} },
-    { MODKEY,                       XK_u,      setlayout,      {.v = &layouts[11]} },
-    { MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[13]} },
+    { MODKEY|ControlMask,           XK_u,      setlayout,      {.v = &layouts[11]} },
+    { MODKEY|ControlMask,           XK_f,      setlayout,      {.v = &layouts[13]} },
     { MODKEY|ControlMask,	          XK_comma,  cyclelayout,    {.i = -1 } },
     { MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
     { MODKEY,                       XK_semicolon,setlayout,    {0} },

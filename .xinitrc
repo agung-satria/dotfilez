@@ -11,6 +11,7 @@ mpd &
 flameshot &
 nm-applet &
 dunst &
+eww daemon &
 picom --experimental-backends &
 # picom &
 # asb & #rc.local alternative

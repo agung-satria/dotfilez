@@ -4,9 +4,9 @@
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-    "SF Pro Display:weight=Medium:size=13:antialias=true:autohint=true",
-    "JetBrainsMono Nerd Font:style:medium:size=13",
-    "NotoColorEmoji:pixelsize=15:antialias=true:autohint=true"
+    "SF Pro Display:weight=Medium:size=14:antialias=true:autohint=true",
+    "JetBrainsMono Nerd Font:style:medium:size=14",
+    "Noto Color Emoji:pixelsize=16:antialias=true:autohint=true"
 };
 static const unsigned int bgalpha = 0xe0;
 static const unsigned int fgalpha = OPAQUE;

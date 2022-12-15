@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# icon=
+brightness="$(cat /sys/class/backlight/amdgpu_bl0/brightness)"
+total="255"
+percent="$((100*$brightness/$total))"
+
+echo $percent

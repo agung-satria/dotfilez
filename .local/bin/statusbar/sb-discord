@@ -1,0 +1,16 @@
+#!/bin/sh
+
+function rundiscord() {
+  if ! command -v discord &> /dev/null
+  then
+    notify-send "discord is not installed"
+    exit
+  else
+    discord
+  fi
+}
+
+    case $BLOCK_BUTTON in
+      1) rundiscord ;;
+      6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+    esac; echo "ﭮ   "

@@ -3,7 +3,7 @@
 /* appearance */
 /* static char font[]        = "DejaVu Sans:pixelsize=14"; */
 /* static char font[] = "JetBrainsMono Nerd Font:style:medium:pixelsize=16"; */
-static char font[] = "SF Pro Display:weight=Medium:size=14:antialias=true:autohint=true";
+static char font[] = "SF Pro Display:weight=Medium:size=16:antialias=true:autohint=true";
 static char* normbgcolor = "#1d2021";
 static char* normfgcolor = "#cccccc";
 static char* selbgcolor =  "#39393c";

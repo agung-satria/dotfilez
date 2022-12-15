@@ -96,3 +96,4 @@ ex=🎯:\
 *.java=♨:\
 "
 
+. "$HOME/.cargo/env"

@@ -1,0 +1,20 @@
+#!/bin/sh
+
+headvol() {
+  # amixer sget Headphone | grep 'Left:' | cut -d\  -f7 | tr -d '[%]'
+  mpc -p 6601 status | awk 'NR==3 { print $2 }' | awk '{print substr($0,1,2)}'
+  # amixer -c 1 get Master | awk '$0~/%/{print $4}' | awk '{print substr($0,2,2)}'
+}
+
+mastervol() {
+  # amixer get Master | awk '$0~/%/{print $4}' | tr -d '[%]'
+  pamixer --get-volume
+}
+
+micvol() {
+  # amixer -c 1 sget Mic | grep 'Left:' | cut -d\  -f7 | tr -d '[%]'
+  # amixer -c 1 sget 'Mic Boost' | awk 'NR==6 { print $4 }' | awk '{print substr($0,2,3)}' '[%]'
+  amixer -c 1 sget 'Mic Boost' | awk 'NR==6 { print $4 }' | awk '{print substr($0,2,3)}'
+}
+
+"$@"

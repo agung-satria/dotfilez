@@ -3,7 +3,7 @@
 function runssr() {
   if ! command -v simplescreenrecorder &> /dev/null
   then
-    notify-send "simplescreenrecorder is not installed"
+    notify-send " simplescreenrecorder is not installed"
     exit
   else
     simplescreenrecorder

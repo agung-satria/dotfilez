@@ -7,8 +7,9 @@
  */
 static char *font = "JetBrainsMono Nerd Font :pixelsize=20:antialias=true:autohint=true";
 // static char *font2[] = { "JetBrainsMono Nerd Font :pixelsize=22:antialias=true:autohint=true" };
-static char *font2[] = { "NotoColorEmoji:pixelsize=20:antialias=true:autohint=true",
-  "JoyPixels:size=12:antialias=true:autohint=true", 
+static char *font2[] = { "Noto Color Emoji:pixelsize=20:antialias=true:autohint=true",
+  "JoyPixels:size=20:antialias=true:autohint=true", 
+  "Material:size=13:autohint=true",
   "Material Design Icons-Regular:size=13:autohint=true"};
 static int borderpx = 2;
 
