@@ -1,8 +1,9 @@
 <h1 align="center">My Arch Linux Setup</h1>
 <p align="center">suckless, <a href="https://github.com/agung-satria/nvimnew" target="_blank">nvim</a>, script, config, apps, notes, etc</p>
 
+![](suckless/screenshots/desktop-eww.png)
+![](suckless/screenshots/desktop-layout.png)
 ![](suckless/screenshots/desktop-rofi.png)
-![](suckless/screenshots/desktop-dirty.png)
 
 ## Dependencies!
 
@@ -15,10 +16,22 @@ sudo pacman -S dunst libnotify calcurse bc hsetroot xclip pulsemixer
 sudo pacman -S pamixer light expac
 sudo pacman -S ttf-joypixels ttf-font-awesome
 sudo pacman -S ntfs-3g mtpfs gvfs-mtp gvfs-gphoto2
-sudo pacman -S rofi arandr vlc galculator 
+sudo pacman -S rofi arandr vlc galculator
 sudo pacman -S scrot
 sudo pacman -S zip unzip unrar gzip
 ```
+
+## Autolock (Dependencies)
+
+- i3lock-color (aur)
+- xidlehook (aur)
+- xautolock (repo)
+- imagemagick (repo)
+- scrot (repo)
+- dunst (repo)
+- libnotify (repo)
+
+run `locker` in xinitrc, use `lock` to lock screen
 
 ## Change console font (make it bigger)
 
@@ -111,18 +124,25 @@ Change rofi themes:
 - Use `vr` (aliased to nvim ~/.config/rofi/config.rasi)
 - Uncomment line 15 in _config.rasi_ to use [siduck](https://github.com/siduck/chadwm/tree/main/rofi) theme
 - Change/uncomment last line/section to use other themes (windows11, launchpad, etc)
-- Use `rofi-theme-selector` to select a theme that isn't in the file (make sure to put that in _themes_ directory)
 
 ## Install eww
 
 - Install [rust](https://rustup.rs/)
 - Install [eww](https://elkowar.github.io/eww/eww.html)
 
-## Default applications
+## Default Application
 
-```sh
-Nemo 'xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search'
-```
+- Check mime file type `xdg-mime query filetype <file>` ex: $_`xdg-mime query filetype wallpaper.png`_
+- Check default app from mime filetype `xdg-mime query default <image/png>`
+- Check default file manager `xdg-mime query default inode/directory`
+- Set default app of file type `xdg-mime default <mirage.desktop> image/png`
+<br/><br/>Sample from the docs:
+- Set _**nemo**_ for file manager `xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search`
+- set _**dolphin**_ for file manager `xdg-mime default org.kde.dolphin.desktop inode/directory application`
+
+> *.desktop file is under _**/usr/share/applications**_ <br/>
+> [Alternative way](https://www.youtube.com/watch?v=z3F0hTigMvU), edit the ~/.config/mimeapps.list file <br/>
+> And check /usr/share/applications/mimeinfo.cache
 
 ## Nemo preview
 

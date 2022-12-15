@@ -16,7 +16,7 @@ static const unsigned int gappih    = 10;       /* horiz inner gap between windo
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 14;       /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    = 20;       /* vert outer gap between windows and screen edge */
-static       int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
+static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 1;     /* 0 means bottom bar */
 /*  Display modes of the tab bar: never shown, always shown, shown only in  */
@@ -274,7 +274,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask,		  XK_a,   	  spawn,	    	SHCMD("dunstctl history-pop") },
     { MODKEY|ControlMask,	  XK_a,   	  spawn,	    	SHCMD("dunstctl close-all") },
     // { MODKEY|ControlMask,		XK_a,   	  spawn,	    	SHCMD("dunstctl close") },
-    { MODKEY|ControlMask,		XK_l,   	  spawn,	    	SHCMD("lockwithsound") },
+    { MODKEY|ControlMask,		XK_l,   	  spawn,	    	SHCMD("lockwithsound") }, //betterlockscreen
+    { MODKEY|ALTKEY,		    XK_l,   	  spawn,	    	SHCMD("lock") },
 
     // floatthings
     { MODKEY|ShiftMask,         	XK_r,             spawn,        SHCMD("st -c float-st -g 100x25 gotop") },
@@ -369,6 +370,9 @@ static Key keys[] = {
     { MODKEY|ControlMask,           XK_0,      tag,            {.ui = ~0 } },
     { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
     { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
+    { MODKEY|ControlMask,           XK_minus,  setborderpx,    {.i = -1 } },
+    { MODKEY|ControlMask,           XK_equal,  setborderpx,    {.i = +1 } },
+    { MODKEY|ControlMask|ShiftMask, XK_equal,  setborderpx,    {.i = 0 } },
     { MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
     { MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 

@@ -1,7 +1,9 @@
 (defwidget headerBtns[]
   (box :space-evenly false :valign 'end' :halign 'end' :class 'headerBtns'
-       (button :class 'min' :onclick 'eww close slider' ' ')
-       (button :class 'close' :onclick 'eww kill'   '')
+       ; (button :class 'min' :onclick 'eww close slider' ' ')
+       ; (button :class 'close' :onclick 'eww kill'   '')
+       (button :class 'min' :onclick '$HOME/.config/eww/slider/launch_slider' ' ')
+       (button :class 'close' :onclick '$HOME/.config/eww/slider/launch_slider'   '')
       )
   )
 

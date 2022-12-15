@@ -1,0 +1,23 @@
+#!/bin/bash
+
+## Files and cmd
+FILE="$HOME/.cache/eww_music_popup"
+CFG="$HOME/.config/eww/music"
+EWW=`which eww`
+
+## Run eww daemon if not running already
+if [[ ! `pidof eww` ]]; then
+	${EWW} daemon
+	sleep 1
+fi
+
+## Open widgets 
+run_eww() {
+	${EWW} --config "$CFG" open-many \
+		   music
+}
+
+## Launch widget as pop up when dwmblock clicked
+run_eww & #where my command is the command you want to run and the & sign backgrounds it.
+PID=$! #PID = last run command.
+sleep 2 && 	${EWW} --config "$CFG" close music  || kill $PID

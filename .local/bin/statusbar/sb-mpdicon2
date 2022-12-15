@@ -2,6 +2,7 @@
 
 PREFIX_PLAY='    '
 PREFIX_PAUSE='    '
+PREFIX_STOP='    '
 TIME="$(mpc -p 6601 status | awk 'NR==2 { print $3 }')"
 
 get_mpd()
@@ -9,6 +10,7 @@ get_mpd()
 	current_song="$(mpc -p 6601 current | awk '{print substr($0,1,35)}')"
 
 	if [[ "$current_song" = "" ]]; then
+		# echo "$PREFIX_STOP"
 		echo ""
 		exit 0
 	else
@@ -21,16 +23,17 @@ get_mpd()
 	fi
    now_playing="$(mpc -p 6601 current)"
  case $BLOCK_BUTTON in
-	1) notify-send "🎵 $now_playing" "\ $TIME
-
- Middle click to toggle
- Right click to open ncmpcpp" ;;
-	2) mpc -p 6601 toggle ;;
-  3) st -c float-st-ncmpcpp -g 100x25+350+200 ncmpcpp ;;
-  4) mpc -p 6601 volume +2 ;;
-  5) mpc -p 6601 volume -2 ;;
-	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
-esac;
+   1) $HOME/.config/eww/music/launch_music_popup ;;
+# 	1) notify-send "🎵 $now_playing" "\ $TIME
+#
+#  Middle click to toggle
+#  Right click to open ncmpcpp" ;;
+    2) mpc -p 6601 toggle ;;
+    3) st -c float-st-ncmpcpp -g 100x25+350+200 ncmpcpp ;;
+    4) mpc -p 6601 volume +2 ;;
+    5) mpc -p 6601 volume -2 ;;
+    6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+  esac;
 
 	echo " $current_song"
 }

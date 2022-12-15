@@ -1,8 +1,9 @@
 ## auto start
 dwmblocks &
 lowbatnotif &
-# hsetroot -cover ~/.mygithub/dotfilez/.local/share/wallpapers/landscape-darken.jpg
-hsetroot -cover ~/.mygithub/dotfilez/.local/share/wallpapers/win11-dark-1080p.jpg
+hsetroot -cover ~/.mygithub/dotfilez/.local/share/wallpapers/landscape.jpg
+# hsetroot -cover ~/.mygithub/dotfilez/.local/share/wallpapers/win11-dark-1080p.jpg
+# hsetroot -cover ~/.mygithub/dotfilez/.local/share/wallpapers/yosemite-lowpoly.jpg
 xset r rate 300 50
 xset s blank
 xset s 600

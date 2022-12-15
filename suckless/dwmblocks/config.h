@@ -12,7 +12,7 @@ static const Block blocks[] = {
 	{"",   "sb-internet2",	            3,		22},
 	{"",   "sb-volarch3",	        0,		1},
 	{"",   "sb-search",	        0,		12},
-//	{"",   "sb-eww",	        0,		7},
+	{"",   "sb-ewwslider",	        0,		7},
 	{"",   "sb-clock2",	            60,		10},
 //	{"",   "sb-notification",	            0,		14},
 //	{"",   "sb-showdesktop",	            0,		19},

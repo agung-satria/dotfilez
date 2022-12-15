@@ -32,7 +32,7 @@
              :class 'micSlider'
              :value mic_vol
              ; :onchange "amixer -c 1 set Mic {}%"
-             :onchange "amixer -c 1 sset 'Mic Booster' {}"
+             :onchange "amixer -c 1 sset 'Mic Boost' {}%"
              :orientation 'v'
              :flipped true 
             ))

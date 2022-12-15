@@ -14,7 +14,8 @@ mastervol() {
 micvol() {
   # amixer -c 1 sget Mic | grep 'Left:' | cut -d\  -f7 | tr -d '[%]'
   # amixer -c 1 sget 'Mic Boost' | awk 'NR==6 { print $4 }' | awk '{print substr($0,2,3)}' '[%]'
-  amixer -c 1 sget 'Mic Boost' | awk 'NR==6 { print $4 }' | awk '{print substr($0,2,3)}'
+  # amixer -c 1 sget 'Mic Boost' | awk 'NR==6 { print $4 }' | awk '{print substr($0,2,3)}'
+  amixer -c 1 sget 'Mic Boost' | grep "%]" | awk 'NR==2 {print $4}' |tr -d '[%]'
 }
 
 "$@"

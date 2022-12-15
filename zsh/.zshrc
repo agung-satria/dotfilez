@@ -209,7 +209,7 @@ abbrev-alias webcamrecord="ffmpeg -y -i /dev/video0 output.mkv"
 abbrev-alias mkslideshow="cat folder/* | ffmpeg -y -framerate 1.5 -f image2pipe -i - -i sound.ogg -acodec copy output.mkv"
 abbrev-alias tn="tmux new-session -s "
 abbrev-alias tk="tmux kill-session -t "
-abbrev-alias tr="tmux rename-session -t "
+abbrev-alias trn="tmux rename-session -t "
 abbrev-alias tc="tmux attach-session -t "
 # make sure ffmpeg and lame are installed
 # zsh abbreviations===================================
