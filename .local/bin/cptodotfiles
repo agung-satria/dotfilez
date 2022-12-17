@@ -1,9 +1,9 @@
 #!/bin/bash
-dfiles="${XDG_DATA_HOME:-$HOME/.mygithub/dotfilez}"
+dfiles="${XDG_DATA_HOME:-$HOME/.dotfiles}"
 
 cp $HOME/.xinitrc "$dfiles/"
 cp $HOME/.local/bin/cptodotfiles "$dfiles/.local/bin"
-cp $HOME/.local/bin/{asb,brightness-setter,cacctoken,ce,changevolume,cpcolor,xcpcolor,dmenurecord,dmenuunicode,lampstatus,lock,locker,lockwithsound,lowbatnotif,maimpick,mkbash,natural-mouse-scroll-false,rewall,samedir,se,ss-cp,ss-full,sysact} "$dfiles/.local/bin"
+cp $HOME/.local/bin/{asb,brightness-setter,cacctoken,ce,changevolume,cpcolor,xcpcolor,dmenurecord,dmenuunicode,lampstatus,lock,locker,lockwithsound,lowbatnotif,maimpick,mkbash,natural-mouse-scroll-false,rewall,samedir,se,ss-cp,ss-full,sfetch,sysact} "$dfiles/.local/bin"
 cp $HOME/.config/picom/picom.conf "$dfiles/.config/picom/picom.conf"
 cp $HOME/.zshrc "$dfiles/zsh"
 cp $HOME/.zshenv "$dfiles/zsh"

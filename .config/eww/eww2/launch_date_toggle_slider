@@ -1,0 +1,40 @@
+#!/bin/bash
+
+## Files and cmd
+FILESLIDER="$HOME/.cache/slider&date.toggle"
+FILEDATE="$HOME/.cache/date&slider.toggle"
+CFG="$HOME/.config/eww/eww2"
+EWW=`which eww`
+
+## Run eww daemon if not running already
+if [[ ! `pidof eww` ]]; then
+	${EWW} daemon
+	sleep 1
+fi
+
+## Open widgets 
+run_date() {
+	${EWW} --config "$CFG" open-many \
+    date
+}
+
+## Launch or close date
+# if [[ ! -f "$FILEDATE" ]]; then
+# 	touch "$FILEDATE"
+# 	run_date
+# else
+# 	${EWW} --config "$CFG" close \
+#     date
+# 	rm "$FILEDATE"
+# fi
+
+# Close slider if openned
+if [[ ! -f "$FILEDATE" ]]; then
+	touch "$FILEDATE"
+	run_date
+  eww -c $HOME/.config/eww/eww4 close slider
+else
+	${EWW} --config "$CFG" close \
+    date
+	rm "$FILEDATE"
+fi

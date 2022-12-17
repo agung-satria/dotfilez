@@ -15,9 +15,9 @@ static const char *colors[SchemeLast][2] = {
 
 // //pop color---------------------------------------
 	/*     fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#141919" },
-	[SchemeSel] = { "#5FBAC7", "#39393c" },
-	[SchemeOut] = { "#000000", "#56B6C2" },
+	[SchemeNorm] = { "#b6beca", "#171a1f" },
+	[SchemeSel] = { "#74bee9", "#39393c" },
+	[SchemeOut] = { "#090909", "#90daff" },
 };
 // //pop color---------------------------------------
 

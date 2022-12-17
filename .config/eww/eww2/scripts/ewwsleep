@@ -1,0 +1,4 @@
+#!/bin/bash
+#Descriptions: 
+snd-notify && systemctl suspend && betterlockscreen -l &
+$HOME/.config/eww/powermenu/launch_powermenu #to toggle close after lock

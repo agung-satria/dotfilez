@@ -1,9 +1,10 @@
 <h1 align="center">My Arch Linux Setup</h1>
 <p align="center">suckless, <a href="https://github.com/agung-satria/nvimnew" target="_blank">nvim</a>, script, config, apps, notes, etc</p>
 
-![](suckless/screenshots/desktop-eww.png)
-![](suckless/screenshots/desktop-layout.png)
-![](suckless/screenshots/desktop-rofi.png)
+![](suckless/screenshots/decay-eww.png)
+![](suckless/screenshots/decay-layout.png)
+
+[colorscheme sources](https://github.com/decaycs)
 
 ## Dependencies!
 
@@ -19,6 +20,7 @@ sudo pacman -S ntfs-3g mtpfs gvfs-mtp gvfs-gphoto2
 sudo pacman -S rofi arandr vlc galculator
 sudo pacman -S scrot
 sudo pacman -S zip unzip unrar gzip
+sudo pacman -S zathura mupdf zathura-pdf-mupdf
 ```
 
 ## Autolock (Dependencies)

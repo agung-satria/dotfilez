@@ -1,0 +1,13 @@
+#!/bin/bash
+
+## Files and cmd
+CFG="$HOME/.config/eww/eww2"
+EWW=`which eww`
+
+## Run eww daemon if not running already
+if [[ ! `pidof eww` ]]; then
+	${EWW} daemon
+	sleep 1
+fi
+
+$EWW -c $CFG open --toggle powermenu

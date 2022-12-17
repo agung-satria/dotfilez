@@ -2,7 +2,7 @@
 #Descriptions: 
 snd-notify &
 notify-send -t 2000 "🖼️ Setting up wallpaper and lockscreen"
-hsetroot -fill ~/.mygithub/dotfilez/.local/share/wallpapers/landscape.jpg
-betterlockscreen -u ~/.mygithub/dotfilez/.local/share/wallpapers/rocksea.jpg
+hsetroot -fill ~/.dotfiles/.local/share/wallpapers/landscape.jpg
+betterlockscreen -u ~/.dotfiles/.local/share/wallpapers/rocksea.jpg
 snd-notifysystemgeneric &
 notify-send -t 1500 "✅ Done"

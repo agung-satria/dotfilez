@@ -6,6 +6,7 @@ vscodevim.vim (VIM)
 vscode-icons-team.vscode-icons (Icons for Visua Studio Code)
 PKief.material-icon-theme (Material Icon Theme)
 
+decaycs.decay (decay) (used)
 zhuangtongfa.material-theme (One Dark Pro)
 jdinhlife.gruvbox (Gruvbox)
 

@@ -4,12 +4,12 @@
 /* static char font[]        = "DejaVu Sans:pixelsize=14"; */
 /* static char font[] = "JetBrainsMono Nerd Font:style:medium:pixelsize=16"; */
 static char font[] = "SF Pro Display:weight=Medium:size=16:antialias=true:autohint=true";
-static char* normbgcolor = "#1d2021";
-static char* normfgcolor = "#cccccc";
-static char* selbgcolor =  "#39393c";
-static char* selfgcolor =  "#56B6C2";
-static char* urgbgcolor   = "#2b2b2b";
-static char* urgfgcolor   = "#E06C75";
+static char* normbgcolor = "#1E232B";
+static char* normfgcolor = "#b6beca";
+static char* selbgcolor =  "#404242";
+static char* selfgcolor =  "#74bee9";
+static char* urgbgcolor   = "#384148";
+static char* urgfgcolor   = "#e05f65";
 static const char before[]      = "";
 static const char after[]       = "";
 static const char titletrim[]   = "...";

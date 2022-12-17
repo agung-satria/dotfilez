@@ -1,0 +1,40 @@
+#!/bin/bash
+
+## Files and cmd
+FILESLIDER="$HOME/.cache/slider&date.toggle"
+FILEDATE="$HOME/.cache/date&slider.toggle"
+CFG="$HOME/.config/eww/slider"
+EWW=`which eww`
+
+## Run eww daemon if not running already
+if [[ ! `pidof eww` ]]; then
+	${EWW} daemon
+	sleep 1
+fi
+
+## Open slider
+run_slider() {
+	${EWW} --config "$CFG" open-many \
+    slider
+}
+
+# # Launch or close slider
+# if [[ ! -f "$FILESLIDER" ]]; then
+# 	touch "$FILESLIDER"
+# 	run_slider
+# else
+# 	${EWW} --config "$CFG" close \
+#     slider
+# 	rm "$FILESLIDER"
+# fi
+
+# # Launch or close slider
+if [[ ! -f "$FILESLIDER" ]]; then
+	touch "$FILESLIDER"
+	run_slider
+  eww -c $HOME/.config/eww/eww2 close date
+else
+	${EWW} --config "$CFG" close \
+    slider
+	rm "$FILESLIDER"
+fi

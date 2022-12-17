@@ -5,6 +5,7 @@
     case $BLOCK_BUTTON in
       1) rofi modi drun -show drun show-icons true ;;
       2) notify-send "❓ Help file not yet available" ;;
-      3) sysact ;;
+      # 3) sysact ;;
+      3) $HOME/.config/eww/eww2/launch_powermenu ;;
       6) "$TERMINAL" -e "$EDITOR" "$0" ;;
     esac; echo "   "

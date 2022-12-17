@@ -118,8 +118,8 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-/* float alpha = 1.0; */
-float alpha = 0.90;
+float alpha = 1.0;
+// float alpha = 0.90;
 // float alpha = 0.75;
 
 /* Terminal colors (16 first used in escape sequence) */
@@ -180,37 +180,66 @@ static const char *colorname[] = {
 // };
 /* ########################end of gruvbox####################### */
 
-/* ########################onedark####################### */
+// /* ########################onedark####################### */
+// 	/* "#282828", /1* hard contrast: #1d2021 / soft contrast: #32302f *1/ */
+// 	// "#14191e", /* hard contrast: #1d2021 / soft contrast: #32302f */
+// 	"#0E0D0D", /* hard contrast: #1d2021 / soft contrast: #32302f */
+// 	"#E06C75",
+// 	"#98C379",
+// 	"#D19A66",
+// 	"#61AFEF",
+// 	"#C678DD",
+// 	"#56B6C2",
+// 	"#ABB2BF",
+// 	"#5C6370",
+// 	"#E06C75",
+// 	"#98C379",
+// 	"#D19A66",
+// 	"#61AFEF",
+// 	"#C678DD",
+// 	"#56B6C2",
+// 	"#F2F2F2",
+// 	[255] = 0,
+// 	/* more colors can be added after 255 to use with DefaultXX */
+// 	"#add8e6", /* 256 -> cursor */
+// 	"#555555", /* 257 -> rev cursor*/
+//  	"#14191e", /* 258 -> bg for onedark*/
+// 	// "#0C0D13", /* 258 -> bg */
+// 	// "#0e0d0d", /* 258 -> bg */
+// 	"#ebdbb2", /* 259 -> fg */
+// 	// "#1E2127", /* 258 -> bg */
+// 	// "#5C6370", /* 259 -> fg */
+// };
+// /* ########################end of onedark####################### */
+
+/* ########################decay####################### */
 	/* "#282828", /1* hard contrast: #1d2021 / soft contrast: #32302f *1/ */
 	// "#14191e", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#0E0D0D", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#E06C75",
-	"#98C379",
-	"#D19A66",
-	"#61AFEF",
-	"#C678DD",
-	"#56B6C2",
+	"#1c252c", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	"#e05f65",
+	"#78dba9",
+	"#f1cf8a",
+	"#70a5eb",
+	"#c68aee",
+	"#74bee9",
 	"#ABB2BF",
-	"#5C6370",
-	"#E06C75",
-	"#98C379",
-	"#D19A66",
-	"#61AFEF",
-	"#C678DD",
-	"#56B6C2",
-	"#F2F2F2",
+	"#384148",
+	"#fc7b81",
+	"#94f7c5",
+	"#ffeba6",
+	"#8cc1ff",
+	"#e2a6ff",
+	"#90daff",
+	"#dee1e6",
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#add8e6", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
- 	"#14191e", /* 258 -> bg for onedark*/
-	// "#0C0D13", /* 258 -> bg */
-	// "#0e0d0d", /* 258 -> bg */
-	"#ebdbb2", /* 259 -> fg */
-	// "#1E2127", /* 258 -> bg */
-	// "#5C6370", /* 259 -> fg */
+ 	"#171a1f", /* 258 -> bg for decay*/
+	"#b6beca", /* 259 -> fg */
+	//"#fafdff", /* 259 -> fg */
 };
-/* ########################end of onedark####################### */
+/* ########################end of decay####################### */
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor

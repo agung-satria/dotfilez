@@ -1,9 +1,9 @@
 ## auto start
 dwmblocks &
 lowbatnotif &
-hsetroot -cover ~/.mygithub/dotfilez/.local/share/wallpapers/landscape.jpg
-# hsetroot -cover ~/.mygithub/dotfilez/.local/share/wallpapers/win11-dark-1080p.jpg
-# hsetroot -cover ~/.mygithub/dotfilez/.local/share/wallpapers/yosemite-lowpoly.jpg
+# hsetroot -cover ~/.dotfiles/.local/share/wallpapers/landscape.jpg
+hsetroot -cover ~/.dotfiles/.local/share/wallpapers/decay1.jpg
+# hsetroot -cover ~/.dotfiles/.local/share/wallpapers/vxarnosz.jpg
 xset r rate 300 50
 xset s blank
 xset s 600
@@ -12,7 +12,7 @@ mpd &
 flameshot &
 nm-applet &
 dunst &
-eww daemon &
+# eww daemon &
 picom --experimental-backends &
 # picom &
 # asb & #rc.local alternative
