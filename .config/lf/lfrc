@@ -216,7 +216,7 @@ map F mkdirr
 map b setwallpaper
 map D delete
 map <a-delete> delete
-map <delete> $trash-put -- $f
+map <delete> $trash-put -- $fx
 map E extract
 map C copyto
 map M moveto
@@ -259,8 +259,11 @@ source "~/.config/lf/shortcutrc"
 map gh cd ~/
 map gD cd ~/Documents
 map gd cd ~/Downloads
-map gp cd ~/Pictures
 map gm cd ~/Music
-map gc cd ~/.config
+map gp cd ~/Pictures
 map gv cd ~/Videos
-map gb cd ~/.local/bin
+map gw cd ~/w10
+map gs cd ~/.dotfiles
+map gt cd ~/.gitthings
+map gc cd ~/.config
+map gl cd ~/.local

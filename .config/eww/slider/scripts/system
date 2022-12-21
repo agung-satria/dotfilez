@@ -2,7 +2,7 @@
 
 pkgCount() {
   # xbps-query -l | wc -l
-  sudo pacman -Q | wc -l
+  pacman -Qq | wc -l
 }
 
 pkgUpdates() {
@@ -25,7 +25,8 @@ cpu() {
 }
 
 disk() {
-  df -hl | awk '/^\/dev\/sd[ab]/ { sum+=$5 } END { print sum }'
+  # df -hl | awk '/^\/dev\/sd[ab]/ { sum+=$5 } END { print sum }'
+  df -hl | awk '/^\/dev\/nvme0n1/ { sum+=$5 } END { print sum }'
 }
 
 ram() {
@@ -35,7 +36,8 @@ ram() {
 backlight() {
   # printf "%.0f\n" $(xbacklight -get)
   # printf "%.0f\n" $(cat /sys/class/backlight/amdgpu_bl0/brightness)
-  $HOME/.config/eww/slider/scripts/brightperc
+  # $HOME/.config/eww/slider/scripts/brightperc
+  light -G
 }
 
 wifi() {

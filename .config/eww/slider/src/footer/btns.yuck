@@ -27,7 +27,8 @@
   )
 
  (btn :name "" 
-    :command "doas zzz"
+   ; :command "systemctl poweroff"
+   :command "$HOME/.config/eww/powermenu/launch_powermenu"
     :class "sleep"
   )
 ))

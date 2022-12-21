@@ -18,7 +18,7 @@ tmux source ~/.tmux.conf
 
 # Install Plugins
 
-- `prefix` = `C-a`
+- `prefix` = `C-z`
 - `prefix + r` to reload
 - `prefix + I` (install plugins)
 - `prefix + alt-U` (uninstall plugins)

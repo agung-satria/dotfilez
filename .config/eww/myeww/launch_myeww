@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ## Files and cmd
-FILE="$HOME/.cache/eww_launch.powermenu"
-CFG="$HOME/.config/eww/powermenu"
+FILE="$HOME/.cache/myeww"
+CFG="$HOME/.config/eww/myeww"
 EWW=`which eww`
 
 ## Run eww daemon if not running already
@@ -14,11 +14,7 @@ fi
 ## Open widgets 
 run_eww() {
 	${EWW} --config "$CFG" open-many \
-		   lock \
-		   logout \
-		   sleep \
-		   reboot \
-		   poweroff
+		   example
 }
 
 ## Launch or close widgets accordingly
@@ -27,6 +23,6 @@ if [[ ! -f "$FILE" ]]; then
 	run_eww
 else
 	${EWW} --config "$CFG" close \
-					lock logout sleep reboot poweroff
+					example 
 	rm "$FILE"
 fi

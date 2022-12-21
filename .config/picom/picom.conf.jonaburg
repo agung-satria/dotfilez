@@ -12,6 +12,8 @@ rounded-corners-exclude = [
   "class_g = 'URxvt'",
   "class_g = 'XTerm'",
   "class_g = 'dwm'",
+  "class_g = 'Nm-applet'",
+  "class_g = 'systray'",
   "class_g = 'dmenu'",
   "class_g = 'Dunst'",
 ];

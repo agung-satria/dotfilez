@@ -1,61 +1,45 @@
 #!/bin/bash
 bat() {
-  batstat="$(cat /sys/class/power_supply/BAT0/status)"
-  battery="$(cat /sys/class/power_supply/BAT0/capacity)"
-  if [[ $batstat = 'Unknown' ]] || [[ $batstat = 'Charging' ]]; then
-    # batstat="$battery%"
-    batstat="  " 
-  elif [[ $battery -ge 5 ]] && [[ $battery -le 10 ]]; then
-    # batstat="$battery%"
-    batstat="  " 
-  elif [[ $battery -ge 11 ]] && [[ $battery -le 20 ]]; then
-    batstat="    "
-    # batstat="   $battery%"
-    # batstat="  " 
-  elif [[ $battery -ge 21 ]] && [[ $battery -le 30 ]]; then
-    batstat="    "
-    # batstat="   $battery%"
-    # batstat="  " 
-  elif [[ $battery -ge 31 ]] && [[ $battery -le 40 ]]; then
-    batstat="    "
-    # batstat="   $battery%"
-    # batstat="  " 
-  elif [[ $battery -ge 41 ]] && [[ $battery -le 50 ]]; then
-    batstat="    "
-    # batstat="   $battery%"
-    # batstat="  " 
-  elif [[ $battery -ge 51 ]] && [[ $battery -le 60 ]]; then
-    batstat="    "
-    # batstat="   $battery%"
-    # batstat="  " 
-  elif [[ $battery -ge 61 ]] && [[ $battery -le 70 ]]; then
-    batstat="    "
-    # batstat="   $battery%"
-    # batstat="  " 
-  elif [[ $battery -ge 71 ]] && [[ $battery -le 80 ]]; then
-    batstat="    "
-    # batstat="   $battery%"
-    # batstat="  " 
-  elif [[ $battery -ge 81 ]] && [[ $battery -le 90 ]]; then
-    batstat="    "
-    # batstat="   $battery%"
-    # batstat="  " 
-  elif [[ $battery -ge 91 ]] && [[ $battery -le 95 ]]; then
-    batstat="    "
-    # batstat="   $battery%"
-    # batstat="  " 
-  elif [[ $battery -ge 96 ]] && [[ $battery -le 100 ]]; then
-    batstat="    "
-    # batstat="   $battery%"
-    # batstat="  " 
 
+  batstat="$(cat /sys/class/power_supply/BAT0/status)"
+  ischarging="$(cat /sys/class/power_supply/BAT0/status)"
+  if [[ $batstat = 'Unknown' ]] || [[ $batstat = 'Charging' ]]; then
+    icon="  " 
+  elif [[ $battery -ge 5 ]] && [[ $battery -le 10 ]]; then
+    icon="  " 
+  elif [[ $battery -ge 11 ]] && [[ $battery -le 20 ]]; then
+    icon="    "
+  elif [[ $battery -ge 21 ]] && [[ $battery -le 30 ]]; then
+    icon="    "
+  elif [[ $battery -ge 31 ]] && [[ $battery -le 40 ]]; then
+    icon="    "
+  elif [[ $battery -ge 41 ]] && [[ $battery -le 50 ]]; then
+    icon="    "
+  elif [[ $battery -ge 51 ]] && [[ $battery -le 60 ]]; then
+    icon="    "
+  elif [[ $battery -ge 61 ]] && [[ $battery -le 70 ]]; then
+    icon="    "
+  elif [[ $battery -ge 71 ]] && [[ $battery -le 80 ]]; then
+    icon="    "
+  elif [[ $battery -ge 81 ]] && [[ $battery -le 90 ]]; then
+    icon="    "
+  elif [[ $battery -ge 91 ]] && [[ $battery -le 95 ]]; then
+    icon="    "
+  elif [[ $battery -ge 96 ]] && [[ $battery -le 100 ]]; then
+    icon="    "
   fi
-  echo "$batstat"
+  echo "$icon"
 }
+
 battery="$(cat /sys/class/power_supply/BAT0/capacity)"
+  batstat="$(cat /sys/class/power_supply/BAT0/status)"
 case $BLOCK_BUTTON in
-  1) notify-send "🔋 Battery percentage $battery%" ;;
-  4) light -A 5;;
-  5) light -U 5;;
+  1) if [ $batstat == 'Charging' ]; then
+    notify-send "🔋 $batstat: $battery%"
+  else
+    notify-send "🔋 Battery: $battery%" 
+  fi ;;
+  4) changebrightness up;;
+  5) changebrightness down;;
   6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac; echo "$(bat)"

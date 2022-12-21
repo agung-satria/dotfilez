@@ -8,7 +8,7 @@
 static char *font = "JetBrainsMono Nerd Font :pixelsize=20:antialias=true:autohint=true";
 // static char *font2[] = { "JetBrainsMono Nerd Font :pixelsize=22:antialias=true:autohint=true" };
 static char *font2[] = { "Noto Color Emoji:pixelsize=20:antialias=true:autohint=true",
-  "JoyPixels:size=20:antialias=true:autohint=true", 
+  "JoyPixels:size=20:antialias=true:autohint=true",
   "Material:size=13:autohint=true",
   "Material Design Icons-Regular:size=13:autohint=true"};
 static int borderpx = 2;
@@ -118,30 +118,30 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 1.0;
-// float alpha = 0.90;
-// float alpha = 0.75;
+// float alpha = 1.0;
+float alpha = 0.90;
+//float alpha = 0.75;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
 /* ########################alcrt color####################### */
-    /* "#14191e", */ 
-    /* "#b43c29", */ 
-    /* "#00c200", */ 
-    /* "#f1fa8c", */ 
-    /* "#2743c7", */ 
-    /* "#bf3fbd", */ 
-    /* "#00c5c7", */ 
-    /* "#c7c7c7", */ 
-    /* "#676767", */ 
-    /* "#dc7974", */ 
-    /* "#57e690", */ 
-    /* "#f1fa8c", */ 
-    /* "#a6aaf1", */ 
-    /* "#e07de0", */ 
-    /* "#5ffdff", */ 
-    /* "#feffff", */ 
+    /* "#14191e", */
+    /* "#b43c29", */
+    /* "#00c200", */
+    /* "#f1fa8c", */
+    /* "#2743c7", */
+    /* "#bf3fbd", */
+    /* "#00c5c7", */
+    /* "#c7c7c7", */
+    /* "#676767", */
+    /* "#dc7974", */
+    /* "#57e690", */
+    /* "#f1fa8c", */
+    /* "#a6aaf1", */
+    /* "#e07de0", */
+    /* "#5ffdff", */
+    /* "#feffff", */
   /* [255] = 0, */
   /* more colors can be added after 255 to use with DefaultXX */
     /*  "#add8e6", */   /* 256 -> cursor */

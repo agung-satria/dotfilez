@@ -1,5 +1,5 @@
 <h1 align="center">My Arch Linux Setup</h1>
-<p align="center">suckless, <a href="https://github.com/agung-satria/nvimnew" target="_blank">nvim</a>, script, config, apps, notes, etc</p>
+<p align="center">suckless, <a href="https://github.com/agung-satria/nvim" target="_blank">nvim</a>, script, config, apps, notes, etc</p>
 
 ![](suckless/screenshots/decay-eww.png)
 ![](suckless/screenshots/decay-layout.png)
@@ -13,13 +13,13 @@ sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webki
 sudo pacman -S tmux fzf wget curl rsync tree imagemagick nano
 sudo pacman -S nemo nemo-fileroller font-manager
 sudo pacman -S maim xdotool flameshot simplescreenrecorder
-sudo pacman -S dunst libnotify calcurse bc hsetroot xclip pulsemixer
-sudo pacman -S pamixer light expac
+sudo pacman -S dunst libnotify calcurse bc hsetroot pulsemixer xclip scrot
 sudo pacman -S ttf-joypixels ttf-font-awesome
 sudo pacman -S ntfs-3g mtpfs gvfs-mtp gvfs-gphoto2
 sudo pacman -S rofi arandr vlc galculator
-sudo pacman -S scrot
 sudo pacman -S zip unzip unrar gzip
+sudo pacman -S pamixer light expac
+sudo pacman -S firefox
 sudo pacman -S zathura mupdf zathura-pdf-mupdf
 ```
 
@@ -75,10 +75,11 @@ makepkg -si
 - yay -S noto-color-emoji-fontconfig (color emoji!)
 - yay -S brave-bin
 - yay -S mirage (image viewer)
+- yay -S gromit-mpx
 - yay -S gotop
 - yay -S grabc (sometimes not working)
-- yay -S picom-jonaburg-git (for nice rounded corners/used) or
-- yay -S picom-pijulius-git (for nice animation)
+- yay -S picom-jonaburg-git (for nice rounded corners) or
+- yay -S picom-pijulius-git (for nice animation) or just 'picom' from repo
 - yay -S ttf-ms-fonts
 - yay -S colorpicker
 - yay -S 7-zip

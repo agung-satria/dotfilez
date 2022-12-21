@@ -119,7 +119,7 @@ no-fading-destroyed-argb = false
 
 # Specify a list of conditions of windows that should never be considered focused.
 # focus-exclude = []
-focus-exclude = [ 
+focus-exclude = [
   "class_g = 'Cairo-clock'",
   "class_g = 'dwm'",
   "class_g = 'jgmenu'"

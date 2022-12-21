@@ -12,17 +12,22 @@ static const unsigned int systrayonleft = 0;   	/* 0: systray in the right corne
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static int showsystray        = 0;     /* 0 means no systray */
+// no gap
+// static const unsigned int gappih    = 0;       /* horiz inner gap between windows */
+// static const unsigned int gappiv    = 0;       /* vert inner gap between windows */
+// static const unsigned int gappoh    = 0;       /* horiz outer gap between windows and screen edge */
+// static const unsigned int gappov    = 0;       /* vert outer gap between windows and screen edge */
+// dekat
+// static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
+// static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
+// static const unsigned int gappoh    = 14;       /* horiz outer gap between windows and screen edge */
+// static const unsigned int gappov    = 20;       /* vert outer gap between windows and screen edge */
 // agak jauh
 static const unsigned int gappih    = 16;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 16;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 22;       /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    = 30;       /* vert outer gap between windows and screen edge */
-// agak dekat
-// static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
-// static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
-// static const unsigned int gappoh    = 14;       /* horiz outer gap between windows and screen edge */
-// static const unsigned int gappov    = 20;       /* vert outer gap between windows and screen edge */
-static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
+static       int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 1;     /* 0 means bottom bar */
 /*  Display modes of the tab bar: never shown, always shown, shown only in  */
@@ -34,7 +39,7 @@ static const int toptab				= False;               /* False means bottom tab bar 
 
 static const char *fonts[]        = {"SF Pro Display:weight=Medium:size=14:antialias=true:autohint=true",
   "JetBrainsMono Nerd Font:style:medium:size=14:autohint=true",
-  "JoyPixels:size=12:antialias=true:autohint=true", 
+  "JoyPixels:size=12:antialias=true:autohint=true",
   "Noto Color Emoji:pixelsize=14:antialias=true:autohint=true",
   "Font Awesome 6 Brands Regular:pixelsize=14:antialias=true:autohint=true",
   "Font Awesome 6 Free Regular:pixelsize=14:antialias=true:autohint=true",
@@ -52,7 +57,7 @@ static const char col_pop[]       = "#74bee9";
 static const char col_red[]       = "#e05f65";
 static const char *colors[][3]    = {
     /*               fg         bg         border   */
-    [SchemeNorm] = { col_gray3, col_gray1, col_gray1 },
+    [SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
     [SchemeSel]  = { col_pop, col_gray2,  col_pop  },
     [SchemeTitle]  = { col_gray4, col_gray1,  col_hl  },
 };
@@ -94,8 +99,9 @@ static const Rule rules[] = {
      *	WM_NAME(STRING) = title
     */
     /* class                  instance  title      tags mask    isfloating   monitor */
-    { "Brave-browser",        NULL,		  NULL,		   1 << 1,	    0,		       -1 },  
-    { "Google-chrome",        NULL,		  NULL,		   1 << 1,	    0,		       -1 },  
+    { "Brave-browser",        NULL,		  NULL,		   1 << 1,	    0,		       -1 },
+    { "Google-chrome",        NULL,		  NULL,		   1 << 1,	    0,		       -1 },
+    { "firefox",              NULL,		  NULL,		   1 << 1,	    0,		       -1 },
     { "Code",                 NULL,		  NULL,		   1 << 2,	    0,		       -1 },
     { "code",                 NULL,		  NULL,		   1 << 2,	    0,		       -1 },
     { "libreoffice",	        NULL,		  NULL,		   1 << 2,	    0,     	     -1 },
@@ -104,35 +110,35 @@ static const Rule rules[] = {
     { "Gimp",	                NULL,		  NULL,		   1 << 5,	    0,		       -1 },
     { "Inkscape",	            NULL,		  NULL,		   1 << 6,	    0,		       -1 },
     { "obs",	                NULL,		  NULL,		   1 << 7,	    0,		       -1 },
-    { "vokoscreen",           NULL,     NULL,      0,           1,           -1 },  
-    { "vokoscreenNG",         NULL,     NULL,      0,           1,           -1 },  
-    { "SimpleScreenRecorder", NULL,     NULL,      0,           1,           -1 },  
-    { "Yad",			            NULL,     NULL,      0,           1,           -1 },  
-    { "yad",			            NULL,     NULL,      0,           1,           -1 },  
-    { "Lxappearance",		      NULL,     NULL,      0,           1,           -1 },  
-    { "lxappearance",		      NULL,     NULL,      0,           1,           -1 },  
-    { "vCoolor",			        NULL,     NULL,      0,           1,           -1 },  
-    { "winbox64.exe",	        NULL,     NULL,      0,           1,           -1 },  
-    { "Wine",                 NULL,     NULL,      0,           1,           -1 },  
-    { "Eog",                  NULL,     NULL,      0,           1,           -1 },  
-    { "Arandr",               NULL,     NULL,      0,           1,           -1 },  
-    { "ksnip",                NULL,     NULL,      0,           1,           -1 },  
-    { "Pavucontrol",          NULL,     NULL,      0,           1,           -1 },  
-    { "xdman-Main",           NULL,     NULL,      0,           1,           -1 },  
-    { "arandr",               NULL,     NULL,      0,           1,           -1 },  
-    { "Sxiv",                 NULL,     NULL,      0,           1,           -1 },  
-    { "Mirage",               NULL,     NULL,      0,           1,           -1 },  
-    { "Viewnior",             NULL,     NULL,      0,           1,           -1 },  
-    { "Nemo",                 NULL,     NULL,      0,           1,           -1 },  
-    { "File-roller",          NULL,     NULL,      0,           1,           -1 },  
-    { "Org.gnome.Nautilus",   NULL,     NULL,      0,           1,           -1 },  
-    { "org.gnome.Nautilus",   NULL,     NULL,      0,           1,           -1 },  
-    { "dolphin",              NULL,     NULL,      0,           1,           -1 },  
-    { "Gnome-calculator",     NULL,     NULL,      0,           1,           -1 },  
-    { "Gnome-calendar",       NULL,     NULL,      0,           1,           -1 },  
-    { "Galculator",           NULL,     NULL,      0,           1,           -1 },  
-    { "audacious",            NULL,     NULL,      0,           0,           -1 },  
-    { "Dragon",               NULL,     NULL,      0,           1,           -1 },  
+    { "vokoscreen",           NULL,     NULL,      0,           1,           -1 },
+    { "vokoscreenNG",         NULL,     NULL,      0,           1,           -1 },
+    { "SimpleScreenRecorder", NULL,     NULL,      0,           1,           -1 },
+    { "Yad",			            NULL,     NULL,      0,           1,           -1 },
+    { "yad",			            NULL,     NULL,      0,           1,           -1 },
+    { "Lxappearance",		      NULL,     NULL,      0,           1,           -1 },
+    { "lxappearance",		      NULL,     NULL,      0,           1,           -1 },
+    { "vCoolor",			        NULL,     NULL,      0,           1,           -1 },
+    { "winbox64.exe",	        NULL,     NULL,      0,           1,           -1 },
+    { "Wine",                 NULL,     NULL,      0,           1,           -1 },
+    { "Eog",                  NULL,     NULL,      0,           1,           -1 },
+    { "Arandr",               NULL,     NULL,      0,           1,           -1 },
+    { "ksnip",                NULL,     NULL,      0,           1,           -1 },
+    { "Pavucontrol",          NULL,     NULL,      0,           1,           -1 },
+    { "xdman-Main",           NULL,     NULL,      0,           1,           -1 },
+    { "arandr",               NULL,     NULL,      0,           1,           -1 },
+    { "Sxiv",                 NULL,     NULL,      0,           1,           -1 },
+    { "Mirage",               NULL,     NULL,      0,           1,           -1 },
+    { "Viewnior",             NULL,     NULL,      0,           1,           -1 },
+    { "Nemo",                 NULL,     NULL,      0,           1,           -1 },
+    { "File-roller",          NULL,     NULL,      0,           1,           -1 },
+    { "Org.gnome.Nautilus",   NULL,     NULL,      0,           1,           -1 },
+    { "org.gnome.Nautilus",   NULL,     NULL,      0,           1,           -1 },
+    { "dolphin",              NULL,     NULL,      0,           1,           -1 },
+    { "Gnome-calculator",     NULL,     NULL,      0,           1,           -1 },
+    { "Gnome-calendar",       NULL,     NULL,      0,           1,           -1 },
+    { "Galculator",           NULL,     NULL,      0,           1,           -1 },
+    { "audacious",            NULL,     NULL,      0,           0,           -1 },
+    { "Dragon",               NULL,     NULL,      0,           1,           -1 },
     /* scratchpads */
     { NULL,		          "spterm",		    NULL,		   SPTAG(0),	  1,           -1 },
     { NULL,		          "spcalc",		    NULL,		   SPTAG(1),	  1,           -1 },
@@ -180,8 +186,8 @@ static const Layout layouts[] = {
     /*5*/ { "",      deck },
     /*6*/ { "",      bstackhoriz },
     /*7*/ { "",      grid },
-    /*8*/ { "",      nrowgrid },
-    /*9*/ { "",      horizgrid },
+    /*8*/ { "",      nrowgrid },
+    /*9*/ { "",      horizgrid },
     /*10*/{ "",      gaplessgrid },
     /*11*/{ "",      centeredmaster },
     /*12*/{ "",      centeredfloatingmaster },
@@ -229,13 +235,13 @@ static Key keys[] = {
     { 0,  XF86XK_AudioMute,           spawn, SHCMD("changevolume mute; pkill -RTMIN+1 dwmblocks") },
     { 0,  XF86XK_AudioRaiseVolume,    spawn, SHCMD("changevolume up; pkill -RTMIN+1 dwmblocks") },
     { 0,  XF86XK_AudioLowerVolume,    spawn, SHCMD("changevolume down; pkill -RTMIN+1 dwmblocks") },
-    { 0,  XF86MonBrightnessUp,        spawn, SHCMD("light -A 5; pkill -RTMIN+2 dwmblocks") },
-    { 0,  XF86MonBrightnessDown,      spawn, SHCMD("light -U 5; pkill -RTMIN+2 dwmblocks") },
+    { 0,  XF86MonBrightnessUp,        spawn, SHCMD("changebrightness up; pkill -RTMIN+2 dwmblocks") },
+    { 0,  XF86MonBrightnessDown,      spawn, SHCMD("changebrightness down; pkill -RTMIN+2 dwmblocks") },
     { MODKEY,			        XK_0,		    spawn, SHCMD("changevolume mute; pkill -RTMIN+1 dwmblocks") },
     { MODKEY,			        XK_equal,		spawn, SHCMD("changevolume up; pkill -RTMIN+1 dwmblocks") },
     { MODKEY,			        XK_minus,		spawn, SHCMD("changevolume down; pkill -RTMIN+1 dwmblocks") },
-    { MODKEY|ShiftMask,		XK_equal,		spawn, SHCMD("light -A 5; pkill -RTMIN+2 dwmblocks") },
-    { MODKEY|ShiftMask,		XK_minus,		spawn, SHCMD("light -U 5; pkill -RTMIN+2 dwmblocks") },
+    { MODKEY|ShiftMask,		XK_equal,		spawn, SHCMD("changebrightness up; pkill -RTMIN+2 dwmblocks") },
+    { MODKEY|ShiftMask,		XK_minus,		spawn, SHCMD("changebrightness down; pkill -RTMIN+2 dwmblocks") },
 
     /* mpd control */
     { MODKEY,			        XK_backslash,		spawn,		SHCMD("mpc -p 6601 toggle") },
@@ -250,25 +256,28 @@ static Key keys[] = {
     { MODKEY|ALTKEY,		    	XK_bracketright,	spawn,		SHCMD("mpc -p 6601 random") },
 
     /* launch (apps, dmenu script, etc) */
-    { MODKEY|ShiftMask,		    	XK_BackSpace,     	spawn,		SHCMD("systemctl suspend && lockwithsound") },
+    { MODKEY|ShiftMask,		    XK_BackSpace,     	spawn,		SHCMD("systemctl suspend && lockwithsound") },
     { MODKEY,				    XK_r,             spawn,		SHCMD("rofi modi drun -show drun show-icons true -columns 2 width 45") },
-    { MODKEY,            		XK_w,             spawn,		SHCMD("brave") },
-    // { MODKEY,				        XK_Escape,       	spawn,		SHCMD("sysact") },
-    { MODKEY,               XK_a,             spawn,		SHCMD("/home/agung/.config/eww/launch_all") },
-    { MODKEY,               XK_s,             spawn,		SHCMD("/home/agung/.config/eww/slider/launch_slider") },
-    { MODKEY,               XK_m,             spawn,		SHCMD("/home/agung/.config/eww/music/launch_music") },
-    { MODKEY,               XK_Escape,        spawn,		SHCMD("/home/agung/.config/eww/powermenu/launch_powermenu") },
-    { MODKEY|ShiftMask,  		XK_w,             spawn,		SHCMD("brave --incognito") },
+    // { MODKEY,            		XK_w,             spawn,		SHCMD("brave") },
+    // { MODKEY|ShiftMask,  		XK_w,             spawn,		SHCMD("brave --incognito") },
+    { MODKEY,            		XK_w,             spawn,		SHCMD("firefox") },
+    { MODKEY|ShiftMask,  		XK_w,             spawn,		SHCMD("firefox --private-window") },
+    // { MODKEY,				    XK_Escape,       	spawn,		SHCMD("sysact") },
+    { MODKEY,				    XK_BackSpace,     spawn,		SHCMD("sysact") },
+    { MODKEY,                   XK_a,             spawn,		SHCMD("/home/agung/.config/eww/launch_all") },
+    { MODKEY,                   XK_s,             spawn,		SHCMD("/home/agung/.config/eww/slider/launch_slider") },
+    { MODKEY,                   XK_m,             spawn,		SHCMD("/home/agung/.config/eww/music/launch_music") },
+    { MODKEY,                   XK_Escape,        spawn,		SHCMD("/home/agung/.config/eww/powermenu/launch_powermenu") },
     { MODKEY|ShiftMask,  		XK_d,             spawn,		SHCMD("samedir") },
-    { MODKEY,  		          XK_y,             spawn,		SHCMD("xcpcolor") },
-    { MODKEY|ControlMask,  	XK_e,             spawn,		SHCMD("nemo") },
-    { MODKEY|ShiftMask,		  XK_apostrophe,    spawn,	    SHCMD("galculator") },
+    { MODKEY,  		            XK_y,             spawn,		SHCMD("xcpcolor") },
+    { MODKEY|ControlMask,  	    XK_e,             spawn,		SHCMD("nemo") },
+    { MODKEY|ShiftMask,		    XK_apostrophe,    spawn,	    SHCMD("galculator") },
     { MODKEY,		           	XK_p,	  	  spawn,	    	SHCMD("arandr") },
-    { MODKEY|ShiftMask,		  XK_a,   	  spawn,	    	SHCMD("dunstctl history-pop") },
-    { MODKEY|ControlMask,	  XK_a,   	  spawn,	    	SHCMD("dunstctl close-all") },
+    { MODKEY|ShiftMask,		    XK_a,   	  spawn,	    	SHCMD("dunstctl history-pop") },
+    { MODKEY|ControlMask,	    XK_a,   	  spawn,	    	SHCMD("dunstctl close-all") },
     // { MODKEY|ControlMask,		XK_a,   	  spawn,	    	SHCMD("dunstctl close") },
     { MODKEY|ControlMask,		XK_l,   	  spawn,	    	SHCMD("lockwithsound") }, //betterlockscreen
-    { MODKEY|ALTKEY,		    XK_l,   	  spawn,	    	SHCMD("lock") },
+    { MODKEY|ALTKEY,		    XK_l,   	  spawn,	    	SHCMD("lock") }, //scrot transparent lock
 
     // floatthings
     { MODKEY|ShiftMask,         	XK_r,             spawn,        SHCMD("st -c float-st -g 100x25 gotop") },
@@ -289,7 +298,7 @@ static Key keys[] = {
     { MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
     { MODKEY|ALTKEY,                XK_Return, spawn,          SHCMD("tabbed -r 2 st -w ''") }, //open tabbed in st
-    { MODKEY|ControlMask,           XK_Return, spawn,          SHCMD("st -e tmux a") }, //reattach last tmux session
+    { MODKEY|ControlMask,           XK_Return, spawn,          SHCMD("st -e runtmux") }, //attach tmux session, if attached, create new
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY|ShiftMask,             XK_b,      togglesystray,  {0} },
     { MODKEY|ControlMask,           XK_w,      tabmode,        {-1} },
@@ -297,7 +306,7 @@ static Key keys[] = {
     { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
     { MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
     { MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
-    { ALTKEY,                       XK_Tab,    swapfocus,      {0} }, 
+    { ALTKEY,                       XK_Tab,    swapfocus,      {0} },
     { MODKEY,                       XK_n,      incnmaster,     {.i = +1 } },
     { MODKEY|ShiftMask,             XK_n,      incnmaster,     {.i = -1 } },
     { MODKEY,                       XK_h,      setmfact,       {.f = -0.035} },
@@ -336,6 +345,7 @@ static Key keys[] = {
     { MODKEY|ControlMask,           XK_m,      setlayout,      {.v = &layouts[2]} },
     { MODKEY|ControlMask,           XK_s,      setlayout,      {.v = &layouts[3]} },
     { MODKEY|ControlMask,           XK_c,      setlayout,      {.v = &layouts[5]} },
+    { MODKEY|ControlMask,           XK_g,      setlayout,      {.v = &layouts[10]} },
     { MODKEY|ControlMask,           XK_u,      setlayout,      {.v = &layouts[11]} },
     { MODKEY|ControlMask,           XK_f,      setlayout,      {.v = &layouts[13]} },
     { MODKEY|ControlMask,	          XK_comma,  cyclelayout,    {.i = -1 } },

@@ -2,19 +2,19 @@
 dwmblocks &
 lowbatnotif &
 # hsetroot -cover ~/.dotfiles/.local/share/wallpapers/landscape.jpg
-hsetroot -cover ~/.dotfiles/.local/share/wallpapers/decay1.jpg
+hsetroot -cover ~/.dotfiles/.local/share/wallpapers/supermoon.jpg
 # hsetroot -cover ~/.dotfiles/.local/share/wallpapers/vxarnosz.jpg
 xset r rate 300 50
 xset s blank
 xset s 600
 natural-mouse-scroll-false &
 mpd &
-flameshot &
+# flameshot &
 nm-applet &
 dunst &
 # eww daemon &
-picom --experimental-backends &
-# picom &
+picom &
+# picom --experimental-backends &
 # asb & #rc.local alternative
 snd-logon &
 
