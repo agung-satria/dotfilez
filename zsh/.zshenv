@@ -1,7 +1,7 @@
 # default apps
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="brave"
+export BROWSER="firefox"
 
 # path
 export PATH=~/.local/bin:~/.local/bin/statusbar:~/.local/bin/sound:~/bin:$PATH

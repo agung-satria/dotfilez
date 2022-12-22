@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ## Files and cmd
-FILE="$HOME/.cache/eww_slider"
-CFG="$HOME/.config/eww/slider"
+FILE="$HOME/.cache/eww_dashboard"
+CFG="$HOME/.config/eww/dashboard/"
 EWW=`which eww`
 
 ## Run eww daemon if not running already
@@ -13,8 +13,7 @@ fi
 
 ## Open widgets
 run_eww() {
-	${EWW} --config "$CFG" open-many \
-		   slider
+	${EWW} --config "$CFG" open dashboard
 }
 
 ## Launch or close widgets accordingly
@@ -23,6 +22,6 @@ if [[ ! -f "$FILE" ]]; then
 	run_eww
 else
 	${EWW} --config "$CFG" close \
-					slider
+					dashboard
 	rm "$FILE"
 fi

@@ -1,0 +1,3 @@
+#!/bin/bash
+kill -TERM "$(pgrep -u "$USER" "\bdwm$")" && snd-logoff
+# kill -TERM "$(pgrep -u "$USER" "\bdwm$")"

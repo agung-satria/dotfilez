@@ -13,8 +13,8 @@ mpd &
 nm-applet &
 dunst &
 # eww daemon &
-picom &
-# picom --experimental-backends &
+# picom &
+picom --experimental-backends &
 # asb & #rc.local alternative
 snd-logon &
 

@@ -1,0 +1,36 @@
+(defpoll pfp :interval "10s" "$HOME/.config/eww/dashboard/scripts/pfp.sh")
+(defpoll username :interval "10s" "$HOME/.config/eww/dashboard/scripts/user.sh")
+(defpoll hostname :interval "10s" "#HOME/.config/eww/dashboard/")
+(defpoll uptime :interval "30s" "uptime -p")
+
+(defpoll music_title :interval "1s" "mpc -p 6601 -f %title% current") ;; nanti pakai script biar ga blank kalau ga ada tag lagu nya
+(defpoll music_artist :interval "1s" "mpc -p 6601 -f %artist% current")
+; (defpoll music_art :interval "1s" "$HOME/.config/eww/dashboard/scripts/music/get_cover.sh")
+(defpoll music_art :interval "1s" "asdf")
+(defpoll music_art_url :interval "1s" "asdf")
+(defpoll music_status :interval "1s" "$HOME/.config/eww/dashboard/scripts/music/songdata.sh status")
+
+(defpoll disk :interval "1s" "$HOME/.config/eww/dashboard/scripts/disk.sh")
+
+(defpoll volume_icon :interval "1s" "$HOME/.config/eww/dashboard/scripts/volume.sh icon")
+(defpoll volume :interval "1s" "$HOME/.config/eww/dashboard/scripts/volume.sh percentage")
+(defpoll volume_value :interval "1s" "$HOME/.config/eww/dashboard/scripts/volume.sh vol")
+(defpoll is_muted :interval "1s" "$HOME/.config/eww/dashboard/scripts/volume.sh muted")
+
+(defpoll br_icon :interval "1s" "$HOME/.config/eww/dashboard/scripts/brightness.sh icon")
+(defpoll br :interval "1s" "$HOME/.config/eww/dashboard/scripts/brightness.sh br")
+
+(defpoll calendar_day :interval "10h" "date '+%d'")
+(defpoll calendar_month :interval "10h" "date '+%m")
+(defpoll calendar_year :interval "10h" "date '+%Y'")
+
+;; Music vars
+(defpoll SONG :interval "1s" `scripts/music_info --song`)
+(defpoll ARTIST :interval "1s" `scripts/music_info --artist`)
+(defpoll STATUS :interval "1s" `scripts/music_info --status`)
+(defpoll CURRENT :interval "1s" `scripts/music_info --time`)
+(defpoll COVER :interval "1s" `scripts/music_info --cover`)
+(defpoll CTIME :interval "1s" `scripts/music_info --ctime`)
+(defpoll TTIME :interval "1s" `scripts/music_info --ttime`)
+
+

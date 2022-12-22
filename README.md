@@ -1,10 +1,9 @@
 <h1 align="center">My Arch Linux Setup</h1>
 <p align="center">suckless, <a href="https://github.com/agung-satria/nvim" target="_blank">nvim</a>, script, config, apps, notes, etc</p>
 
-![](suckless/screenshots/decay-eww.png)
-![](suckless/screenshots/decay-layout.png)
-
-[colorscheme sources](https://github.com/decaycs)
+![](suckless/screenshots/desktop-clean.png)
+![](suckless/screenshots/desktop-dirty.png)
+![](suckless/screenshots/desktop-layout.png)
 
 ## Dependencies!
 
