@@ -17,6 +17,10 @@
 (defpoll volume_value :interval "1s" "$HOME/.config/eww/dashboard/scripts/volume.sh vol")
 (defpoll is_muted :interval "1s" "$HOME/.config/eww/dashboard/scripts/volume.sh muted")
 
+; (defpoll mpd_icon :interval "1s" "$HOME/.config/eww/dashboard/scripts/mpd.sh icon")
+(defpoll mpd_icon :interval "1s" "echo ")
+(defpoll mpd_val :interval "1s" "mpc -p 6601 status | awk 'NR==3 { print $2 }' | awk '{print substr($0,1,2)}'")
+
 (defpoll br_icon :interval "1s" "$HOME/.config/eww/dashboard/scripts/brightness.sh icon")
 (defpoll br :interval "1s" "$HOME/.config/eww/dashboard/scripts/brightness.sh br")
 

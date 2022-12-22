@@ -148,6 +148,7 @@
                :min 0
                :max 101)
       )
+      ; pamixer volume
       (box :orientation "h"
            :space-evenly "false"
            :class "vol-slider"
@@ -155,10 +156,23 @@
               volume_icon
         )
         (scale :value volume_value
-               :onchange "~/.config/dwm/eww/scripts/volume.sh set {}"
+               :onchange "pamixer --set-volume {} ; pkill -RTMIN+1 dwmblocks"
                :min 0
                :max 101)
       )
+      ; mpd volume
+      (box :orientation "h"
+           :space-evenly "false"
+           :class "mpd-slider"
+        (box :class "mpd-label"
+              mpd_icon
+        )
+        (scale :value "${mpd_val}"
+               :onchange "mpc -p 6601 volume {}"
+               :min 0
+               :max 101)
+      )
+      ; brightness
       (box :orientation "h"
            :space-evenly "false"
            :class "br-slider"

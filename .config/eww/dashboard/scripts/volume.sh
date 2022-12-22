@@ -88,4 +88,5 @@ if [[ $1 == "set" ]]; then
     val=100
   fi
   pactl set-sink-volume $SINK $val%
+  # pamixer --set-volume $SINK $val
 fi

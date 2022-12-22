@@ -2,8 +2,8 @@
 dwmblocks &
 lowbatnotif &
 # hsetroot -cover ~/.dotfiles/.local/share/wallpapers/landscape.jpg
-hsetroot -cover ~/.dotfiles/.local/share/wallpapers/supermoon.jpg
-# hsetroot -cover ~/.dotfiles/.local/share/wallpapers/vxarnosz.jpg
+# hsetroot -cover ~/.dotfiles/.local/share/wallpapers/supermoon.jpg
+nitrogen --restore
 xset r rate 300 50
 xset s blank
 xset s 600
@@ -13,8 +13,8 @@ mpd &
 nm-applet &
 dunst &
 # eww daemon &
-# picom &
-picom --experimental-backends &
+picom &
+# picom --experimental-backends &
 # asb & #rc.local alternative
 snd-logon &
 

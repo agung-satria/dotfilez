@@ -1,13 +1,13 @@
 (defwidget time[]
-    (box :class 'time' 
+    (box :class 'time'
     '󱑆 ${time} | ${date}')
     ; '󱑆 ${time}   ${date}')
  )
 
 (defwidget radialBars[]
-  (box :class "radialBars" 
+  (box :class "radialBars"
     (progressBar
-      :value cpu 
+      :value cpu
       :text ''
       :class 'CPU'
       :boxClass 'CPUBOX'
@@ -18,6 +18,6 @@
       :class 'RAM'
       :boxClass 'RAMBOX'
       )
-    (button :class 'mute' :onclick 'pamixer -t' '' )
+    (button :class 'mute' :onclick 'pamixer -t ; pkill -RTMIN+1 dwmblocks' '' )
      )
 )

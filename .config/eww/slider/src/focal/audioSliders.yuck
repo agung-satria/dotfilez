@@ -2,12 +2,12 @@
   (box :space-evenly false :class 'audioSliders'
 
     ; Master Volume (use pamixer) 
-    (box :orientation 'v' :class 'addPadding' 
+    (box :orientation 'v' :class 'addPadding'
     (label :text '墳' :class 'audioIcon')
     (metric
              :class 'masterSlider'
              :value master_vol
-             :onchange "pamixer --set-volume {}"
+             :onchange "pamixer --set-volume {} ; pkill -RTMIN+1 dwmblocks"
              :orientation 'v'
              :flipped true
          )
@@ -22,24 +22,24 @@
              ; :onchange "amixer set Headphone {}%"
              :onchange "mpc -p 6601 volume {}"
              :orientation 'v'
-             :flipped true 
+             :flipped true
             ))
 
-    ; Mic 
+    ; Mic
     (box :orientation 'v'  :class 'addPadding'
     (label :text '' :class 'audioIcon')
-    (metric 
+    (metric
              :class 'micSlider'
              :value mic_vol
              ; :onchange "amixer -c 1 set Mic {}%"
              :onchange "amixer -c 1 sset 'Mic Boost' {}%"
              :orientation 'v'
-             :flipped true 
+             :flipped true
             ))
     ; 
    (box :orientation 'v' :class 'pkgsBox'
     (progressBar
-      :value battery 
+      :value battery
       :text '🔋'
       :class 'battery'
       )

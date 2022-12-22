@@ -12,7 +12,7 @@ sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webki
 sudo pacman -S tmux fzf wget curl rsync tree imagemagick nano
 sudo pacman -S nemo nemo-fileroller font-manager
 sudo pacman -S maim xdotool flameshot simplescreenrecorder
-sudo pacman -S dunst libnotify calcurse bc hsetroot pulsemixer xclip scrot
+sudo pacman -S dunst libnotify calcurse bc nitrogen hsetroot pulsemixer xclip scrot
 sudo pacman -S ttf-joypixels ttf-font-awesome
 sudo pacman -S ntfs-3g mtpfs gvfs-mtp gvfs-gphoto2
 sudo pacman -S rofi arandr vlc galculator

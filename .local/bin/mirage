@@ -1,0 +1,141 @@
+#!/usr/bin/python
+"""Mirage is a fast GTK+ Image Viewer
+"""
+
+__author__ = "Scott Horowitz"
+__email__ = "stonecrest@gmail.com"
+__license__ = """
+Mirage, a simple GTK+ Image Viewer
+Copyright 2007 Scott Horowitz <stonecrest@gmail.com>
+Copyright 2020 Thomas Ross <thomasross@thomasross.io>
+
+This file is part of Mirage.
+
+Mirage is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+Mirage is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+"""
+
+import os
+import sys
+import site
+import gettext
+import locale
+
+from gi.repository import Gio
+
+
+LOCALE_DOMAIN = "mirage"
+MIRAGE_RESOURCE_FILE_NAME = "io.thomasross.mirage.gresource"
+
+
+def get_mirage_source_dir():
+    mirage_bin_dir = os.path.dirname(os.path.realpath(__file__))
+    mirage_source_dir = os.path.abspath(os.path.join(mirage_bin_dir, ".."))
+
+    if os.path.exists(os.path.join(mirage_source_dir, "mirage", "__init__.py")):
+        return mirage_source_dir
+
+    return None
+
+
+def get_data_file_path(filename):
+    for prefix in (
+        x
+        for x in [
+            sys.prefix,
+            os.path.join(sys.prefix, "local"),
+            site.USER_BASE,
+            getattr(sys, "base_prefix", None),
+        ]
+        if x
+    ):
+        path = os.path.join(prefix, filename)
+        if os.path.exists(path):
+            return path
+
+    return None
+
+
+def get_locale_directory():
+    ru_mo_file = get_data_file_path(
+        os.path.join("share", "locale", "ru", "LC_MESSAGES", "mirage.mo")
+    )
+
+    if not ru_mo_file:
+        return None
+
+    return os.path.dirname(os.path.dirname(os.path.dirname(ru_mo_file)))
+
+
+def main():
+    mirage_source_dir = get_mirage_source_dir()
+    uninstalled = mirage_source_dir is not None
+
+    if uninstalled:
+        import subprocess
+
+        sys.path.insert(0, mirage_source_dir)
+
+        resource_file_path = os.path.join(mirage_source_dir, MIRAGE_RESOURCE_FILE_NAME)
+        subprocess.call(
+            [
+                "glib-compile-resources",
+                "--sourcedir={}".format(os.path.join(mirage_source_dir, "resources")),
+                "--target={}".format(resource_file_path),
+                os.path.join(mirage_source_dir, "resources", "mirage.gresource.xml"),
+            ]
+        )
+    else:
+        resource_file_path = get_data_file_path(
+            os.path.join("share", "mirage", MIRAGE_RESOURCE_FILE_NAME)
+        )
+        if not resource_file_path:
+            print("Could not find", MIRAGE_RESOURCE_FILE_NAME, file=sys.stderr)
+            sys.exit(1)
+
+    resources = Gio.resource_load(resource_file_path)
+    Gio.resources_register(resources)
+
+    import mirage
+
+    try:
+        locale.setlocale(locale.LC_ALL, "")
+    except locale.Error as e:
+        print("Could not set locale: {}.".format(e), 'Using "C".', file=sys.stderr)
+        locale.setlocale(locale.LC_ALL, "C")
+
+    locale_directory = get_locale_directory()
+    gettext.bindtextdomain(LOCALE_DOMAIN, locale_directory)
+    gettext.textdomain(LOCALE_DOMAIN)
+    translation = gettext.translation(LOCALE_DOMAIN, locale_directory, fallback=True)
+    translation.install()
+
+    try:
+        locale.bindtextdomain(LOCALE_DOMAIN, locale_directory)
+        locale.bind_textdomain_codeset(LOCALE_DOMAIN, "UTF-8")
+        locale.textdomain(LOCALE_DOMAIN)
+    except locale.error as e:
+        print(
+            "Could not bind locale domain: {}.".format(e),
+            "Not all translations will work.",
+            file=sys.stderr,
+        )
+
+    try:
+        mirage.run([])
+    except KeyboardInterrupt:
+        pass
+
+
+if __name__ == "__main__":
+    main()

@@ -145,6 +145,29 @@
         }
       }
     }
+    .mpd-slider {
+      .mpd-label {
+        font-size: 20px;
+        font-family: Iosevka Nerd Font;
+        margin-right: 15px;
+        color: $fg;
+      }
+      & scale trough {
+        all: unset;
+        border-radius: 10px;
+        background-color: $black;
+        border: none;
+        min-height: 14px;
+        min-width: 355px;
+        margin-left: 3px;
+        & highlight {
+          all: unset;
+          background-color: $yellow;
+          color: #000000;
+          border-radius: 10px;
+        }
+      }
+    }
     .br-slider {
       .br-label {
         font-size: 20px;
@@ -162,7 +185,8 @@
         margin-left: 3px;
         & highlight {
           all: unset;
-          background-color: $yellow;
+          /* background-color: $yellow; */
+          background-color: $white;
           color: #000000;
           border-radius: 10px;
         }
@@ -319,7 +343,7 @@ calendar:indeterminate {
     transition: all ease .2s;
     /* &:hover { background-color: $bgSecondary; } */
     /* &:hover { background-color: #2F333C; } */
-    &:hover { color: #fff; }
+    &:hover { color: #EAEAEA; }
     &:active { background-color: $bg; }
     .content {
       border-radius: 20px;
@@ -334,8 +358,8 @@ calendar:indeterminate {
 
   .lock, .logout, .sleep, .reboot, .shutdown {
       padding: 10px 0;
-      margin: 0;
-      font-size: 35px;
+      margin: -20px;
+      font-size: 40px;
   }
 }
 
