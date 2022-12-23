@@ -69,13 +69,16 @@
             "warning": 20,
             "critical": 10
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format": "{icon}{capacity}%",
+        "format-charging": "{capacity}%",
+        "format-plugged": "ﮣ{capacity}%",
+        /* "format-plugged": "{capacity}%", */
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "]
+        /* "format-icons": [" ", " ", " ", " ", " "] */
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -85,7 +88,8 @@
         "format-bluetooth": "{icon} {volume}% {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         //"format-muted": "婢",
-        "format-muted": "🔇",
+        /* "format-muted": "🔇", */
+                "format-muted": " {volume}%",
         // "format-source": "{volume}% ",
         // "format-source-muted": "",
         "format-icons": {

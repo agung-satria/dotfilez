@@ -1,4 +1,4 @@
-`
+```sh
 yay -S hyprland-bin
 sudo pacman -S kitty
 sudo pacman -S pipewire wireplumber
@@ -12,12 +12,11 @@ sudo pacman -S swaylock (lockscreen like i3lock)
 sudo pacman -S swaybg (just use hyprpaper)
 
 yay -S hyprpaper-git (https://github.com/hyprwm/hyprpaper)
-
-yay -S xdg-desktop-portal-hyprland-git (belum) / kayaknya enggak--------
+    yay -S xdg-desktop-portal-hyprland-git
 (xdg-desktop-portal-wlr)
 
+(belum)---------------------------------------------------
 exec once this (.local/bin/exec-once):
-```sh
 #!/bin/bash
 sleep 1
 killall xdg-desktop-portal-hyprland
@@ -26,8 +25,7 @@ killall xdg-desktop-portal
 /usr/libexec/xdg-desktop-portal-hyprland &
 sleep 2
 /usr/lib/xdg-desktop-portal &
-```
-(belum) / kayaknya enggak------------------------------------------------
+(belum)---------------------------------------------------
 
 sudo pacman -S polkit-kde-agent
 You can autostart it with
@@ -53,3 +51,4 @@ usage:
 -h | --help prints a help message
 -a | --autocopy automatically copies the output to the clipboard (requires wl-clipboard)
 `
+```

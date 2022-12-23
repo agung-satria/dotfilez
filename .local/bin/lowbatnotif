@@ -15,5 +15,5 @@ bat() {
     fi
  }
     $(bat)
-sleep 2m
+sleep 5m
 done

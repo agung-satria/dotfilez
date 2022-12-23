@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# sudo pacman -S wl-clipboard
+# require: https://github.com/bugaevc/wl-clipboard
+
+cat ~/.local/share/.at.txt | wl-copy

@@ -4,12 +4,19 @@
 ![](suckless/screenshots/desktop-clean.png)
 ![](suckless/screenshots/desktop-dirty.png)
 ![](suckless/screenshots/desktop-layout.png)
+![](suckless/screenshots/desktop-hyprland.png)
 
 ## Dependencies!
 
 ```sh
 sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk
 sudo pacman -S tmux fzf wget curl rsync tree imagemagick nano
+
+sudo pacman -S dolphin konsole ark qt5ct
+Edit /etc/environment as root
+and add the line `QT_QPA_PLATFORMTHEME=qt5ct` and save
+and edit qt5 theme qith QT5Settings
+
 sudo pacman -S nemo nemo-fileroller font-manager
 sudo pacman -S maim xdotool wtype*
 sudo pacman -S flameshot simplescreenrecorder
