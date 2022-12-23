@@ -28,7 +28,7 @@
     }
     .uptime, .hostname {
     font-family: JetBrains Mono Nerd Font;
-      /* font-size: 22px; */
+      font-size: 17px;
     }
     .hostname {
       color: $blue;
@@ -36,7 +36,7 @@
     .uptime {
     /* font-family: SF Pro Display; */
     font-family: JetBrains Mono Nerd Font;
-      /* font-size: 19px; */
+      font-size: 16px;
       /* color: $lightblack; */
       color: $yellow;
     }
@@ -88,13 +88,15 @@
 .controls {
   background-color: $bgSecondary;
   border-radius: 20px;
-  padding: 9px;
+  /* padding: 10px 22px; */
+  padding: 14px;
+  padding-bottom: 15px;
   .header {
     /* font-family: Product Sans; */
     font-family: SF Pro Display;
     /* color: $lightblack; */
     color: #3C4D5E;
-    font-size: 18px;
+    font-size: 16px;
   }
   .content {
     .disk-slider {
@@ -111,7 +113,7 @@
         border: none;
         margin-bottom: 10px;
         min-height: 14px;
-        min-width: 355px;
+        min-width: 265px;
         margin-left: 9px;
         & progress {
           all: unset;
@@ -135,7 +137,7 @@
         background-color: $black;
         border: none;
         min-height: 14px;
-        min-width: 355px;
+        min-width: 265px;
         margin-left: 4px;
         & highlight {
           all: unset;
@@ -158,7 +160,7 @@
         background-color: $black;
         border: none;
         min-height: 14px;
-        min-width: 355px;
+        min-width: 265px;
         margin-left: 3px;
         & highlight {
           all: unset;
@@ -181,7 +183,7 @@
         background-color: $black;
         border: none;
         min-height: 14px;
-        min-width: 355px;
+        min-width: 265px;
         margin-left: 3px;
         & highlight {
           all: unset;
@@ -200,7 +202,7 @@
   font-family: SF Pro Display;
   background-color: $bgSecondary;
   border-radius: 20px;
-  padding: 0px 1rem .2rem;
+  padding: 0px .6rem .2rem;
   color: $fg;
   background-color: $bgSecondary;
 
@@ -272,8 +274,10 @@ calendar:indeterminate {
 	background-size: 100%;
   background-color: $bgSecondary;
 	min-height: 0px;
-	min-width: 120px;
-	margin: 10px 0px 4px 10px ;
+	/* min-width: 120px; */
+	min-width: 106px;
+	/* margin: 10px 0px 10px 10px ; */
+	margin: 12px 0px 10px 12px ;
 	border-radius: 14px;
 	/* border-radius: 50%; */
 }
@@ -281,15 +285,16 @@ calendar:indeterminate {
 .song {
 	color: #8FBCBB;
     font-family: SF Pro Display;
-	font-size : 18px;
+	font-size : 17px;
 	font-weight : bold;
-	margin : 16px 0px -15px 0px;
+	/* margin : 16px 0px -15px 0px; */
+	margin : 12px 0px -18px 0px;
 }
 
 .artist {
 	color: #EBCB8B;
     font-family: SF Pro Display;
-	font-size : 17px;
+	font-size : 16px;
 	font-weight : normal;
 	margin : 0px 0px;
 }
@@ -301,19 +306,19 @@ calendar:indeterminate {
 	color: #EBCB8B;
 	font-size : 30px;
 	font-weight : normal;
-	margin : -21px 0px -28px 0px;
+	margin : -21px 0px -20px 0px;
 }
 .btn_play {
 	color: #A3BE8C;
 	font-size : 36px;
 	font-weight : bold;
-	margin : -21px 0px -28px 0px;
+	margin : -21px 0px -20px 0px;
 }
 .btn_next {
 	color: #EBCB8B;
 	font-size : 30px;
 	font-weight : normal;
-	margin : -21px 0px -28px 0px;
+	margin : -21px 0px -20px 0px;
 }
 
 .music_bar scale trough highlight {
@@ -326,8 +331,8 @@ calendar:indeterminate {
 	background-color: #3A404C;
 	border-radius: 4px;
 	min-height: 8px;
-	min-width: 240px;
-	margin : 10px 25px 10px 16px;
+	min-width: 180px;
+	margin : 2px 25px 16px 16px;
 }
 
 .powermenu {
@@ -357,9 +362,9 @@ calendar:indeterminate {
   .shutdown { color: $red; }
 
   .lock, .logout, .sleep, .reboot, .shutdown {
-      padding: 10px 0;
+      padding: 10px 0px;
       margin: -20px;
-      font-size: 40px;
+      font-size: 36px;
   }
 }
 
