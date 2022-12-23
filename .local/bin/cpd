@@ -1,8 +1,8 @@
 #!/bin/bash
 dfiles="${XDG_DATA_HOME:-$HOME/.dotfiles}"
 
-cp $HOME/.xinitrc "$dfiles/"
-cp $HOME/.local/bin/cptodotfiles "$dfiles/.local/bin"
+# cp $HOME/.xinitrc "$dfiles/"
+cp $HOME/.local/bin/cpd "$dfiles/.local/bin"
 cp $HOME/.local/bin/{asb,brightness-setter,cacctoken,ce,changebrightness,changevolume,cpcolor,xcpcolor,dmenurecord,dmenuunicode,lampstatus,lock,locker,lockwithsound,lowbatnotif,maimpick,mkbash,natural-mouse-scroll-false,rewall,runtmux,samedir,se,ss-cp,ss-full,sfetch,sysact} "$dfiles/.local/bin"
 # cp $HOME/.config/picom/picom.conf "$dfiles/.config/picom/picom.conf"
 cp $HOME/.zshrc "$dfiles/zsh"
@@ -23,5 +23,9 @@ cp -R $HOME/.config/zathura "$dfiles/.config"
 cp -R $HOME/.local/bin/statusbar "$dfiles/.local/bin"
 cp -R $HOME/.local/bin/sound "$dfiles/.local/bin"
 cp -R $HOME/.local/share/sounds "$dfiles/.local/share"
+
+cp -R $HOME/.config/hypr/ "$dfiles/hyprland/.config"
+cp -R $HOME/.config/kitty/ "$dfiles/hyprland/.config"
+cp -R $HOME/.config/waybar/ "$dfiles/hyprland/.config"
 
 echo "✅ All dotfiles ready to push "

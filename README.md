@@ -11,11 +11,12 @@
 sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk
 sudo pacman -S tmux fzf wget curl rsync tree imagemagick nano
 sudo pacman -S nemo nemo-fileroller font-manager
-sudo pacman -S maim xdotool flameshot simplescreenrecorder
+sudo pacman -S maim xdotool wtype*
+sudo pacman -S flameshot simplescreenrecorder
 sudo pacman -S dunst libnotify calcurse bc nitrogen hsetroot pulsemixer xclip scrot
 sudo pacman -S ttf-joypixels ttf-font-awesome
 sudo pacman -S ntfs-3g mtpfs gvfs-mtp gvfs-gphoto2
-sudo pacman -S rofi arandr vlc galculator
+sudo pacman -S rofi rofi-emoji rofi-calc arandr vlc galculator
 sudo pacman -S zip unzip unrar gzip
 sudo pacman -S pamixer light expac
 sudo pacman -S firefox

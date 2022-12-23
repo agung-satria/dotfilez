@@ -1,11 +1,12 @@
 configuration{
-    modi: "run,drun,window";
+    modi: "run,drun,emoji,calc";
+    // modi: "run,drun,window,emoji";
     lines: 5;
-    /* font: "JetBrains Mono Nerd Font 12"; */
+    // font: "JetBrains Mono Nerd Font 12";
     font: "SF Pro Display 15";
     show-icons: true;
     icon-theme: "Zafiro-icons-Dark";
-    terminal: "alacritty";
+    terminal: "kitty";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
@@ -13,7 +14,9 @@ configuration{
     sidebar-mode: true;
     display-drun: "   Apps ";
     display-run: "   Run ";
-    display-window: " 﩯  Window";
+    // display-window: " 﩯 Window ";
+    display-emoji: "  Emoji";
+    display-calc: "  Calc";
 }
 
 /* @theme "themes/decay" */
@@ -94,7 +97,7 @@ button {
     padding: 10px;
     background-color: @bg-col-light;
     text-color: @grey;
-    vertical-align: 0.5; 
+    vertical-align: 0.5;
     horizontal-align: 0.5;
 }
 

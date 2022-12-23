@@ -1,0 +1,20 @@
+window {
+    width: 300px;
+    height: 350px;
+    border: 0px;
+    background-color: @bg-col;
+    padding: 0px;
+}
+
+inputbar {
+    children: [entry];
+    background-color: @bg-col;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+listview {
+    border: 0px 0px 0px;
+    margin: 10px 5px 5px 10px;
+    background-color: @bg-col;
+}

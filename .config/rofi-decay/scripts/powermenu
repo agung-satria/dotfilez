@@ -1,0 +1,15 @@
+#!/bin/bash
+#Descriptions:
+
+chosen=$(printf "📴 Power Off\n🔃 Restart\n💤 Sleep\n🐻 Hibernate\n🚪 Log Out\n🔒 Lock" | rofi -dmenu -i -theme-str '@import "/home/agung/.config/rofi/box/powermenu.rasi"')
+
+case "$chosen" in
+	"📴 Power Off") poweroff ;;
+	"🔃 Restart") reboot ;;
+	"💤 Sleep") systemctl suspend ;;
+	"🐻 Hibernate") systemctl hibernate ;;
+    "🚪 Log Out") notify-send "⚠️ Press Super+Shift+q to leave Hyprland" ;;
+	"🔒 Lock") swaylock ;;
+	*) exit 1 ;;
+esac
+

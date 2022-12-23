@@ -18,6 +18,7 @@ hash -d cf=/home/agung/.config
 hash -d NVIM=/home/agung/.config/nvim
 hash -d cdg=~/.gitthings
 hash -d DOTFILES=~/.dotfiles
+hash -d HYPRLAND=~/.hyprland-dotfiles
 hash -d SUCKLESS=/home/agung/.dotfiles/suckless
 hash -d Notes=~/.gitthings/notes
 hash -d w10=/home/agung/w10
