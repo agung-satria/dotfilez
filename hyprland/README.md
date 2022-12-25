@@ -51,4 +51,32 @@ usage:
 -h | --help prints a help message
 -a | --autocopy automatically copies the output to the clipboard (requires wl-clipboard)
 `
+
+cursor:?
+https://wiki.archlinux.org/title/Cursor_themes
+
+link download:
+https://github.com/ful1e5/apple_cursor
+https://github.com/ful1e5/apple_cursor/releases
+tar file in usr/share/icons
+
+https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
+set in gsetting in hyprland.conf
+
+set in ~/.config/gtk-3.0/settings.ini
+'gtk-cursor-theme-name=macOS-BigSur'
+reboot
+
+nvim ~/.icons/default/index.theme
+'
+# This file is written by LXAppearance. Do not edit.
+[Icon Theme]
+Name=Default
+Comment=Default Cursor Theme
+Inherits=macOS-BigSur
+'
+ln -s /usr/share/icons/macOS-BigSur ~/.icons/default/cursors
+
+set in LXAppearance if necessary
+
 ```

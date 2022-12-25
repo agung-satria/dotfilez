@@ -226,13 +226,14 @@ Reboot
 `https://github.com/betterlockscreen/betterlockscreen` (build manual like on ubuntu)
 ```
 
-## Pacman command
+## Command
 
 ```sh
 sudo pacman -Rsn $(pacman -Qdtq)
 sudo pacman -Scc
 sudo pacman -Rscnd <program>
 
+yay -Qm (list installed AUR packages )
 ```
 
 ## Command

@@ -1,0 +1,3 @@
+#!/bin/bash
+#Descriptions:
+notify-send "This Month" "$(cal --color=always | sed "s/..7m/<b><span color=\"cyan\">/;s/..27m/<\/span><\/b>/")" && notify-send "Appointments" "$(calcurse -d3)" && notify-send " - C to open calcurse"

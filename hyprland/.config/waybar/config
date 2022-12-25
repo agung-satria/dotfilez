@@ -25,7 +25,7 @@
         "format": "{}"
     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 21,
         "spacing": 10
     },
    //  "clock": {
@@ -36,17 +36,23 @@
    //  },
      "clock": {
          // "timezone": "America/New_York",
-         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
+         /* "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>", //hover popup */
+         "tooltip-format": false, //hover popup
          // "format-alt": "{:%Y-%m-%d}"
-        "format-alt": "{:%a, %b %d %Y}",
+        /* "format-alt": "{:%a, %b %d %Y}", */
+         /* "on-click" : "kitty -e calcurse", */
+         /* "hover": "disable", */
+         "on-click" : "$HOME/.config/waybar/scripts/notifySendCal",
+         /* "format":  "{:%a, %b %d %I:%M %p}" //12hr */
         "format": "{:%I:%M%p}"
+
      },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
-    "network": {
+     "backlight": {
+         // "device": "acpi_video1",
+         "format": "{icon} {percent}%",
+         "format-icons": ["", "", "", "", "", "", "", "", ""]
+     },
+     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
 
         "format-wifi": "直 {signalStrength}%",
@@ -55,13 +61,13 @@
         // "format-ethernet": " wired",
         "format-ethernet": "",
         "format-disconnected": "睊",
-        // "on-click": "nmtui"
+        "on-click": "kitty -e nmtui",
         // "format-wifi": "{essid} ({signalStrength}%) ",
         // "format-ethernet": "{ipaddr}/{cidr} ",
-        // "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
         // "format-linked": "{ifname} (No IP) ",
         // "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        // "format-alt": "{ifname}: {ipaddr}/{cidr}" // (on-click)
     },
         "battery": {
         "states": {
@@ -89,7 +95,7 @@
         "format-bluetooth-muted": " {icon} {format_source}",
         //"format-muted": "婢",
         /* "format-muted": "🔇", */
-                "format-muted": " {volume}%",
+        "format-muted": " {volume}%",
         // "format-source": "{volume}% ",
         // "format-source-muted": "",
         "format-icons": {
@@ -101,7 +107,9 @@
             "car": "",
             "default": ["", "墳", ""]
         },
-        "on-click": "pavucontrol"
+        // "on-click": "pavucontrol"
+        // "on-click": "kitty -e pulsemixer"
+        "on-click": "pamixer -t"
     },
     "custom/launcher": {
         // "exec": "$HOME/.config/waybar/scripts/spotify.sh",
@@ -110,6 +118,7 @@
         // "format": " <span color='#bf616a'> </span>",
         // "format": "",
         // "format": "異",
+        /* "tooltip-format" : "Rofi launcher", */
         "format": "🚀",
         // "format": " <span color='#bf616a'> 異</span>",
         // "format": " <span color='#bf616a'> </span>",

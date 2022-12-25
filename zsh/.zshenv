@@ -1,6 +1,6 @@
 # default apps
 export EDITOR="nvim"
-export TERMINAL="st"
+export TERMINAL="kitty"
 export BROWSER="firefox"
 
 # path
@@ -14,6 +14,8 @@ export PATH="${HOME}/.config/lsp/lua-language-server/bin:${PATH}"
 # golang (download binarie first)
 # https://go.dev/doc/install
 export PATH=$PATH:/usr/local/go/bin
+
+export XDG_CURRENT_DESKTOP=sway
 
 # cleaning up home folder
 
