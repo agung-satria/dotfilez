@@ -1,8 +1,10 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   /* font-family: 'Roboto Mono Medium', 'Ubuntu Nerd Font'; */
-  font-family: 'SF Pro Display Semibold', 'JetBrains Mono Nerd Font';
-  font-size: 18px;
+  font-family: 'SF Pro Display',
+  'JetBrains Mono Nerd Font';
+  /* font-family: 'SF Pro Display'; */
+  font-size: 19px;
   border: none;
   padding: 0;
   margin: 0;
@@ -47,7 +49,7 @@ window#waybar.hidden {
   /* cursor: pointer; */
   /* border-radius: 10px; */
   /* background: rgba(0, 0, 0, 0.2); */
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.06);
   /* box-shadow: inset 0 -3px #e9e9e9; */
   /* color: #bf616a; */
   color: #BFBFBF;
@@ -61,8 +63,9 @@ window#waybar.hidden {
 
 #workspaces button.active {
   /* color: #ff9e64; */
-  color: #e9e9e9;
-  background-color: rgba(255, 255, 255, 0.09);
+  /* color: #e9e9e9; */
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
   /* border-radius: 10px; */
   /* background-color: transparent; */
 }
@@ -117,10 +120,10 @@ window#waybar.hidden {
 }
 
 #clock {
-  margin: 0 8px 0 0;
+  margin: 0 3px 0 -12px;
   /* color: #c0caf5; */
   color: #E9E9E9;
-  padding: 0px;
+  padding: 4px;
   /* color: #bf616a; */
 }
 
@@ -136,28 +139,34 @@ window#waybar.hidden {
 #battery {
   /* color: #a3be8c; */
   color: #e9e9e9;
-  margin: 0 -3px 0 0;
+  padding: 0 3px 0 3px;
+  /* margin: 0 -3px 0 0; */
   /* background-color: #90b1b1; */
+  background-color: transparent;
 }
 
 #battery.charging,
 #battery.plugged {
   /* color: #26a65b; */
-  margin: 0 -3px 0 0;
+  /* margin: 0 -3px 0 0; */
   color: #e9e9e9;
   /* background-color: #26a65b; */
 }
 
 @keyframes blink {
   to {
-    background-color: rgba(30, 34, 42, 0.5);
-    color: #abb2bf;
+    /* background-color: rgba(30, 34, 42, 0.5); */
+    /* color: #abb2bf; */
+    background-color: transparent;
+    color: transparent;
   }
 }
 
 #battery.critical:not(.charging) {
-  background-color: #f53c3c;
-  color: #abb2bf;
+  /* background-color: #f53c3c; */
+  /* color: #abb2bf; */
+  color: #F8545C;
+  background-color: transparent;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -188,9 +197,9 @@ label:focus {
 }
 
 #network {
-  margin: 0;
-  /* padding: 0; */
-  padding: 5.5px;
+  margin: 0 0px 0 0;
+  /* padding: 6px; */
+  padding: 0 6px 0 6px;
   /* margin-right: 0px; */
   /* color: #1abc9c; */
   color: #e9e9e9;
@@ -200,6 +209,7 @@ label:focus {
   /* cursor: pointer; */
   /* background: rgba(0, 0, 0, 0.2); */
   /* border: None; */
+  padding: 6px;
   box-shadow: None;
   /* box-shadow: inset 0 -3px #e9e9e9; */
   /* color: #bf616a; */
@@ -208,7 +218,7 @@ label:focus {
 #custom-launcher {
   color: #e9e9e9;
   /* border: None; */
-  margin: 0 0px 0 8px ;
+  margin: 0 -2px 0 6px ;
   /* padding-right: 0px; */
   /* padding: 0 10px; */
 }
@@ -229,8 +239,8 @@ label:focus {
 }
 
 #pulseaudio {
-  padding: 1px;
-    margin: 0 0px;
+  padding: 4px;
+  margin: 0 10px 0 0;
   /* background-color: #B48EAD; */
   /* color: #bb9af7; */
   color: #e9e9e9;
@@ -312,7 +322,7 @@ label:focus {
 #language {
   background: #00b093;
   color: #740864;
-  padding: 0 5px;
+  padding: 0 4px;
   margin: 0 5px;
   min-width: 16px;
 }
@@ -341,10 +351,14 @@ label:focus {
 }
 
 tooltip {
-    background-color: #171a1f;
-    border: solid #171a1f 2px;
-    border-radius: 16px;
-    color: #b6beca;
+    /* color: rgba(233, 233, 233, 1); */
+    color: transparent;
+    /* background-color: #171a1f; */
+    background-color: transparent;
+    /* border: solid #e9e9e9 2px; */
+    border: none;
+    /* border-radius: 12px; */
+    border-radius: 0;
     padding: 14px;
-    margin-right: 40px;
+    margin-right: 540px;
 }

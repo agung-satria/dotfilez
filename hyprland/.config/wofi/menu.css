@@ -1,0 +1,7 @@
+@import ".config/wofi/style.css";
+window {
+	/* font-family: "FiraCode Nerd Font Mono"; */
+	font-family: "SF Pro Display",
+    "JetBrains Mono Nerd Font";
+	font-size: 13px;
+}

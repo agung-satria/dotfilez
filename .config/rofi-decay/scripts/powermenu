@@ -8,8 +8,8 @@ case "$chosen" in
 	"🔃 Reboot") reboot ;;
 	"💤 Suspend") systemctl suspend ;;
 	"🐻 Hibernate") systemctl hibernate ;;
-    "🚪 Log Out") notify-send "⚠️ Press Super+Shift+q to leave Hyprland" ;;
-	"🔒 Lock") swaylock ;;
+    "🚪 Log Out") loginctl terminate-user $USER ;;
+	"🔒 Lock") swaylock -f -c 000000 ;;
 	*) exit 1 ;;
 esac
 

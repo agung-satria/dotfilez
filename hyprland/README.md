@@ -1,9 +1,17 @@
 ```sh
 yay -S hyprland-bin
+yay -S waybar-hyprland
+yay -S hyprpaper-git (https://github.com/hyprwm/hyprpaper)
+yay -S wlogout (powermenu)
+
 sudo pacman -S kitty
 sudo pacman -S pipewire wireplumber
-sudo pacman -S wofi
+sudo pacman -S wofi (pakai rofi juga bisa)
+
 sudo pacman -S grim (screenshot utility for wayland) it already stored in $HOME/Pictures/
+sudo pacman -S swappy (for area acreenshot [stored in ~/Pictures/screenshots])
+sudo pacman -S wf-recorder (Screen recorder for wlroots-based)
+
 sudo pacman -S pavucontrol
 sudo pacman -S otf-font-awesome
 sudo pacman -S bemenu-wayland (just use rofi)
@@ -11,8 +19,8 @@ sudo pacman -S bemenu-wayland (just use rofi)
 sudo pacman -S swaylock (lockscreen like i3lock)
 sudo pacman -S swaybg (just use hyprpaper)
 
-yay -S hyprpaper-git (https://github.com/hyprwm/hyprpaper)
-    yay -S xdg-desktop-portal-hyprland-git
+
+yay -S xdg-desktop-portal-hyprland-git
 (xdg-desktop-portal-wlr)
 
 (belum)---------------------------------------------------
@@ -31,17 +39,12 @@ sudo pacman -S polkit-kde-agent
 You can autostart it with
 `exec-once=/usr/lib/polkit-kde-authentication-agent-1` (belum)
 
-bar: waybar
-yay -S waybar-hyprland
-config: `~/.config/waybar`
-
 for systray
 sudo pacman -S libappindicator-gtk3
 and export `XDG_CURRENT_DESKTOP=Unity`
 to /etc/environment
 
-
-
+Color picker:
 yay -S hyprpicker-git (color picker)
 https://github.com/hyprwm/hyprpicker
 sudo pacman -S wl-clipboard
@@ -52,17 +55,15 @@ usage:
 -a | --autocopy automatically copies the output to the clipboard (requires wl-clipboard)
 `
 
-cursor:?
+cursor:?==============================================
 https://wiki.archlinux.org/title/Cursor_themes
 
 link download:
 https://github.com/ful1e5/apple_cursor
 https://github.com/ful1e5/apple_cursor/releases
 tar file in usr/share/icons
-
 https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
-set in gsetting in hyprland.conf
-
+set gsettings in hyprland.conf
 set in ~/.config/gtk-3.0/settings.ini
 'gtk-cursor-theme-name=macOS-BigSur'
 reboot
@@ -78,5 +79,5 @@ Inherits=macOS-BigSur
 ln -s /usr/share/icons/macOS-BigSur ~/.icons/default/cursors
 
 set in LXAppearance if necessary
-
+cursor:!==============================================
 ```

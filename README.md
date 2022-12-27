@@ -13,8 +13,14 @@ sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webki
 sudo pacman -S tmux fzf wget curl rsync tree imagemagick nano
 
 sudo pacman -S dolphin konsole ark qt5ct
+sudo pacman -S kde-cli-tools (to change default 'open with')
 Edit /etc/environment as root
-and add the line `QT_QPA_PLATFORMTHEME=qt5ct` and save
+and add the line :
+'
+export QT_QPA_PLATFORMTHEME=qt5ct
+export XDG_CURRENT_DESKTOP=Unity
+'
+and save
 and edit qt5 theme qith QT5Settings
 
 sudo pacman -S nemo nemo-fileroller font-manager

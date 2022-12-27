@@ -120,7 +120,7 @@ unsigned int tabspaces = 8;
 /* bg opacity */
 // float alpha = 1.0;
 // float alpha = 0.90;
-float alpha = 0.85;
+float alpha = 0.88;
 //float alpha = 0.75;
 
 /* Terminal colors (16 first used in escape sequence) */
@@ -236,8 +236,10 @@ static const char *colorname[] = {
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#add8e6", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
- 	"#171a1f", /* 258 -> bg for decay*/
-	"#b6beca", /* 259 -> fg */
+ 	// "#171a1f", /* 258 -> bg for decay*/
+ 	"#0D1017", /* 258 -> bg for decay*/
+	// "#b6beca", /* 259 -> fg */
+	"#c0caf5", /* 259 -> fg */
 	//"#fafdff", /* 259 -> fg */
 };
 /* ########################end of decay####################### */
