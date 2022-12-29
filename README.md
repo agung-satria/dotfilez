@@ -13,6 +13,10 @@ sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webki
 sudo pacman -S tmux fzf wget curl rsync tree imagemagick nano
 
 sudo pacman -S dolphin konsole ark qt5ct
+
+sudo pacman -S lxqt-policykit (for file manager, work with nemo and dolphin)
+and then exec once 'lxqt-policykit-agent' at startup, dwm or hyprland: (to authenticate other partition in nemo file manager)
+
 sudo pacman -S kde-cli-tools (to change default 'open with')
 Edit /etc/environment as root
 and add the line :
@@ -23,7 +27,8 @@ export XDG_CURRENT_DESKTOP=Unity
 and save
 and edit qt5 theme qith QT5Settings
 
-sudo pacman -S nemo nemo-fileroller font-manager
+-----------------------------------------------------------
+sudo pacman -S nemo nemo-fileroller font-manager lxqt-policykit-agent
 sudo pacman -S maim xdotool wtype*
 sudo pacman -S flameshot simplescreenrecorder
 sudo pacman -S dunst libnotify calcurse bc nitrogen hsetroot pulsemixer xclip scrot
@@ -119,7 +124,8 @@ cp -R .config/{mpd,ncmpcpp,mpv} ~/.config
 ## Theming
 
 ```sh
-sudo pacman -S papirus-icon-theme lxappearance
+sudo pacman -S lxappearance
+sudo pacman -S papirus-icon-theme (tar is in dotfiles)
 ```
 
 Install from file
@@ -187,6 +193,14 @@ CheckSpace
 ILoveCandy
 #ParallelDownloads = 5
 ```
+
+## Create a custom .desktop file with specific GTK THEME (ex: libreoffice)
+
+- sudo cp /usr/share/applications/libreoffice-* ~/.local/share/applications/
+- sudo chown agung:agung ~/.local/share/applications/*
+- edit each file you want to specify gtk theme (nvim libreoffice-*)
+- Modify the line starting with 'Exec=' to include 'GTK_THEME=Adwaita:Light' (you can change 'Adwaita:Light' with 'Decay-light' for example) and then the previous existing contents of the line. (So 'Exec=libreoffice --writer %U' would become "Exec=env GTK_THEME=Adwaita:Light libreoffice --writer %U" )
+- Save and close. Now libreoffice has specific (not dark) GTK THEME
 
 ## Enable tap to Click
 

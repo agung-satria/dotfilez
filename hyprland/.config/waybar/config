@@ -65,7 +65,7 @@
         /* "format-disconnected": "", */
         "format-disconnected": "睊",
         /* "on-click": "kitty -e nmtui", */
-        "on-click": "st -c st-float -g 95x25 nmtui",
+        "on-click": "kitty --class kitty-float -e nmtui",
         // "format-wifi": "{essid} ({signalStrength}%) ",
         // "format-ethernet": "{ipaddr}/{cidr} ",
         // "tooltip-format": "{ifname} via {gwaddr} ",

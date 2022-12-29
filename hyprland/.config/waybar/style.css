@@ -11,7 +11,7 @@
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.88);
   /* background-color: rgba(26, 27, 38, 0); */
   /* background-color: #1e1e1e; */
   /* background-color: #1e1e1e; */
@@ -49,7 +49,8 @@ window#waybar.hidden {
   /* cursor: pointer; */
   /* border-radius: 10px; */
   /* background: rgba(0, 0, 0, 0.2); */
-  background: rgba(255, 255, 255, 0.06);
+  /* background: rgba(255, 255, 255, 0.06); */
+
   /* box-shadow: inset 0 -3px #e9e9e9; */
   /* color: #bf616a; */
   color: #BFBFBF;
@@ -65,9 +66,9 @@ window#waybar.hidden {
   /* color: #ff9e64; */
   /* color: #e9e9e9; */
   color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.15);
+  /* background-color: rgba(255, 255, 255, 0.15); */
+  background-color: transparent;
   /* border-radius: 10px; */
-  /* background-color: transparent; */
 }
 
 #workspaces button.urgent {
