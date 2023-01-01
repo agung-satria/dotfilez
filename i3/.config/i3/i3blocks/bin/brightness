@@ -1,0 +1,14 @@
+#!/bin/bash
+# icon=☀
+icon=💡
+brightness="$(cat /sys/class/backlight/amdgpu_bl0/brightness)"
+total="255"
+percent="$((100*$brightness/$total))"
+# echo ☀$brightness
+
+case $BLOCK_BUTTON in
+    4) brightness-setter +5 && pkill -RTMIN+1 i3blocks ;;
+    5) brightness-setter -5 && pkill -RTMIN+1 i3blocks ;;
+esac
+
+echo $icon$percent%

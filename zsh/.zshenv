@@ -1,21 +1,20 @@
 # default apps
 export EDITOR="nvim"
-export TERMINAL="kitty"
+export TERMINAL="alacritty"
 export BROWSER="firefox"
 
 # path
 export PATH=~/.local/bin:~/.local/bin/statusbar:~/.local/bin/sound:~/bin:$PATH
-export PATH=/usr/local/node-v19.1.0-linux-x64/bin:$PATH
+# export PATH=/usr/local/node-v19.1.0-linux-x64/bin:$PATH
+export PATH=/home/agung/.local/node-v18.12.1-linux-x64/bin:$PATH
 
 # build this first
 # https://terminalroot.com/how-to-install-lua-lsp-on-neovim/
-export PATH="${HOME}/.config/lsp/lua-language-server/bin:${PATH}"
+# export PATH="${HOME}/.config/lsp/lua-language-server/bin:${PATH}"
 
 # golang (download binarie first)
 # https://go.dev/doc/install
-export PATH=$PATH:/usr/local/go/bin
-
-export XDG_CURRENT_DESKTOP=sway
+# export PATH=$PATH:/usr/local/go/bin
 
 # cleaning up home folder
 
@@ -97,5 +96,3 @@ ex=🎯:\
 *.jar=♨:\
 *.java=♨:\
 "
-
-. "$HOME/.cargo/env"

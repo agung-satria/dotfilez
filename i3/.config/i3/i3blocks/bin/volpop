@@ -1,0 +1,27 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+  1) amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks && $refresh_i3status ;;
+  2) alacritty -e pulsemixer ;;
+  3) amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks && $refresh_i3status ;;
+  4) amixer -q -D pulse sset Master 2%+ && pkill -RTMIN+1 i3blocks && $refresh_i3status ;;
+  5) amixer -q -D pulse sset Master 2%- && pkill -RTMIN+1 i3blocks && $refresh_i3status ;;
+esac
+
+[ $(amixer sget Master | tail -1 | awk '{print $6 }') = "[off]" ] && echo " " && exit
+
+vol="$(amixer sget Master | awk -F"[][]" '/Left:/ { print $2 }' | sed s/%//)"
+
+if [ "$vol" -gt "74" ]; then
+  icon="  "
+elif [ "$vol" -gt "49" ]; then
+  icon="墳 "
+elif [ "$vol" -gt "24" ]; then
+  icon=" "
+elif [ "$vol" -gt "0" ]; then
+  icon=" "
+else
+  echo " " && exit
+fi
+
+echo "$icon$vol%"

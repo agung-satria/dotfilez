@@ -19,7 +19,7 @@ alias \
   nvim="nvim" \
   v="nvim" \
   vv="nvim" \
-  vim="nvim" \
+  vim="vim" \
   vi="nvim" \
   t="tmux" \
   ta="tmux a" \

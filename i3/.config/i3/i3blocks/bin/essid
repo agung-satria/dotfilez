@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# INTERFACE="${INTERFACE:-wlan0}"
+INTERFACE="${INTERFACE:-wlp1s0}"
+
+[[ ! -d /sys/class/net/${INTERFACE}/wireless ]] ||
+    [[ "$(cat /sys/class/net/$INTERFACE/operstate)" = 'down' ]] && exit
+ESSID=$(/sbin/iwconfig $INTERFACE | perl -n -e'/ESSID:"(.*?)"/ && print $1')
+
+# echo  $ESSID
+echo " "

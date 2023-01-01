@@ -1,0 +1,27 @@
+#!/bin/bash
+VOLUME_ON_ICON='  '
+VOLUME_MUTED_ICON='  '
+# VOLUME_ON_ICON='🔊'
+# VOLUME_MUTED_ICON='🔇'
+get_volume(){
+  active_sink=$(pacmd list-sinks | awk '/* index:/{print $3}')
+  curStatus=$(amixer sget Master | tail -1 | awk '{print $6 }')
+  volume=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
+  if [ "${curStatus}" = '[off]' ]
+  then
+    echo "$VOLUME_MUTED_ICON$volume"
+    # echo "Vol: $volume (muted)"
+    # echo "$volume"
+  else
+    echo "$VOLUME_ON_ICON$volume"
+    # echo "Vol: $volume"
+  fi
+}
+case $BLOCK_BUTTON in
+  1) amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks && $refresh_i3status ;;
+  2) alacritty -e pulsemixer ;;
+  3) amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks && $refresh_i3status ;;
+  4) amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks && $refresh_i3status ;;
+  5) amixer -q -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks && $refresh_i3status ;;
+esac
+get_volume

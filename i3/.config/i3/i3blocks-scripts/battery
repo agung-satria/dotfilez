@@ -1,0 +1,32 @@
+#!/bin/bash
+bat() {
+	batstat="$(cat /sys/class/power_supply/BAT0/status)"
+	battery="$(cat /sys/class/power_supply/BAT0/capacity)"
+	if [[ $batstat = 'Unknown' ]] || [[ $batstat = 'Charging' ]]; then
+        batstat="$battery%"
+        elif [[ $battery -ge 5 ]] && [[ $battery -le 10 ]]; then
+        batstat="$battery%"
+        elif [[ $battery -ge 11 ]] && [[ $battery -le 20 ]]; then
+		batstat="$battery%"
+        elif [[ $battery -ge 21 ]] && [[ $battery -le 30 ]]; then
+        batstat="$battery%"
+        elif [[ $battery -ge 31 ]] && [[ $battery -le 40 ]]; then
+        batstat="$battery%"
+		elif [[ $battery -ge 41 ]] && [[ $battery -le 50 ]]; then
+        batstat="$battery%"
+		elif [[ $battery -ge 51 ]] && [[ $battery -le 60 ]]; then
+        batstat="$battery%"
+		elif [[ $battery -ge 61 ]] && [[ $battery -le 70 ]]; then
+        batstat="$battery%"
+		elif [[ $battery -ge 71 ]] && [[ $battery -le 80 ]]; then
+        batstat="$battery%"
+		elif [[ $battery -ge 81 ]] && [[ $battery -le 90 ]]; then
+        batstat="$battery%"
+		elif [[ $battery -ge 91 ]] && [[ $battery -le 95 ]]; then
+		batstat="$battery%"
+		elif [[ $battery -ge 96 ]] && [[ $battery -le 100 ]]; then
+		batstat="$battery%"
+    fi
+   	    echo "$batstat"
+ }
+	echo "$(bat)"

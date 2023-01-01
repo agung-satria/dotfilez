@@ -1,0 +1,4 @@
+#!/bin/bash
+#Descriptions: i3 config's dependencies
+
+sudo apt install i3 i3blocks alacritty dunst libnotify-bin maim xclip gpick rofi nitrogen compton calcurse

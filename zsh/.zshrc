@@ -19,8 +19,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="alanpeabody"
 # ZSH_THEME="minimal"
 # ZSH_THEME="jbergantine"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME="gnzh"
+# ZSH_THEME="eastwood"
+ZSH_THEME="gozilla"
 
 # Codi
 # Usage: codi [filetype] [filename]
@@ -198,7 +200,7 @@ abbrev-alias lsuser="awk -F':' '{ print $1}' /etc/passwd"
 abbrev-alias lsgroup="cut -d: -f1 /etc/group | sort"
 abbrev-alias sw="hsetroot -cover ~/Pictures/arch.png"
 abbrev-alias refont="sudo fc-cache -fv"
-abbrev-alias fst="xset r rate 300 50"
+abbrev-alias fst="xset r rate 210 50"
 abbrev-alias mp4tomp3="ffmpeg -i video.mp4 -vn -acodec libmp3lame -ac 2 -ab 160k -ar 48000 audio.mp3"
 abbrev-alias mp3toogg="ffmpeg audio.mp3 -vn audio.ogg"
 abbrev-alias mkvtomp4="ffmpeg -i video.mkv video.mp4 -qscale 0"
@@ -215,8 +217,6 @@ abbrev-alias tc="tmux attach-session -t "
 # zsh abbreviations===================================
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# -e
-alias luamake=/home/agung/.config/lsp/lua-language-server/3rd/luamake/luamake
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
