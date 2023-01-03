@@ -1,0 +1,25 @@
+#!/bin/bash
+# Prints out the volume percentage
+
+rec=$(pactl list short | grep RUNNING | sed -e 's,^\([0-9][0-9]*\)[^0-9].*,\1,')
+getmute=$(pactl list sinks | grep '^[[:space:]]Mute:' | awk '{print $2}')
+
+[ $getmute = yes ] && echo "  " && exit
+
+vol="$(pactl list sinks | grep '^[[:space:]]Volume:' | \
+	head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')"
+
+  if [ "$vol" -gt "74" ]; then
+    icon="  "
+  elif [ "$vol" -gt "49" ]; then
+    icon="墳 "
+  elif [ "$vol" -gt "24" ]; then
+    icon=" "
+  elif [ "$vol" -gt "0" ]; then
+    icon="  "
+  else
+    echo "  "  && exit
+  fi
+
+echo "$icon$vol%"
+

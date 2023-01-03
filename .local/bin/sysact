@@ -5,26 +5,25 @@ case "$(readlink -f /sbin/init)" in
 	*) ctl='loginctl' ;;
 esac
 
-# color emoji (noto)🖥️
-case "$(printf "🔒Lock\n🚪Logout\n📴 Shutdown\n🔃 Restart\n💤 Sleep\n📺 Display Off" | dmenu -i -p 'Action: ')" in
-	'🔒Lock') lockwithsound ;;
-	'🚪Logout') kill -TERM "$(pgrep -u "$USER" "\bdwm$")" && snd-logoff ;;
-	'📴 Shutdown') snd-shutdown >/dev/null 2>&1 && $ctl poweroff -i ;;
-	'🔃 Restart') snd-notify >/dev/null 2>&1 && $ctl reboot -i ;;
-	'💤 Sleep') $ctl suspend && lockwithsound ;;
-	'📺 Display Off') xset dpms force off ;;
-	*) exit 1 ;;
-esac
-
-# nerd
-# case "$(printf "  lock\n  leave dwm\n  shutdown\n  restart\n⏾ sleep\n鈴   hibernate\n勒  renew dwm\nﱢ  display off" | dmenu -i -p 'Action: ')" in
-# 	'  lock') betterlockscreen -l ;;
-# 	'  leave dwm') kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
-# 	'  shutdown') $ctl poweroff -i ;;
-# 	'  restart') $ctl reboot -i ;;
-# 	'鈴  hibernate') $ctl hibernate && betterlockscreen -l ;;
-# 	'⏾ sleep') $ctl suspend && betterlockscreen -l ;;
-# 	'勒  renew dwm') kill -HUP "$(pgrep -u "$USER" "\bdwm$")" ;;
-# 	'ﱢ  display off') xset dpms force off ;;
+# # color emoji (noto)🖥️
+# case "$(printf "🔒Lock\n🚪Logout\n📴 Poweroff\n🔃 Reboot\n💤 Sleep\n📺 Display Off" | dmenu -i -p 'Action: ')" in
+# 	'🔒Lock') lockwithsound ;;
+# 	'🚪Logout') kill -TERM "$(pgrep -u "$USER" "\bdwm$")" && snd-logoff ;;
+# 	'📴 Poweroff') snd-shutdown >/dev/null 2>&1 && $ctl poweroff -i ;;
+# 	'🔃 Reboot') snd-notify >/dev/null 2>&1 && $ctl reboot -i ;;
+# 	'💤 Sleep') $ctl suspend && lockwithsound ;;
+# 	'📺 Display Off') xset dpms force off ;;
 # 	*) exit 1 ;;
 # esac
+
+# nerd
+case "$(printf "  lock\n  Logout\n  Poweroff\n  Reboot\n⏾ Suspend\n鈴  Hibernate\nﱢ  Display off" | dmenu -i -p 'Action: ')" in
+	'  lock') betterlockscreen -l ;;
+	'  Logout') kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
+	'  Poweroff') $ctl poweroff -i ;;
+	'  Reboot') $ctl reboot -i ;;
+	'鈴  Hibernate') $ctl hibernate && betterlockscreen -l ;;
+	'⏾ Suspend') $ctl suspend && betterlockscreen -l ;;
+	'ﱢ  Display off') xset dpms force off ;;
+	*) exit 1 ;;
+esac

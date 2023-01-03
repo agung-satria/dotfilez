@@ -1,7 +1,8 @@
 # Dependencies:
 ```sh
 sudo pacman -S ranger ueberzug
-sudo pacman -S perl-image-exiftool feh zathura ffmpegthumbnailer lynx trash-cli
+sudo pacman -S perl-image-exiftool ffmpegthumbnailer lynx trash-cli zathura mupdf zathura-pdf-mupdf
+sudo apt install libimage-exiftool-perl ffmpegthumbnailer lynx trash-cli zathura mupdf
 ```
 
 ## Install

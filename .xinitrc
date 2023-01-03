@@ -1,10 +1,10 @@
 # ## auto start
 # dwmblocks &
+# slstatus &
 # lowbatnotif &
-# # hsetroot -cover ~/.dotfiles/.local/share/wallpapers/landscape.jpg
-# hsetroot -cover ~/.dotfiles/.local/share/wallpapers/supermoon.jpg
-# nitrogen --restore
-# xset r rate 210 50
+# hsetroot -cover ~/.dotfiles/.local/share/wallpapers/tree-alone.jpg
+# # nitrogen --restore
+# xset r rate 240 50
 # xset s blank
 # xset s 600
 # natural-mouse-scroll-false &

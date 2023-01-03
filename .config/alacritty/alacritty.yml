@@ -166,8 +166,8 @@ window:
     general: Alacritty
   opacity: 0.88
   dimensions:
-    columns: 85
-    lines: 23
+    columns: 92
+    lines: 22
 
 font:
   normal:
