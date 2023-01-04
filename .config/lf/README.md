@@ -1,8 +1,8 @@
 # Dependencies:
 
 ```sh
-sudo pacman -S ranger ueberzug
-sudo pacman -S perl-image-exiftool perl-file-mimeinfo zathura ffmpegthumbnailer lynx trash-cli xwallpaper mpv
+sudo pacman -S ueberzug perl-image-exiftool perl-file-mimeinfo ffmpegthumbnailer lynx trash-cli mupdf xwallpaper zathura zathura-pdf-mupdf mpv --needed
+
 yay -S vidir
 yay -S dragon-drop (already in bin)
 ```
@@ -12,18 +12,8 @@ yay -S dragon-drop (already in bin)
 ```sh
 chmod +x scope
 chmod +x cleaner
-
-cp 'cpthis' content to the specified directory
-echo "alias lf="lfub"" >> ~/.zshrc of ~/.config/shell/aliasrc
-
-yay -S dragon-drop-git
-dragon (prebuilt binary already in uwuntu/bin)
-
-run lfub in the directoy 'cpthis'
-{bm-dirs,bm,files} is already in zsh config folder
-no need to copy (just the reminder path use)
 ```
 
-## Mapping ranger (sync it)
+run `setup.sh`
 
-See `lfrc`
+See `lfrc` for mapping
