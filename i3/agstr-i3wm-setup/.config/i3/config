@@ -15,6 +15,7 @@ exec --no-startup-id xset s blank
 exec --no-startup-id xset s 600
 exec --no-startup-id nm-applet
 exec --no-startup-id compton
+exec --no-startup-id dunst
 exec --no-startup-id mpd
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id dex --autostart --environment i3

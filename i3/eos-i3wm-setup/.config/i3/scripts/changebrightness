@@ -1,0 +1,31 @@
+#!/bin/bash
+
+function send_notification() {
+	# brightness=$(light -G) # with decimal
+  
+  actualbrightness="$(cat /sys/class/backlight/amdgpu_bl0/brightness)"
+  total="255"
+  brightness="$((100*$actualbrightness/$total))" # rounded decimal
+
+	dunstify -a "changebrightness" -u low -r "9393" -h int:value:"$brightness" -i "brightness-$1" "Brightness: ${brightness}%" -t 2000
+}
+
+case $1 in
+up)
+	# Set the volume on (if it was muted)
+	# pamixer -u
+	# pamixer -i 5
+  light -A 5
+	# pamixer -i 5 --allow-boost
+	# pamixer -i 5 ; pkill -RTMIN+1 dwmblocks
+	send_notification $1
+	;;
+down)
+	# pamixer -u
+	# pamixer -d 5
+  light -U 5
+	# pamixer -d 5 --allow-boost
+	# pamixer -d 5 ; pkill -RTMIN+1 dwmblocks
+	send_notification $1
+	;;
+esac
