@@ -1,8 +1,13 @@
 # Dependencies:
 
 ```sh
-sudo pacman -S ranger ueberzug
-sudo pacman -S perl-image-exiftool ffmpegthumbnailer lynx trash-cli zathura mupdf zathura-pdf-mupdf
+sudo apt install python3 python3-pip
+pip3 install ranger-fm
+sudo apt install libimage-exiftool-perl ffmpegthumbnailer lynx trash-cli zathura mupdf
+sudo dpkg -i ./bin/ueberzug_18.1.9-2_amd64.deb
+sudo apt install python3-attr (depends, see the warning)
+sudo apt --fix-broken Install
+which ueberzug 
 ```
 
 ## Install
@@ -12,7 +17,6 @@ then clone the install the plugin (dev icon)
 ```sh
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 ```
-ranger_devicons (plugin) : github repo (just make install/make uninstall)
 dragon (copy binary file to $PATH or build from source, google it)
 
 ## Mapping
@@ -28,6 +32,7 @@ dragon (copy binary file to $PATH or build from source, google it)
 * `ctrl-r` Open "Recycle Bin" / trash in nemo file manager
 * `delete` Move to trash
 * `shift+delete` Delete permanent (console remove)
+* `D` Delete permanent (console remove)
 * `space` Select file
 * `V` Select all
 * `ctrl-f` fzf_select (search)
