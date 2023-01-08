@@ -207,27 +207,32 @@ ILoveCandy
 ```sh
 sudo cp /usr/share/X11/xorg.conf.d/40-libinput.conf /etc/X11/xorg.conf.d
 sudo nvim /etc/X11/xorg.conf.d/40-libinput.conf
-
-sudo echo "Section "InputClass"
-	Identifier "devname"
-	Driver "libinput"
-	Option "Tapping" "on"
-	Option "NaturalScrolling" "true"
-EndSection" >> /etc/X11/xorg.conf.d/40-libinput.conf
 ```
 
-Section
+Add this section
 
 ```sh
+# for touchpad
 Section "InputClass"
-	Identifier "devname"
-	Driver "libinput"
-	Option "Tapping" "on"
-	Option "NaturalScrolling" "true"
+        Identifier "libinput touchpad catchall"
+        MatchIsTouchpad "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+        Option "Tapping" "on"
+        Option "NaturalScrolling" "True"
+EndSection
+
+# for mouse
+Section "InputClass"
+        Identifier "libinput pointer catchall"
+        MatchIsPointer "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+        Option "NaturalScrolling" "False"
 EndSection
 ```
 
-Restart DWM
+Then log off and on to apply.
 
 ## Disable power button
 
